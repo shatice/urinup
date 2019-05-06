@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      message: 'HELENE IS A BALEINE'
+      message: 'HELENE IS A BALEINE & SARAH IS A RAT'
     };
   }
 };
