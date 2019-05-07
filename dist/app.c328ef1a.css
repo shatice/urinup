@@ -143,7 +143,7 @@ textarea {
 }
 
 .big-header {
-  background-color: #0de595;
+  background-color: #3c4b5c;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -154,13 +154,13 @@ textarea {
 }
 
 .button {
-  color: #0de595;
+  color: #3c4b5c;
   text-decoration: none;
   background: white;
   padding: 5px;
   border-radius: 5px;
-  display: inline-block;
-  border: none;
+  display: flex;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=/app.c328ef1a.css.map */
