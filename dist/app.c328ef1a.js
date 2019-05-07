@@ -15600,7 +15600,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"app.js":[function(require,module,exports) {
+},{"./../img/sdf.png":[["sdf.691096cb.png","assets/img/sdf.png"],"assets/img/sdf.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"app.js":[function(require,module,exports) {
 "use strict";
 
 var _vue = _interopRequireDefault(require("vue"));
@@ -15642,7 +15642,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56756" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62613" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

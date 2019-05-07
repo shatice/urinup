@@ -11,8 +11,13 @@ textarea {
   font-family: 'Roboto';
 }
 
+body {
+  background-image: url(../img/sdf.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .big-header {
-  background-color: $hetic-green;
   height: 100vh;
   display: flex;
   justify-content: center;
