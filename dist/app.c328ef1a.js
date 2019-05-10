@@ -14998,23 +14998,19 @@ exports.default = void 0;
 var _default = {
   data: function data() {
     return {
-<<<<<<< HEAD
-      message: "Bienvenue"
-=======
       message: "OUPS, CA URGE !!!"
->>>>>>> cfd031b319231c091321eebda0cfc5600762c261
     };
   }
 };
 exports.default = _default;
-        var $f7e50a = exports.default || module.exports;
+        var $52d86d = exports.default || module.exports;
       
-      if (typeof $f7e50a === 'function') {
-        $f7e50a = $f7e50a.options;
+      if (typeof $52d86d === 'function') {
+        $52d86d = $52d86d.options;
       }
     
         /* template */
-        Object.assign($f7e50a, (function () {
+        Object.assign($52d86d, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -15027,10 +15023,6 @@ exports.default = _default;
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
-<<<<<<< HEAD
-      _c("router-link", { staticClass: "button", attrs: { to: "/page2" } }, [
-        _vm._v("Avancer")
-=======
       _c(
         "router-link",
         { staticClass: "button", attrs: { to: "/accessories" } },
@@ -16468,7 +16460,6 @@ exports.default = _default;
       _vm._v(" "),
       _c("router-link", { staticClass: "button", attrs: { to: "/subway" } }, [
         _vm._v("Non")
->>>>>>> cfd031b319231c091321eebda0cfc5600762c261
       ])
     ],
     1
@@ -16494,11 +16485,6 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-<<<<<<< HEAD
-            api.createRecord('$f7e50a', $f7e50a);
-          } else {
-            api.reload('$f7e50a', $f7e50a);
-=======
             api.createRecord('$0db076', $0db076);
           } else {
             api.reload('$0db076', $0db076);
@@ -16665,18 +16651,13 @@ render._withStripped = true
             api.createRecord('$93e39a', $93e39a);
           } else {
             api.reload('$93e39a', $93e39a);
->>>>>>> cfd031b319231c091321eebda0cfc5600762c261
           }
         }
 
         
       }
     })();
-<<<<<<< HEAD
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/page2.vue":[function(require,module,exports) {
-=======
 },{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/denfert.vue":[function(require,module,exports) {
->>>>>>> cfd031b319231c091321eebda0cfc5600762c261
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16691,115 +16672,14 @@ exports.default = void 0;
 //
 //
 //
-<<<<<<< HEAD
-//
-var _default = {
-  data: function data() {
-    return {
-      message: "Où aller ?"
-    };
-  }
-};
-exports.default = _default;
-        var $2318d7 = exports.default || module.exports;
-      
-      if (typeof $2318d7 === 'function') {
-        $2318d7 = $2318d7.options;
-      }
-    
-        /* template */
-        Object.assign($2318d7, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "big-header" },
-    [
-      _c("h1", [_vm._v(_vm._s(_vm.message))]),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("router-link", { staticClass: "button", attrs: { to: "/page3" } }, [
-        _vm._v("A gauche")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { staticClass: "button", attrs: { to: "/page4" } }, [
-        _vm._v("A droite")
-      ])
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$2318d7', $2318d7);
-          } else {
-            api.reload('$2318d7', $2318d7);
-          }
-        }
-
-        
-      }
-    })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/page3.vue":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = {
-  data: function data() {
-    return {
-      message: "Chemin tranquille"
-=======
 var _default = {
   data: function data() {
     return {
       message: "Tu sors à denfert où tu prends le métro jusqu'à chatelet, quel raccourci !"
->>>>>>> cfd031b319231c091321eebda0cfc5600762c261
     };
   }
 };
 exports.default = _default;
-<<<<<<< HEAD
-        var $cf0104 = exports.default || module.exports;
-      
-      if (typeof $cf0104 === 'function') {
-        $cf0104 = $cf0104.options;
-      }
-    
-        /* template */
-        Object.assign($cf0104, (function () {
-=======
         var $590819 = exports.default || module.exports;
       
       if (typeof $590819 === 'function') {
@@ -16808,7 +16688,6 @@ exports.default = _default;
     
         /* template */
         Object.assign($590819, (function () {
->>>>>>> cfd031b319231c091321eebda0cfc5600762c261
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -16821,13 +16700,8 @@ exports.default = _default;
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
-<<<<<<< HEAD
-      _c("router-link", { staticClass: "button", attrs: { to: "/page5" } }, [
-        _vm._v("Avancer")
-=======
       _c("router-link", { staticClass: "button", attrs: { to: "/chatelet" } }, [
         _vm._v("Je fonce !!!")
->>>>>>> cfd031b319231c091321eebda0cfc5600762c261
       ])
     ],
     1
@@ -16853,257 +16727,94 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-<<<<<<< HEAD
-            api.createRecord('$cf0104', $cf0104);
-          } else {
-            api.reload('$cf0104', $cf0104);
-          }
-        }
-
-        
-      }
-    })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/page4.vue":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = {
-  data: function data() {
-    return {
-      message: "Chemin dangereux"
-    };
-  }
-};
-exports.default = _default;
-        var $c53eb8 = exports.default || module.exports;
-      
-      if (typeof $c53eb8 === 'function') {
-        $c53eb8 = $c53eb8.options;
-      }
-    
-        /* template */
-        Object.assign($c53eb8, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "big-header" },
-    [
-      _c("h1", [_vm._v(_vm._s(_vm.message))]),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("router-link", { staticClass: "button", attrs: { to: "/page2" } }, [
-        _vm._v("A gauche")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { staticClass: "button", attrs: { to: "/page6" } }, [
-        _vm._v("A droite")
-      ])
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$c53eb8', $c53eb8);
-          } else {
-            api.reload('$c53eb8', $c53eb8);
-          }
-        }
-
-        
-      }
-    })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/page5.vue":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = {
-  data: function data() {
-    return {
-      message: "Arrivée"
-    };
-  }
-};
-exports.default = _default;
-        var $d7ea6c = exports.default || module.exports;
-      
-      if (typeof $d7ea6c === 'function') {
-        $d7ea6c = $d7ea6c.options;
-      }
-    
-        /* template */
-        Object.assign($d7ea6c, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "big-header" },
-    [
-      _c("h1", [_vm._v(_vm._s(_vm.message))]),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("router-link", { staticClass: "button", attrs: { to: "/home" } }, [
-        _vm._v("Restart")
-      ])
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$d7ea6c', $d7ea6c);
-          } else {
-            api.reload('$d7ea6c', $d7ea6c);
-          }
-        }
-
-        
-      }
-    })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/page6.vue":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = {
-  data: function data() {
-    return {
-      message: "Piège mortel"
-    };
-  }
-};
-exports.default = _default;
-        var $7a0e11 = exports.default || module.exports;
-      
-      if (typeof $7a0e11 === 'function') {
-        $7a0e11 = $7a0e11.options;
-      }
-    
-        /* template */
-        Object.assign($7a0e11, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "big-header" },
-    [
-      _c("h1", [_vm._v(_vm._s(_vm.message))]),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("router-link", { staticClass: "button", attrs: { to: "/home" } }, [
-        _vm._v("LOSE")
-      ])
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$7a0e11', $7a0e11);
-          } else {
-            api.reload('$7a0e11', $7a0e11);
-=======
             api.createRecord('$590819', $590819);
           } else {
             api.reload('$590819', $590819);
->>>>>>> cfd031b319231c091321eebda0cfc5600762c261
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/truck.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Génial! Tu es un génie et rien ne te fais peur! Tu arrives enfin à destination."
+    };
+  }
+};
+exports.default = _default;
+        var $5ed70a = exports.default || module.exports;
+      
+      if (typeof $5ed70a === 'function') {
+        $5ed70a = $5ed70a.options;
+      }
+    
+        /* template */
+        Object.assign($5ed70a, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/win" } }, [
+        _vm._v("carte")
+      ]),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/lose" } }, [
+        _vm._v("Pas carte")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$5ed70a', $5ed70a);
+          } else {
+            api.reload('$5ed70a', $5ed70a);
           }
         }
 
@@ -17124,17 +16835,6 @@ var _vueRouter = _interopRequireDefault(require("vue-router"));
 
 var _Home = _interopRequireDefault(require("./components/Home.vue"));
 
-<<<<<<< HEAD
-var _page = _interopRequireDefault(require("./components/page2.vue"));
-
-var _page2 = _interopRequireDefault(require("./components/page3.vue"));
-
-var _page3 = _interopRequireDefault(require("./components/page4.vue"));
-
-var _page4 = _interopRequireDefault(require("./components/page5.vue"));
-
-var _page5 = _interopRequireDefault(require("./components/page6.vue"));
-=======
 var _accessories = _interopRequireDefault(require("./components/accessories.vue"));
 
 var _start = _interopRequireDefault(require("./components/start.vue"));
@@ -17174,7 +16874,8 @@ var _win = _interopRequireDefault(require("./components/win.vue"));
 var _scooter = _interopRequireDefault(require("./components/scooter.vue"));
 
 var _denfert = _interopRequireDefault(require("./components/denfert.vue"));
->>>>>>> cfd031b319231c091321eebda0cfc5600762c261
+
+var _truck = _interopRequireDefault(require("./components/truck.vue"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17188,27 +16889,6 @@ var router = new _vueRouter.default({
     name: 'home',
     component: _Home.default
   }, {
-<<<<<<< HEAD
-    path: '/page2',
-    name: 'page2',
-    component: _page.default
-  }, {
-    path: '/page3',
-    name: 'page3',
-    component: _page2.default
-  }, {
-    path: '/page4',
-    name: 'page4',
-    component: _page3.default
-  }, {
-    path: '/page5',
-    name: 'page5',
-    component: _page4.default
-  }, {
-    path: '/page6',
-    name: 'page6',
-    component: _page5.default
-=======
     path: '/accessories',
     name: 'accessories',
     component: _accessories.default
@@ -17279,7 +16959,7 @@ var router = new _vueRouter.default({
   }, {
     path: '/truck',
     name: 'truck',
-    component: truck
+    component: _truck.default
   }, {
     path: '/lose',
     name: 'lose',
@@ -17292,7 +16972,6 @@ var router = new _vueRouter.default({
     path: '/scooter',
     name: 'scooter',
     component: _scooter.default
->>>>>>> cfd031b319231c091321eebda0cfc5600762c261
   }, {
     path: '*',
     redirect: {
@@ -17302,11 +16981,7 @@ var router = new _vueRouter.default({
 });
 var _default = router;
 exports.default = _default;
-<<<<<<< HEAD
-},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/page2.vue":"components/page2.vue","./components/page3.vue":"components/page3.vue","./components/page4.vue":"components/page4.vue","./components/page5.vue":"components/page5.vue","./components/page6.vue":"components/page6.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-=======
-},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/accessories.vue":"components/accessories.vue","./components/start.vue":"components/start.vue","./components/walk.vue":"components/walk.vue","./components/catacombs.vue":"components/catacombs.vue","./components/change.vue":"components/change.vue","./components/chatelet.vue":"components/chatelet.vue","./components/docks.vue":"components/docks.vue","./components/lose.vue":"components/lose.vue","./components/republique.vue":"components/republique.vue","./components/right.vue":"components/right.vue","./components/seine.vue":"components/seine.vue","./components/sewage.vue":"components/sewage.vue","./components/station.vue":"components/station.vue","./components/subway.vue":"components/subway.vue","./components/surf.vue":"components/surf.vue","./components/taxi.vue":"components/taxi.vue","./components/wagon.vue":"components/wagon.vue","./components/win.vue":"components/win.vue","./components/scooter.vue":"components/scooter.vue","./components/denfert.vue":"components/denfert.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
->>>>>>> cfd031b319231c091321eebda0cfc5600762c261
+},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/accessories.vue":"components/accessories.vue","./components/start.vue":"components/start.vue","./components/walk.vue":"components/walk.vue","./components/catacombs.vue":"components/catacombs.vue","./components/change.vue":"components/change.vue","./components/chatelet.vue":"components/chatelet.vue","./components/docks.vue":"components/docks.vue","./components/lose.vue":"components/lose.vue","./components/republique.vue":"components/republique.vue","./components/right.vue":"components/right.vue","./components/seine.vue":"components/seine.vue","./components/sewage.vue":"components/sewage.vue","./components/station.vue":"components/station.vue","./components/subway.vue":"components/subway.vue","./components/surf.vue":"components/surf.vue","./components/taxi.vue":"components/taxi.vue","./components/wagon.vue":"components/wagon.vue","./components/win.vue":"components/win.vue","./components/scooter.vue":"components/scooter.vue","./components/denfert.vue":"components/denfert.vue","./components/truck.vue":"components/truck.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -17378,7 +17053,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../img/sdf.png":[["sdf.691096cb.png","assets/img/sdf.png"],"assets/img/sdf.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"app.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"app.js":[function(require,module,exports) {
 "use strict";
 
 var _vue = _interopRequireDefault(require("vue"));
@@ -17420,15 +17095,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-<<<<<<< HEAD
-<<<<<<< HEAD
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64543" + '/');
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59703" + '/');
->>>>>>> 7a23227d32c2cecfd03ea93baf266d0dfd501a2c
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56062" + '/');
->>>>>>> cfd031b319231c091321eebda0cfc5600762c261
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57169" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
