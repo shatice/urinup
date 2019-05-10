@@ -22,7 +22,7 @@ import wagon from './components/wagon.vue';
 import win from './components/win.vue';
 import scooter from './components/scooter.vue';
 import denfert from './components/denfert.vue';
-import truck from './components/truck.vue';
+
 
 Vue.use(Router);
 
