@@ -14998,7 +14998,7 @@ exports.default = void 0;
 var _default = {
   data: function data() {
     return {
-      message: 'Hello Hetic'
+      message: "OUPS, CA URGE !!!"
     };
   }
 };
@@ -15023,17 +15023,11 @@ exports.default = _default;
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
-<<<<<<< Updated upstream
-      _c("router-link", { staticClass: "button", attrs: { to: "/page" } }, [
-        _vm._v("Go to Page")
-      ])
-=======
       _c(
         "router-link",
         { staticClass: "button", attrs: { to: "/accessories" } },
         [_vm._v("Continue")]
       )
->>>>>>> Stashed changes
     ],
     1
   )
@@ -15067,7 +15061,7 @@ render._withStripped = true
         
       }
     })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Page.vue":[function(require,module,exports) {
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/accessories.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15082,35 +15076,23 @@ exports.default = void 0;
 //
 //
 //
-<<<<<<< Updated upstream
-var _default = {};
-exports.default = _default;
-        var $5c93bc = exports.default || module.exports;
-      
-      if (typeof $5c93bc === 'function') {
-        $5c93bc = $5c93bc.options;
-      }
-    
-        /* template */
-        Object.assign($5c93bc, (function () {
-=======
 //
 var _default = {
   data: function data() {
     return {
-      message: "Où aller ?"
+      message: "Choisis ton accessoire"
     };
   }
 };
 exports.default = _default;
-        var $3b6574 = exports.default || module.exports;
+        var $823428 = exports.default || module.exports;
       
-      if (typeof $3b6574 === 'function') {
-        $3b6574 = $3b6574.options;
+      if (typeof $823428 === 'function') {
+        $823428 = $823428.options;
       }
     
         /* template */
-        Object.assign($3b6574, (function () {
+        Object.assign($823428, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -15123,12 +15105,12 @@ exports.default = _default;
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
-      _c("router-link", { staticClass: "button", attrs: { to: "/page3" } }, [
-        _vm._v("A gauche")
+      _c("router-link", { staticClass: "button", attrs: { to: "/start" } }, [
+        _vm._v("Smartphone")
       ]),
       _vm._v(" "),
-      _c("router-link", { staticClass: "button", attrs: { to: "/page4" } }, [
-        _vm._v("A droite")
+      _c("router-link", { staticClass: "button", attrs: { to: "/start" } }, [
+        _vm._v("Carte en papier")
       ])
     ],
     1
@@ -15154,101 +15136,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$3b6574', $3b6574);
+            api.createRecord('$823428', $823428);
           } else {
-            api.reload('$3b6574', $3b6574);
+            api.reload('$823428', $823428);
           }
         }
 
         
       }
     })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/page3.vue":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = {
-  data: function data() {
-    return {
-      message: "Chemin tranquille"
-    };
-  }
-};
-exports.default = _default;
-        var $1e9f7e = exports.default || module.exports;
-      
-      if (typeof $1e9f7e === 'function') {
-        $1e9f7e = $1e9f7e.options;
-      }
-    
-        /* template */
-        Object.assign($1e9f7e, (function () {
->>>>>>> Stashed changes
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "big-header" },
-    [
-      _c("h1", [_vm._v("Page")]),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("router-link", { staticClass: "button", attrs: { to: "/" } }, [
-        _vm._v("Go to Home")
-      ])
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-<<<<<<< Updated upstream
-            api.createRecord('$5c93bc', $5c93bc);
-          } else {
-            api.reload('$5c93bc', $5c93bc);
-=======
-            api.createRecord('$1e9f7e', $1e9f7e);
-          } else {
-            api.reload('$1e9f7e', $1e9f7e);
-          }
-        }
-
-        
-      }
-    })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/page4.vue":[function(require,module,exports) {
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/start.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15264,22 +15161,23 @@ exports.default = void 0;
 //
 //
 //
+//
 var _default = {
   data: function data() {
     return {
-      message: "Chemin dangereux"
+      message: "Tu n'as pas le temps de réflechir, chaque seconde compte! À toi de jouer :"
     };
   }
 };
 exports.default = _default;
-        var $0de4ef = exports.default || module.exports;
+        var $d6b315 = exports.default || module.exports;
       
-      if (typeof $0de4ef === 'function') {
-        $0de4ef = $0de4ef.options;
+      if (typeof $d6b315 === 'function') {
+        $d6b315 = $d6b315.options;
       }
     
         /* template */
-        Object.assign($0de4ef, (function () {
+        Object.assign($d6b315, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -15292,12 +15190,16 @@ exports.default = _default;
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
-      _c("router-link", { staticClass: "button", attrs: { to: "/page2" } }, [
-        _vm._v("A gauche")
+      _c("router-link", { staticClass: "button", attrs: { to: "/lose" } }, [
+        _vm._v("Mon overboard !")
       ]),
       _vm._v(" "),
-      _c("router-link", { staticClass: "button", attrs: { to: "/page6" } }, [
-        _vm._v("A droite")
+      _c("router-link", { staticClass: "button", attrs: { to: "/walk" } }, [
+        _vm._v("J'y vais à pied")
+      ]),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/scooter" } }, [
+        _vm._v("Je prends une trotinette éléctique")
       ])
     ],
     1
@@ -15323,16 +15225,440 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$0de4ef', $0de4ef);
+            api.createRecord('$d6b315', $d6b315);
           } else {
-            api.reload('$0de4ef', $0de4ef);
+            api.reload('$d6b315', $d6b315);
           }
         }
 
         
       }
     })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/page5.vue":[function(require,module,exports) {
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/walk.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Ok Ok tu es un bobo écolo, maintenant choisis ton allure :"
+    };
+  }
+};
+exports.default = _default;
+        var $94d6e3 = exports.default || module.exports;
+      
+      if (typeof $94d6e3 === 'function') {
+        $94d6e3 = $94d6e3.options;
+      }
+    
+        /* template */
+        Object.assign($94d6e3, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/sewage" } }, [
+        _vm._v("Je cours comme Usain Bolt")
+      ]),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/subway" } }, [
+        _vm._v("Je préfère marcher j'ai mis mes chaussures de ville")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$94d6e3', $94d6e3);
+          } else {
+            api.reload('$94d6e3', $94d6e3);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/catacombs.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Il paraît que des gens s'y perdent.."
+    };
+  }
+};
+exports.default = _default;
+        var $ccef0b = exports.default || module.exports;
+      
+      if (typeof $ccef0b === 'function') {
+        $ccef0b = $ccef0b.options;
+      }
+    
+        /* template */
+        Object.assign($ccef0b, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/denfert" } }, [
+        _vm._v("Gauche, j'ai une bonne intuition")
+      ]),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/lose" } }, [
+        _vm._v("Droite, je suis droitié")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$ccef0b', $ccef0b);
+          } else {
+            api.reload('$ccef0b', $ccef0b);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/change.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "L'été le métro c'est un vrai four! Prends un de ces deux accessoires pour te fabriquer un éventaille :"
+    };
+  }
+};
+exports.default = _default;
+        var $f8bafb = exports.default || module.exports;
+      
+      if (typeof $f8bafb === 'function') {
+        $f8bafb = $f8bafb.options;
+      }
+    
+        /* template */
+        Object.assign($f8bafb, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c(
+        "router-link",
+        { staticClass: "button", attrs: { to: "/republique" } },
+        [_vm._v("Métro News")]
+      ),
+      _vm._v(" "),
+      _c(
+        "router-link",
+        { staticClass: "button", attrs: { to: "/republique" } },
+        [_vm._v("Carte de Paris")]
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$f8bafb', $f8bafb);
+          } else {
+            api.reload('$f8bafb', $f8bafb);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/chatelet.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Châtelet c'est un vrai labyrinthe ! Tu n'as plus qu'à suivre ton instinct ..."
+    };
+  }
+};
+exports.default = _default;
+        var $2bbe62 = exports.default || module.exports;
+      
+      if (typeof $2bbe62 === 'function') {
+        $2bbe62 = $2bbe62.options;
+      }
+    
+        /* template */
+        Object.assign($2bbe62, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/change" } }, [
+        _vm._v("Gauche")
+      ]),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/right" } }, [
+        _vm._v("Droite")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$2bbe62', $2bbe62);
+          } else {
+            api.reload('$2bbe62', $2bbe62);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/docks.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Oulala! Tu passes par les quais, ca devient galère avec tous ces pavés..."
+    };
+  }
+};
+exports.default = _default;
+        var $9657fa = exports.default || module.exports;
+      
+      if (typeof $9657fa === 'function') {
+        $9657fa = $9657fa.options;
+      }
+    
+        /* template */
+        Object.assign($9657fa, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/seine" } }, [
+        _vm._v("Continuer en trotinette")
+      ]),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/chatelet" } }, [
+        _vm._v("S'arrêter et marcher")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$9657fa', $9657fa);
+          } else {
+            api.reload('$9657fa', $9657fa);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/lose.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15350,19 +15676,855 @@ exports.default = void 0;
 var _default = {
   data: function data() {
     return {
-      message: "Arrivée"
+      message: "Tu as perdu tu t'es fait pipi dessus"
     };
   }
 };
 exports.default = _default;
-        var $76d03a = exports.default || module.exports;
+        var $7c41fa = exports.default || module.exports;
       
-      if (typeof $76d03a === 'function') {
-        $76d03a = $76d03a.options;
+      if (typeof $7c41fa === 'function') {
+        $7c41fa = $7c41fa.options;
       }
     
         /* template */
-        Object.assign($76d03a, (function () {
+        Object.assign($7c41fa, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/Home" } }, [
+        _vm._v("Recommencer")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$7c41fa', $7c41fa);
+          } else {
+            api.reload('$7c41fa', $7c41fa);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/republique.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Mince on est samedi.. Il y a une manifestation à republique! Le metro ferme, tu es obligé de sortir:"
+    };
+  }
+};
+exports.default = _default;
+        var $8cb073 = exports.default || module.exports;
+      
+      if (typeof $8cb073 === 'function') {
+        $8cb073 = $8cb073.options;
+      }
+    
+        /* template */
+        Object.assign($8cb073, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/lose" } }, [
+        _vm._v("Contourner la foule")
+      ]),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/surf" } }, [
+        _vm._v("Affronter les gilets jaune")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$8cb073', $8cb073);
+          } else {
+            api.reload('$8cb073', $8cb073);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/right.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Association"
+    };
+  }
+};
+exports.default = _default;
+        var $be648e = exports.default || module.exports;
+      
+      if (typeof $be648e === 'function') {
+        $be648e = $be648e.options;
+      }
+    
+        /* template */
+        Object.assign($be648e, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c(
+        "router-link",
+        { staticClass: "button", attrs: { to: "/republique" } },
+        [_vm._v("Ecouter")]
+      ),
+      _vm._v(" "),
+      _c(
+        "router-link",
+        { staticClass: "button", attrs: { to: "/republique" } },
+        [_vm._v("Piquer le skate du gamin à côté")]
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$be648e', $be648e);
+          } else {
+            api.reload('$be648e', $be648e);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/seine.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Catastrophe! Tu es tombé dans la seine! Le courant est très fort. Cette échelle est ta seule chance de t'en sortir, choisis le bon barreau pour t'appuyer !"
+    };
+  }
+};
+exports.default = _default;
+        var $3d4653 = exports.default || module.exports;
+      
+      if (typeof $3d4653 === 'function') {
+        $3d4653 = $3d4653.options;
+      }
+    
+        /* template */
+        Object.assign($3d4653, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/station" } }, [
+        _vm._v("Premier")
+      ]),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/lose" } }, [
+        _vm._v("Deuxième")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$3d4653', $3d4653);
+          } else {
+            api.reload('$3d4653', $3d4653);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/sewage.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "OUTCH! Tu n'as pas fait attention et tu es tombé dans une bouche d'égout:"
+    };
+  }
+};
+exports.default = _default;
+        var $beca86 = exports.default || module.exports;
+      
+      if (typeof $beca86 === 'function') {
+        $beca86 = $beca86.options;
+      }
+    
+        /* template */
+        Object.assign($beca86, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c(
+        "router-link",
+        { staticClass: "button", attrs: { to: "/catacombs" } },
+        [_vm._v("Je continue dans les catacombes")]
+      ),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/start" } }, [
+        _vm._v("Je grimpe par l'échelle, ça pu ici")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$beca86', $beca86);
+          } else {
+            api.reload('$beca86', $beca86);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/station.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Bravo! Le courant t'as fait gagner du temps, tu es bien arrivé au métro et tu as même gagné des stations"
+    };
+  }
+};
+exports.default = _default;
+        var $716d85 = exports.default || module.exports;
+      
+      if (typeof $716d85 === 'function') {
+        $716d85 = $716d85.options;
+      }
+    
+        /* template */
+        Object.assign($716d85, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/chatelet" } }, [
+        _vm._v("Fonce !")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$716d85', $716d85);
+          } else {
+            api.reload('$716d85', $716d85);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/subway.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Tu es arrivé au métro pour rejoindre Chatelet tu as le choix"
+    };
+  }
+};
+exports.default = _default;
+        var $5e0a2b = exports.default || module.exports;
+      
+      if (typeof $5e0a2b === 'function') {
+        $5e0a2b = $5e0a2b.options;
+      }
+    
+        /* template */
+        Object.assign($5e0a2b, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/wagon" } }, [
+        _vm._v("Direct")
+      ]),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/chatelet" } }, [
+        _vm._v("Avec hangement")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$5e0a2b', $5e0a2b);
+          } else {
+            api.reload('$5e0a2b', $5e0a2b);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/surf.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Trop fort! À l'aide de ta planche tu as réussi à surfer sur toute la foule! Il ne te reste plus beaucoup de temps, à toi de choisir:"
+    };
+  }
+};
+exports.default = _default;
+        var $5474e5 = exports.default || module.exports;
+      
+      if (typeof $5474e5 === 'function') {
+        $5474e5 = $5474e5.options;
+      }
+    
+        /* template */
+        Object.assign($5474e5, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/taxi" } }, [
+        _vm._v("Taxi")
+      ]),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/uber" } }, [
+        _vm._v("Uber")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$5474e5', $5474e5);
+          } else {
+            api.reload('$5474e5', $5474e5);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/taxi.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Tu n'as que 15€, le texi ne peux pas t'emmener plus loin. Tu décides de prendre un vélib mais tu te fais klaxonner par toutes les voitures"
+    };
+  }
+};
+exports.default = _default;
+        var $89df7e = exports.default || module.exports;
+      
+      if (typeof $89df7e === 'function') {
+        $89df7e = $89df7e.options;
+      }
+    
+        /* template */
+        Object.assign($89df7e, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/lose" } }, [
+        _vm._v("Pas le choix, je ralentis")
+      ]),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/truck" } }, [
+        _vm._v("J'en peux plus, je prends le risque")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$89df7e', $89df7e);
+          } else {
+            api.reload('$89df7e', $89df7e);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/wagon.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "ecouteurs ?"
+    };
+  }
+};
+exports.default = _default;
+        var $0db076 = exports.default || module.exports;
+      
+      if (typeof $0db076 === 'function') {
+        $0db076 = $0db076.options;
+      }
+    
+        /* template */
+        Object.assign($0db076, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/lose" } }, [
+        _vm._v("Oui")
+      ]),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/subway" } }, [
+        _vm._v("Non")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$0db076', $0db076);
+          } else {
+            api.reload('$0db076', $0db076);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/win.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Tu as gagné ! Vas te soulager dans les toilettes et recommence !"
+    };
+  }
+};
+exports.default = _default;
+        var $2b8e3c = exports.default || module.exports;
+      
+      if (typeof $2b8e3c === 'function') {
+        $2b8e3c = $2b8e3c.options;
+      }
+    
+        /* template */
+        Object.assign($2b8e3c, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -15376,7 +16538,7 @@ exports.default = _default;
       _c("br"),
       _vm._v(" "),
       _c("router-link", { staticClass: "button", attrs: { to: "/home" } }, [
-        _vm._v("Restart")
+        _vm._v("Je veux battre mon record")
       ])
     ],
     1
@@ -15402,16 +16564,100 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$76d03a', $76d03a);
+            api.createRecord('$2b8e3c', $2b8e3c);
           } else {
-            api.reload('$76d03a', $76d03a);
+            api.reload('$2b8e3c', $2b8e3c);
           }
         }
 
         
       }
     })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/page6.vue":[function(require,module,exports) {
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/scooter.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "La trotinette c'est dangeureux! Où veux-tu rouler ?"
+    };
+  }
+};
+exports.default = _default;
+        var $93e39a = exports.default || module.exports;
+      
+      if (typeof $93e39a === 'function') {
+        $93e39a = $93e39a.options;
+      }
+    
+        /* template */
+        Object.assign($93e39a, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/docks" } }, [
+        _vm._v("Route")
+      ]),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/sewage" } }, [
+        _vm._v("Trottoir")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$93e39a', $93e39a);
+          } else {
+            api.reload('$93e39a', $93e39a);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/denfert.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15429,19 +16675,19 @@ exports.default = void 0;
 var _default = {
   data: function data() {
     return {
-      message: "Piège mortel"
+      message: "Tu sors à denfert où tu prends le métro jusqu'à chatelet, quel raccourci !"
     };
   }
 };
 exports.default = _default;
-        var $b0a2eb = exports.default || module.exports;
+        var $590819 = exports.default || module.exports;
       
-      if (typeof $b0a2eb === 'function') {
-        $b0a2eb = $b0a2eb.options;
+      if (typeof $590819 === 'function') {
+        $590819 = $590819.options;
       }
     
         /* template */
-        Object.assign($b0a2eb, (function () {
+        Object.assign($590819, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -15454,8 +16700,8 @@ exports.default = _default;
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
-      _c("router-link", { staticClass: "button", attrs: { to: "/home" } }, [
-        _vm._v("LOSE")
+      _c("router-link", { staticClass: "button", attrs: { to: "/chatelet" } }, [
+        _vm._v("Je fonce !!!")
       ])
     ],
     1
@@ -15481,10 +16727,94 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$b0a2eb', $b0a2eb);
+            api.createRecord('$590819', $590819);
           } else {
-            api.reload('$b0a2eb', $b0a2eb);
->>>>>>> Stashed changes
+            api.reload('$590819', $590819);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/truck.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Génial! Tu es un génie et rien ne te fais peur! Tu arrives enfin à destination."
+    };
+  }
+};
+exports.default = _default;
+        var $5ed70a = exports.default || module.exports;
+      
+      if (typeof $5ed70a === 'function') {
+        $5ed70a = $5ed70a.options;
+      }
+    
+        /* template */
+        Object.assign($5ed70a, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/win" } }, [
+        _vm._v("carte")
+      ]),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/lose" } }, [
+        _vm._v("Pas carte")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$5ed70a', $5ed70a);
+          } else {
+            api.reload('$5ed70a', $5ed70a);
           }
         }
 
@@ -15505,7 +16835,47 @@ var _vueRouter = _interopRequireDefault(require("vue-router"));
 
 var _Home = _interopRequireDefault(require("./components/Home.vue"));
 
-var _Page = _interopRequireDefault(require("./components/Page.vue"));
+var _accessories = _interopRequireDefault(require("./components/accessories.vue"));
+
+var _start = _interopRequireDefault(require("./components/start.vue"));
+
+var _walk = _interopRequireDefault(require("./components/walk.vue"));
+
+var _catacombs = _interopRequireDefault(require("./components/catacombs.vue"));
+
+var _change = _interopRequireDefault(require("./components/change.vue"));
+
+var _chatelet = _interopRequireDefault(require("./components/chatelet.vue"));
+
+var _docks = _interopRequireDefault(require("./components/docks.vue"));
+
+var _lose = _interopRequireDefault(require("./components/lose.vue"));
+
+var _republique = _interopRequireDefault(require("./components/republique.vue"));
+
+var _right = _interopRequireDefault(require("./components/right.vue"));
+
+var _seine = _interopRequireDefault(require("./components/seine.vue"));
+
+var _sewage = _interopRequireDefault(require("./components/sewage.vue"));
+
+var _station = _interopRequireDefault(require("./components/station.vue"));
+
+var _subway = _interopRequireDefault(require("./components/subway.vue"));
+
+var _surf = _interopRequireDefault(require("./components/surf.vue"));
+
+var _taxi = _interopRequireDefault(require("./components/taxi.vue"));
+
+var _wagon = _interopRequireDefault(require("./components/wagon.vue"));
+
+var _win = _interopRequireDefault(require("./components/win.vue"));
+
+var _scooter = _interopRequireDefault(require("./components/scooter.vue"));
+
+var _denfert = _interopRequireDefault(require("./components/denfert.vue"));
+
+var _truck = _interopRequireDefault(require("./components/truck.vue"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -15519,111 +16889,89 @@ var router = new _vueRouter.default({
     name: 'home',
     component: _Home.default
   }, {
-<<<<<<< Updated upstream
-    path: '/page',
-    name: 'page',
-    component: _Page.default
-=======
     path: '/accessories',
     name: 'accessories',
-    component: accessories
+    component: _accessories.default
   }, {
     path: '/start',
     name: 'start',
-    component: start
+    component: _start.default
   }, {
     path: '/walk',
     name: 'walk',
-    component: walk
-  }, {
-    path: '/run',
-    name: 'run',
-    component: run
+    component: _walk.default
   }, {
     path: '/docks',
     name: 'docks',
-    component: docks
+    component: _docks.default
   }, {
     path: '/sewage',
     name: 'sewage',
-    component: sewage
+    component: _sewage.default
   }, {
     path: '/subway',
     name: 'subway',
-    component: subway
+    component: _subway.default
   }, {
     path: '/chatelet',
     name: 'chatelet',
-    component: chatelet
+    component: _chatelet.default
   }, {
     path: '/wagon',
     name: 'wagon',
-    component: wagon
+    component: _wagon.default
   }, {
     path: '/seine',
     name: 'seine',
-    component: seine
+    component: _seine.default
   }, {
     path: '/catacombs',
     name: 'catacombs',
-    component: catacombs
+    component: _catacombs.default
   }, {
     path: '/denfert',
     name: 'denfert',
-    component: denfert
+    component: _denfert.default
   }, {
     path: '/station',
     name: 'station',
-    component: station
+    component: _station.default
   }, {
     path: '/right',
     name: 'right',
-    component: right
-  }, {
-    path: '/left',
-    name: 'left',
-    component: left
+    component: _right.default
   }, {
     path: '/change',
     name: 'change',
-    component: change
+    component: _change.default
   }, {
     path: '/republique',
     name: 'republique',
-    component: republique
-  }, {
-    path: '/avoid',
-    name: 'avoid',
-    component: avoid
+    component: _republique.default
   }, {
     path: '/surf',
     name: 'surf',
-    component: surf
+    component: _surf.default
   }, {
     path: '/taxi',
     name: 'taxi',
-    component: taxi
-  }, {
-    path: '/traffic',
-    name: 'traffic',
-    component: traffic
-  }, {
-    path: '/broke',
-    name: 'broke',
-    component: broke
+    component: _taxi.default
   }, {
     path: '/truck',
     name: 'truck',
-    component: truck
+    component: _truck.default
   }, {
     path: '/lose',
     name: 'lose',
-    component: lose
+    component: _lose.default
   }, {
     path: '/win',
     name: 'win',
-    component: win
->>>>>>> Stashed changes
+    component: _win.default
+  }, {
+    path: '/scooter',
+    name: 'scooter',
+    component: _scooter.default
   }, {
     path: '*',
     redirect: {
@@ -15633,7 +16981,7 @@ var router = new _vueRouter.default({
 });
 var _default = router;
 exports.default = _default;
-},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/Page.vue":"components/Page.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/accessories.vue":"components/accessories.vue","./components/start.vue":"components/start.vue","./components/walk.vue":"components/walk.vue","./components/catacombs.vue":"components/catacombs.vue","./components/change.vue":"components/change.vue","./components/chatelet.vue":"components/chatelet.vue","./components/docks.vue":"components/docks.vue","./components/lose.vue":"components/lose.vue","./components/republique.vue":"components/republique.vue","./components/right.vue":"components/right.vue","./components/seine.vue":"components/seine.vue","./components/sewage.vue":"components/sewage.vue","./components/station.vue":"components/station.vue","./components/subway.vue":"components/subway.vue","./components/surf.vue":"components/surf.vue","./components/taxi.vue":"components/taxi.vue","./components/wagon.vue":"components/wagon.vue","./components/win.vue":"components/win.vue","./components/scooter.vue":"components/scooter.vue","./components/denfert.vue":"components/denfert.vue","./components/truck.vue":"components/truck.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -15747,11 +17095,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-<<<<<<< Updated upstream
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53062" + '/');
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60771" + '/');
->>>>>>> Stashed changes
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54241" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

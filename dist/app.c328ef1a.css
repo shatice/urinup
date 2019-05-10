@@ -140,27 +140,34 @@ input,
 select,
 textarea {
   font-family: "Roboto";
+  background-color: #1a2064;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
 }
 
 .big-header {
-  background-color: #0de595;
-  height: 100vh;
+  margin: 200px auto;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
+  font-size: 50px;
   color: white;
+  width: 75%;
 }
 
 .button {
-  color: #0de595;
+  color: #1a2064;
   text-decoration: none;
   background: white;
   padding: 5px;
   border-radius: 5px;
   display: inline-block;
   border: none;
+  margin-top: 10px;
+  font-size: 35px;
 }
 
 /*# sourceMappingURL=/app.c328ef1a.css.map */

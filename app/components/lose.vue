@@ -2,7 +2,7 @@
   <div class="big-header">
     <h1>{{ message }}</h1>
     <br>
-    <router-link class="button" to="/home">Restart</router-link>
+    <router-link class="button" to="/Home">Recommencer</router-link>
   </div>
 </template>
 
@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      message: "Arrivée"
+      message: "Tu as perdu tu t'es fait pipi dessus"
     };
   }
 };

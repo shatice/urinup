@@ -2,7 +2,27 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import Home from './components/Home.vue';
-import Page from './components/Page.vue';
+import accessories from './components/accessories.vue';
+import start from './components/start.vue';
+import walk from './components/walk.vue';
+import catacombs from './components/catacombs.vue';
+import change from './components/change.vue';
+import chatelet from './components/chatelet.vue';
+import docks from './components/docks.vue';
+import lose from './components/lose.vue';
+import republique from './components/republique.vue';
+import right from './components/right.vue';
+import seine from './components/seine.vue';
+import sewage from './components/sewage.vue';
+import station from './components/station.vue';
+import subway from './components/subway.vue';
+import surf from './components/surf.vue';
+import taxi from './components/taxi.vue';
+import wagon from './components/wagon.vue';
+import win from './components/win.vue';
+import scooter from './components/scooter.vue';
+import denfert from './components/denfert.vue';
+import truck from './components/truck.vue';
 
 Vue.use(Router);
 
@@ -29,11 +49,6 @@ const router = new Router({
       path: '/walk',
       name: 'walk',
       component: walk,
-    },
-    {
-      path: '/run',
-      name: 'run',
-      component: run,
     },
     {
       path: '/docks',
@@ -86,11 +101,6 @@ const router = new Router({
       component: right,
     },
     {
-      path: '/left',
-      name: 'left',
-      component: left,
-    },
-    {
       path: '/change',
       name: 'change',
       component: change,
@@ -101,11 +111,6 @@ const router = new Router({
       component: republique,
     },
     {
-      path: '/avoid',
-      name: 'avoid',
-      component: avoid,
-    },
-    {
       path: '/surf',
       name: 'surf',
       component: surf,
@@ -114,16 +119,6 @@ const router = new Router({
       path: '/taxi',
       name: 'taxi',
       component: taxi,
-    },
-    {
-      path: '/traffic',
-      name: 'traffic',
-      component: traffic,
-    },
-    {
-      path: '/broke',
-      name: 'broke',
-      component: broke,
     },
     {
       path: '/truck',
@@ -139,6 +134,11 @@ const router = new Router({
       path: '/win',
       name: 'win',
       component: win,
+    },
+    {
+      path: '/scooter',
+      name: 'scooter',
+      component: scooter,
     },
     {
       path: '*',

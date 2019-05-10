@@ -2,7 +2,7 @@
   <div class="big-header">
     <h1>{{ message }}</h1>
     <br>
-    <router-link class="button" to="/chatelet">Je fonce !!!</router-link>
+    <router-link class="button" to="/home">Je veux battre mon record</router-link>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       message:
-        "Tu sors à denfert où tu prends le métro jusqu'à chatelet, quel raccourci !"
+        "Tu as gagné ! Vas te soulager dans les toilettes et recommence !"
     };
   }
 };

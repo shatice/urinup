@@ -2,8 +2,8 @@
   <div class="big-header">
     <h1>{{ message }}</h1>
     <br>
-    <router-link class="button" to="/page2">A gauche</router-link>
-    <router-link class="button" to="/page6">A droite</router-link>
+    <router-link class="button" to="/sewage">Je cours comme Usain Bolt</router-link>
+    <router-link class="button" to="/subway">Je préfère marcher j'ai mis mes chaussures de ville</router-link>
   </div>
 </template>
 
@@ -11,7 +11,7 @@
 export default {
   data() {
     return {
-      message: "Chemin dangereux"
+      message: "Ok Ok tu es un bobo écolo, maintenant choisis ton allure :"
     };
   }
 };
