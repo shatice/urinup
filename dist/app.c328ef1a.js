@@ -15023,9 +15023,17 @@ exports.default = _default;
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
+<<<<<<< Updated upstream
       _c("router-link", { staticClass: "button", attrs: { to: "/page" } }, [
         _vm._v("Go to Page")
       ])
+=======
+      _c(
+        "router-link",
+        { staticClass: "button", attrs: { to: "/accessories" } },
+        [_vm._v("Continue")]
+      )
+>>>>>>> Stashed changes
     ],
     1
   )
@@ -15074,6 +15082,7 @@ exports.default = void 0;
 //
 //
 //
+<<<<<<< Updated upstream
 var _default = {};
 exports.default = _default;
         var $5c93bc = exports.default || module.exports;
@@ -15084,6 +15093,108 @@ exports.default = _default;
     
         /* template */
         Object.assign($5c93bc, (function () {
+=======
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Où aller ?"
+    };
+  }
+};
+exports.default = _default;
+        var $3b6574 = exports.default || module.exports;
+      
+      if (typeof $3b6574 === 'function') {
+        $3b6574 = $3b6574.options;
+      }
+    
+        /* template */
+        Object.assign($3b6574, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/page3" } }, [
+        _vm._v("A gauche")
+      ]),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/page4" } }, [
+        _vm._v("A droite")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$3b6574', $3b6574);
+          } else {
+            api.reload('$3b6574', $3b6574);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/page3.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Chemin tranquille"
+    };
+  }
+};
+exports.default = _default;
+        var $1e9f7e = exports.default || module.exports;
+      
+      if (typeof $1e9f7e === 'function') {
+        $1e9f7e = $1e9f7e.options;
+      }
+    
+        /* template */
+        Object.assign($1e9f7e, (function () {
+>>>>>>> Stashed changes
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -15123,9 +15234,257 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
+<<<<<<< Updated upstream
             api.createRecord('$5c93bc', $5c93bc);
           } else {
             api.reload('$5c93bc', $5c93bc);
+=======
+            api.createRecord('$1e9f7e', $1e9f7e);
+          } else {
+            api.reload('$1e9f7e', $1e9f7e);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/page4.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Chemin dangereux"
+    };
+  }
+};
+exports.default = _default;
+        var $0de4ef = exports.default || module.exports;
+      
+      if (typeof $0de4ef === 'function') {
+        $0de4ef = $0de4ef.options;
+      }
+    
+        /* template */
+        Object.assign($0de4ef, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/page2" } }, [
+        _vm._v("A gauche")
+      ]),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/page6" } }, [
+        _vm._v("A droite")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$0de4ef', $0de4ef);
+          } else {
+            api.reload('$0de4ef', $0de4ef);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/page5.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Arrivée"
+    };
+  }
+};
+exports.default = _default;
+        var $76d03a = exports.default || module.exports;
+      
+      if (typeof $76d03a === 'function') {
+        $76d03a = $76d03a.options;
+      }
+    
+        /* template */
+        Object.assign($76d03a, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/home" } }, [
+        _vm._v("Restart")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$76d03a', $76d03a);
+          } else {
+            api.reload('$76d03a', $76d03a);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/page6.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "Piège mortel"
+    };
+  }
+};
+exports.default = _default;
+        var $b0a2eb = exports.default || module.exports;
+      
+      if (typeof $b0a2eb === 'function') {
+        $b0a2eb = $b0a2eb.options;
+      }
+    
+        /* template */
+        Object.assign($b0a2eb, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/home" } }, [
+        _vm._v("LOSE")
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$b0a2eb', $b0a2eb);
+          } else {
+            api.reload('$b0a2eb', $b0a2eb);
+>>>>>>> Stashed changes
           }
         }
 
@@ -15160,9 +15519,111 @@ var router = new _vueRouter.default({
     name: 'home',
     component: _Home.default
   }, {
+<<<<<<< Updated upstream
     path: '/page',
     name: 'page',
     component: _Page.default
+=======
+    path: '/accessories',
+    name: 'accessories',
+    component: accessories
+  }, {
+    path: '/start',
+    name: 'start',
+    component: start
+  }, {
+    path: '/walk',
+    name: 'walk',
+    component: walk
+  }, {
+    path: '/run',
+    name: 'run',
+    component: run
+  }, {
+    path: '/docks',
+    name: 'docks',
+    component: docks
+  }, {
+    path: '/sewage',
+    name: 'sewage',
+    component: sewage
+  }, {
+    path: '/subway',
+    name: 'subway',
+    component: subway
+  }, {
+    path: '/chatelet',
+    name: 'chatelet',
+    component: chatelet
+  }, {
+    path: '/wagon',
+    name: 'wagon',
+    component: wagon
+  }, {
+    path: '/seine',
+    name: 'seine',
+    component: seine
+  }, {
+    path: '/catacombs',
+    name: 'catacombs',
+    component: catacombs
+  }, {
+    path: '/denfert',
+    name: 'denfert',
+    component: denfert
+  }, {
+    path: '/station',
+    name: 'station',
+    component: station
+  }, {
+    path: '/right',
+    name: 'right',
+    component: right
+  }, {
+    path: '/left',
+    name: 'left',
+    component: left
+  }, {
+    path: '/change',
+    name: 'change',
+    component: change
+  }, {
+    path: '/republique',
+    name: 'republique',
+    component: republique
+  }, {
+    path: '/avoid',
+    name: 'avoid',
+    component: avoid
+  }, {
+    path: '/surf',
+    name: 'surf',
+    component: surf
+  }, {
+    path: '/taxi',
+    name: 'taxi',
+    component: taxi
+  }, {
+    path: '/traffic',
+    name: 'traffic',
+    component: traffic
+  }, {
+    path: '/broke',
+    name: 'broke',
+    component: broke
+  }, {
+    path: '/truck',
+    name: 'truck',
+    component: truck
+  }, {
+    path: '/lose',
+    name: 'lose',
+    component: lose
+  }, {
+    path: '/win',
+    name: 'win',
+    component: win
+>>>>>>> Stashed changes
   }, {
     path: '*',
     redirect: {
@@ -15286,7 +15747,11 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+<<<<<<< Updated upstream
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "53062" + '/');
+=======
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60771" + '/');
+>>>>>>> Stashed changes
 
   ws.onmessage = function (event) {
     checkedAssets = {};
