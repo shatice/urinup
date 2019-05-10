@@ -140,6 +140,11 @@ input,
 select,
 textarea {
   font-family: "Roboto";
+  background-color: #1a2064;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
 }
 
 body {
@@ -149,23 +154,39 @@ body {
 }
 
 .big-header {
+<<<<<<< HEAD
   height: 100vh;
+=======
+  margin: 200px auto;
+>>>>>>> cfd031b319231c091321eebda0cfc5600762c261
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
+  font-size: 50px;
   color: white;
+  width: 75%;
 }
 
 .button {
+<<<<<<< HEAD
   color: #3c4b5c;
+=======
+  color: #1a2064;
+>>>>>>> cfd031b319231c091321eebda0cfc5600762c261
   text-decoration: none;
   background: white;
   padding: 5px;
   border-radius: 5px;
+<<<<<<< HEAD
   display: flex;
   margin-bottom: 10px;
+=======
+  display: inline-block;
+  border: none;
+  margin-top: 10px;
+  font-size: 35px;
+>>>>>>> cfd031b319231c091321eebda0cfc5600762c261
 }
 
 /*# sourceMappingURL=/app.c328ef1a.css.map */

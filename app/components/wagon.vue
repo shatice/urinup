@@ -2,7 +2,8 @@
   <div class="big-header">
     <h1>{{ message }}</h1>
     <br>
-    <router-link class="button" to="/accessories">Continue</router-link>
+    <router-link class="button" to="/lose">Oui</router-link>
+    <router-link class="button" to="/subway">Non</router-link>
   </div>
 </template>
 
@@ -10,7 +11,7 @@
 export default {
   data() {
     return {
-      message: "OUPS, CA URGE !!!"
+      message: "ecouteurs ?"
     };
   }
 };
