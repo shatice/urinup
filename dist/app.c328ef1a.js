@@ -16736,91 +16736,6 @@ render._withStripped = true
         
       }
     })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/truck.vue":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = {
-  data: function data() {
-    return {
-      message: "Génial! Tu es un génie et rien ne te fais peur! Tu arrives enfin à destination."
-    };
-  }
-};
-exports.default = _default;
-        var $5ed70a = exports.default || module.exports;
-      
-      if (typeof $5ed70a === 'function') {
-        $5ed70a = $5ed70a.options;
-      }
-    
-        /* template */
-        Object.assign($5ed70a, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "big-header" },
-    [
-      _c("h1", [_vm._v(_vm._s(_vm.message))]),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("router-link", { staticClass: "button", attrs: { to: "/win" } }, [
-        _vm._v("carte")
-      ]),
-      _vm._v(" "),
-      _c("router-link", { staticClass: "button", attrs: { to: "/lose" } }, [
-        _vm._v("Pas carte")
-      ])
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$5ed70a', $5ed70a);
-          } else {
-            api.reload('$5ed70a', $5ed70a);
-          }
-        }
-
-        
-      }
-    })();
 },{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"router.js":[function(require,module,exports) {
 "use strict";
 
@@ -16874,8 +16789,6 @@ var _win = _interopRequireDefault(require("./components/win.vue"));
 var _scooter = _interopRequireDefault(require("./components/scooter.vue"));
 
 var _denfert = _interopRequireDefault(require("./components/denfert.vue"));
-
-var _truck = _interopRequireDefault(require("./components/truck.vue"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -16959,7 +16872,7 @@ var router = new _vueRouter.default({
   }, {
     path: '/truck',
     name: 'truck',
-    component: _truck.default
+    component: truck
   }, {
     path: '/lose',
     name: 'lose',
@@ -16981,7 +16894,7 @@ var router = new _vueRouter.default({
 });
 var _default = router;
 exports.default = _default;
-},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/accessories.vue":"components/accessories.vue","./components/start.vue":"components/start.vue","./components/walk.vue":"components/walk.vue","./components/catacombs.vue":"components/catacombs.vue","./components/change.vue":"components/change.vue","./components/chatelet.vue":"components/chatelet.vue","./components/docks.vue":"components/docks.vue","./components/lose.vue":"components/lose.vue","./components/republique.vue":"components/republique.vue","./components/right.vue":"components/right.vue","./components/seine.vue":"components/seine.vue","./components/sewage.vue":"components/sewage.vue","./components/station.vue":"components/station.vue","./components/subway.vue":"components/subway.vue","./components/surf.vue":"components/surf.vue","./components/taxi.vue":"components/taxi.vue","./components/wagon.vue":"components/wagon.vue","./components/win.vue":"components/win.vue","./components/scooter.vue":"components/scooter.vue","./components/denfert.vue":"components/denfert.vue","./components/truck.vue":"components/truck.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/accessories.vue":"components/accessories.vue","./components/start.vue":"components/start.vue","./components/walk.vue":"components/walk.vue","./components/catacombs.vue":"components/catacombs.vue","./components/change.vue":"components/change.vue","./components/chatelet.vue":"components/chatelet.vue","./components/docks.vue":"components/docks.vue","./components/lose.vue":"components/lose.vue","./components/republique.vue":"components/republique.vue","./components/right.vue":"components/right.vue","./components/seine.vue":"components/seine.vue","./components/sewage.vue":"components/sewage.vue","./components/station.vue":"components/station.vue","./components/subway.vue":"components/subway.vue","./components/surf.vue":"components/surf.vue","./components/taxi.vue":"components/taxi.vue","./components/wagon.vue":"components/wagon.vue","./components/win.vue":"components/win.vue","./components/scooter.vue":"components/scooter.vue","./components/denfert.vue":"components/denfert.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -17095,7 +17008,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49360" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56062" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
