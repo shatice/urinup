@@ -49,6 +49,213 @@
           "path": 7
         }
       ]
+    },
+    {
+      "id": 5,
+      "content": "T'es dans le métro",
+      "actions": [
+        {
+          "label": "direct",
+          "path": 8
+        },
+        {
+          "label": "Changements",
+          "path": 9
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "content": "T'es sur les quais",
+      "actions": [
+        {
+          "label": "continuer",
+          "path": 10
+        },
+        {
+          "label": "Marcher",
+          "path": 9
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "content": "T'es dans les égouts",
+      "actions": [
+        {
+          "label": "continuer",
+          "path": 11
+        },
+        {
+          "label": "Grimper",
+          "path": 1
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "content": "T'es dans le wagon",
+      "actions": [
+        {
+          "label": "ecouteurs",
+          "path": 12
+        },
+        {
+          "label": "Pas ecouteurs",
+          "path": 13
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "content": "T'es à chatelet",
+      "actions": [
+        {
+          "label": "gauche",
+          "path": 13
+        },
+        {
+          "label": "Droite",
+          "path": 14
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "content": "T'es dans la seine",
+      "actions": [
+        {
+          "label": "barreau 1",
+          "path": 9
+        },
+        {
+          "label": "barreau 2",
+          "path": 16
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "content": "T'es dans les catacombes",
+      "actions": [
+        {
+          "label": "gauche",
+          "path": 9
+        },
+        {
+          "label": "droite",
+          "path": 18
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "content": "game over",
+      "actions": [
+        {
+          "label": "recommencer",
+          "path": 1
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "content": "T'es dans le wagon mais t'as trop chaud",
+      "actions": [
+        {
+          "label": "eau",
+          "path": 19
+        },
+        {
+          "label": "carte",
+          "path": 19
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "content": "T'es au forum",
+      "actions": [
+        {
+          "label": "ecouter la dame de l'asso",
+          "path": 19
+        },
+        {
+          "label": "piquer un skate",
+          "path": 19
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "content": "Game over",
+      "actions": [
+        {
+          "label": "win",
+          "path": 1
+        },
+        {
+          "label": "lose",
+          "path": 1
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "content": "game over",
+      "actions": [
+        {
+          "label": "win",
+          "path": 1
+        },
+        {
+          "label": "lose",
+          "path": 1
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "content": "t'es a république",
+      "actions": [
+        {
+          "label": "contourner",
+          "path": 20
+        },
+        {
+          "label": "affronter",
+          "path": 21
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "content": "game over",
+      "actions": [
+        {
+          "label": "lose",
+          "path": 1
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "content": "Tu surf sur les gilets jaunes, il te reste 5 km",
+      "actions": [
+        {
+          "label": "taxi",
+          "path": 23
+        },
+        {
+          "label": "uber",
+          "path": 24
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "content": "choisis ton personnage"
     }
   ]
 }

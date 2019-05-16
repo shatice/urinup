@@ -166,6 +166,28 @@ textarea {
 
 body {
   color: black;
+  position: relative;
+}
+
+div {
+  top: 100px;
+  width: 800px;
+  margin: auto 0;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 35px;
+  color: #d50838;
+  margin-bottom: 20px;
+}
+
+ul {
+  color: #212188;
+  font-size: 30px;
+}
+ul li {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=/app.c328ef1a.css.map */

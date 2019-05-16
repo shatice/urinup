@@ -15061,39 +15061,7 @@ render._withStripped = true
         
       }
     })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"services/countService.js":[function(require,module,exports) {
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-var CountService =
-/*#__PURE__*/
-function () {
-  function CountService() {
-    _classCallCheck(this, CountService);
-
-    this.count = 0;
-  }
-
-  _createClass(CountService, [{
-    key: "increment",
-    value: function increment() {
-      this.count++;
-    }
-  }, {
-    key: "value",
-    value: function value() {
-      return this.count;
-    }
-  }]);
-
-  return CountService;
-}();
-
-module.exports = new CountService();
-},{}],"data.json":[function(require,module,exports) {
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"data.json":[function(require,module,exports) {
 module.exports = {
   "steps": [{
     "id": 1,
@@ -15131,6 +15099,153 @@ module.exports = {
       "label": "Je prend le trottoir, j'suis un vrai",
       "path": 7
     }]
+  }, {
+    "id": 5,
+    "content": "T'es dans le métro",
+    "actions": [{
+      "label": "direct",
+      "path": 8
+    }, {
+      "label": "Changements",
+      "path": 9
+    }]
+  }, {
+    "id": 6,
+    "content": "T'es sur les quais",
+    "actions": [{
+      "label": "continuer",
+      "path": 10
+    }, {
+      "label": "Marcher",
+      "path": 9
+    }]
+  }, {
+    "id": 7,
+    "content": "T'es dans les égouts",
+    "actions": [{
+      "label": "continuer",
+      "path": 11
+    }, {
+      "label": "Grimper",
+      "path": 1
+    }]
+  }, {
+    "id": 8,
+    "content": "T'es dans le wagon",
+    "actions": [{
+      "label": "ecouteurs",
+      "path": 12
+    }, {
+      "label": "Pas ecouteurs",
+      "path": 13
+    }]
+  }, {
+    "id": 9,
+    "content": "T'es à chatelet",
+    "actions": [{
+      "label": "gauche",
+      "path": 13
+    }, {
+      "label": "Droite",
+      "path": 14
+    }]
+  }, {
+    "id": 10,
+    "content": "T'es dans la seine",
+    "actions": [{
+      "label": "barreau 1",
+      "path": 9
+    }, {
+      "label": "barreau 2",
+      "path": 16
+    }]
+  }, {
+    "id": 11,
+    "content": "T'es dans les catacombes",
+    "actions": [{
+      "label": "gauche",
+      "path": 9
+    }, {
+      "label": "droite",
+      "path": 18
+    }]
+  }, {
+    "id": 12,
+    "content": "game over",
+    "actions": [{
+      "label": "recommencer",
+      "path": 1
+    }]
+  }, {
+    "id": 13,
+    "content": "T'es dans le wagon mais t'as trop chaud",
+    "actions": [{
+      "label": "eau",
+      "path": 19
+    }, {
+      "label": "carte",
+      "path": 19
+    }]
+  }, {
+    "id": 14,
+    "content": "T'es au forum",
+    "actions": [{
+      "label": "ecouter la dame de l'asso",
+      "path": 19
+    }, {
+      "label": "piquer un skate",
+      "path": 19
+    }]
+  }, {
+    "id": 16,
+    "content": "Game over",
+    "actions": [{
+      "label": "win",
+      "path": 1
+    }, {
+      "label": "lose",
+      "path": 1
+    }]
+  }, {
+    "id": 18,
+    "content": "game over",
+    "actions": [{
+      "label": "win",
+      "path": 1
+    }, {
+      "label": "lose",
+      "path": 1
+    }]
+  }, {
+    "id": 19,
+    "content": "t'es a république",
+    "actions": [{
+      "label": "contourner",
+      "path": 20
+    }, {
+      "label": "affronter",
+      "path": 21
+    }]
+  }, {
+    "id": 20,
+    "content": "game over",
+    "actions": [{
+      "label": "lose",
+      "path": 1
+    }]
+  }, {
+    "id": 21,
+    "content": "Tu surf sur les gilets jaunes, il te reste 5 km",
+    "actions": [{
+      "label": "taxi",
+      "path": 23
+    }, {
+      "label": "uber",
+      "path": 24
+    }]
+  }],
+  "characters": [{
+    "content": "choisis ton personnage"
   }]
 };
 },{}],"components/Game.vue":[function(require,module,exports) {
@@ -15140,8 +15255,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
-var _countService = _interopRequireDefault(require("../services/countService"));
 
 var _data = _interopRequireDefault(require("../data.json"));
 
@@ -15171,7 +15284,6 @@ var _default = {
   watch: {
     "$route.params.id": function $routeParamsId(to, from) {
       this.step = this.getStep();
-      console.log($route.params.id);
     }
   },
   methods: {
@@ -15182,11 +15294,14 @@ var _default = {
         return step.id === parseInt(_this.$route.params.id);
       });
     },
-    doSkip: function doSkip() {
-      this.$router.push({
-        path: "id"
-      });
-      s;
+    doEffects: function doEffects(action) {
+      if (action.path) {
+        this.$router.push({
+          params: {
+            id: action.path
+          }
+        });
+      }
     }
   }
 };
@@ -15215,7 +15330,7 @@ exports.default = _default;
             key: action.path,
             on: {
               click: function($event) {
-                return _vm.doSkip(action)
+                return _vm.doEffects(action)
               }
             }
           },
@@ -15255,7 +15370,7 @@ render._withStripped = true
         
       }
     })();
-},{"../services/countService":"services/countService.js","../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Character.vue":[function(require,module,exports) {
+},{"../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Characters.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15263,7 +15378,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _countService = _interopRequireDefault(require("../services/countService"));
+var _data = _interopRequireDefault(require("../data.json"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -15273,27 +15388,53 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
-      message: "CHOISIS TON CHAR + ACCESSOIR"
+      characters: this.getCharacters()
     };
   }
 };
 exports.default = _default;
-        var $5ef6d1 = exports.default || module.exports;
+        var $292da0 = exports.default || module.exports;
       
-      if (typeof $5ef6d1 === 'function') {
-        $5ef6d1 = $5ef6d1.options;
+      if (typeof $292da0 === 'function') {
+        $292da0 = $292da0.options;
       }
     
         /* template */
-        Object.assign($5ef6d1, (function () {
+        Object.assign($292da0, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("h1", [_vm._v(_vm._s(_vm.message))])])
+  return _c("div", [
+    _c("h1", [_vm._v(_vm._s(_vm.characters.content))]),
+    _vm._v(" "),
+    _c(
+      "ul",
+      _vm._l(_vm.step.actions, function(action) {
+        return _c(
+          "li",
+          {
+            key: action.path,
+            on: {
+              click: function($event) {
+                return _vm.doEffects(action)
+              }
+            }
+          },
+          [_c("div", [_vm._v(_vm._s(action.label))])]
+        )
+      }),
+      0
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -15315,16 +15456,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$5ef6d1', $5ef6d1);
+            api.createRecord('$292da0', $292da0);
           } else {
-            api.reload('$5ef6d1', $5ef6d1);
+            api.reload('$292da0', $292da0);
           }
         }
 
         
       }
     })();
-},{"../services/countService":"services/countService.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"router.js":[function(require,module,exports) {
+},{"../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"router.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15340,7 +15481,7 @@ var _Home = _interopRequireDefault(require("./components/Home.vue"));
 
 var _Game = _interopRequireDefault(require("./components/Game.vue"));
 
-var _Character = _interopRequireDefault(require("./components/Character.vue"));
+var _Characters = _interopRequireDefault(require("./components/Characters.vue"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -15354,9 +15495,9 @@ var router = new _vueRouter.default({
     name: 'home',
     component: _Home.default
   }, {
-    path: '/character',
-    name: 'character',
-    component: _Character.default
+    path: '/characters',
+    name: 'characters',
+    component: _Characters.default
   }, {
     path: '/game/:id',
     name: 'game',
@@ -15370,7 +15511,7 @@ var router = new _vueRouter.default({
 });
 var _default = router;
 exports.default = _default;
-},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/Game.vue":"components/Game.vue","./components/Character.vue":"components/Character.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/Game.vue":"components/Game.vue","./components/Characters.vue":"components/Characters.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -15484,7 +15625,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49479" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57479" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
