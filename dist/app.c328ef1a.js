@@ -15245,7 +15245,16 @@ module.exports = {
     }]
   }],
   "characters": [{
-    "content": "choisis ton personnage"
+    "content": "choisis ton personnage",
+    "actions": [{
+      "class": "parisian",
+      "accessories": "phone",
+      "path": "/game/1"
+    }, {
+      "class": "tourist",
+      "accessories": "map",
+      "path": "/game/1"
+    }]
   }]
 };
 },{}],"components/Game.vue":[function(require,module,exports) {
@@ -15625,7 +15634,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57479" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64201" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

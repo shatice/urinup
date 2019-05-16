@@ -255,7 +255,19 @@
   ],
   "characters": [
     {
-      "content": "choisis ton personnage"
+      "content": "choisis ton personnage",
+      "actions": [
+        {
+          "class": "parisian",
+          "accessories": "phone",
+          "path": "/game/1"
+        },
+        {
+          "class": "tourist",
+          "accessories": "map",
+          "path": "/game/1"
+        }
+      ]
     }
   ]
 }
