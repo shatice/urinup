@@ -1,0 +1,58 @@
+{
+  "steps": [
+
+    {
+      "id": 1 , 
+      "content": "C'est parti ! Tu dois rejoindre au plus vite le métro, tu chois d'y aller...",
+      "actions": [
+        {
+          "label": "En overboard", 
+          "path": 2
+        },
+        {
+          "label": "À pieds", 
+          "path": 3
+        },
+        {
+          "label": "En trotinette", 
+          "path": 4
+        }
+      ]
+    },
+
+    {
+      "id": 2 , 
+      "content": "Oh Oh ! Game Over, en voulant te la péter sur ton overboard tu t'es perdu dans Paris, tu n'as jamais trouvé le métro et tu t'es fais pipi dessus. Dommage !"
+    },
+
+    {
+      "id": 3 , 
+      "content": "Ok ok, à quelle allure veut se déplacer le petit bobo-écolo ?",
+      "actions": [
+        {
+          "label": "Je marche, ça tombe bien j'ai mis mes chassures de ville", 
+          "path": 5
+        },
+        {
+          "label": "Je cours ! (comme Forest)", 
+          "path": 7
+        }
+      ]
+    },
+
+    {
+      "id": 4 , 
+      "content": "Quel courage ! Choisis maintenant ton chemin (à tes risques et périls)",
+      "actions": [
+        {
+          "label": "Je prend la route, easy", 
+          "path": 5
+        },
+        {
+          "label": "Je prend le trottoir, j'suis un vrai", 
+          "path": 7
+        }
+      ]
+    }
+  ]
+}
