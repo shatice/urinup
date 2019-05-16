@@ -2,7 +2,7 @@
   <div>
     <h1>{{ step.content }}</h1>
     <ul>
-      <li v-on:click="doSkip(action)" v-for="action in step.actions" :key="action.path">
+      <li v-on:click="doEffects(action)" v-for="action in step.actions" :key="action.path">
         <div>
           {{ action.label }}
         </div>
@@ -29,15 +29,16 @@ export default {
   watch: {
     '$route.params.id' (to, from) {
       this.step = this.getStep()
-      console.log($route.params.id)
     }
   },
   methods: {
     getStep() {
       return game.steps.find(step => step.id === parseInt(this.$route.params.id))
     },
-    doSkip() {
-      this.$router.push({path:"/home"})
+    doEffects(action) {
+      if (action.path) {
+        this.$router.push({params: {id: action.path}})
+      }
     }
   },
 }
