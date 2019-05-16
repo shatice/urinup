@@ -140,7 +140,7 @@ input,
 select,
 textarea {
   font-family: "Roboto";
-  background-color: #1a2064;
+  background-color: #ffffff;
   text-align: center;
   justify-content: center;
   position: relative;
@@ -154,20 +154,24 @@ textarea {
   flex-wrap: wrap;
   flex-direction: column;
   font-size: 50px;
-  color: white;
+  color: black;
   width: 75%;
 }
 
 .button {
-  color: #1a2064;
+  color: #ffffff;
   text-decoration: none;
-  background: white;
+  background: black;
   padding: 5px;
   border-radius: 5px;
   display: inline-block;
   border: none;
   margin-top: 10px;
   font-size: 35px;
+}
+
+body {
+  color: black;
 }
 
 /*# sourceMappingURL=/app.c328ef1a.css.map */

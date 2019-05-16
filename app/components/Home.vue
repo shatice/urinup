@@ -1,8 +1,6 @@
 <template>
-  <div class="big-header">
+  <div>
     <h1>{{ message }}</h1>
-    <br>
-    <router-link class="button" to="/accessories">Continue</router-link>
   </div>
 </template>
 
@@ -10,7 +8,7 @@
 export default {
   data() {
     return {
-      message: "OUPS, CA URGE !!!"
+      message: "hsh"
     };
   }
 };
