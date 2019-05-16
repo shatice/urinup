@@ -14993,10 +14993,13 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
 var _default = {
   data: function data() {
     return {
-      message: "hsh"
+      message: "INTRO + RÈGLES DU JEU"
     };
   }
 };
@@ -15013,7 +15016,21 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("h1", [_vm._v(_vm._s(_vm.message))])])
+  return _c(
+    "div",
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/game" } }, [
+        _vm._v("Go to Page")
+      ]),
+      _vm._v(" "),
+      _c("br")
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -15044,7 +15061,39 @@ render._withStripped = true
         
       }
     })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"data.json":[function(require,module,exports) {
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"services/countService.js":[function(require,module,exports) {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var CountService =
+/*#__PURE__*/
+function () {
+  function CountService() {
+    _classCallCheck(this, CountService);
+
+    this.count = 0;
+  }
+
+  _createClass(CountService, [{
+    key: "increment",
+    value: function increment() {
+      this.count++;
+    }
+  }, {
+    key: "value",
+    value: function value() {
+      return this.count;
+    }
+  }]);
+
+  return CountService;
+}();
+
+module.exports = new CountService();
+},{}],"data.json":[function(require,module,exports) {
 module.exports = {
   "steps": [{
     "id": 1,
@@ -15092,6 +15141,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _countService = _interopRequireDefault(require("../services/countService"));
+
 var _data = _interopRequireDefault(require("../data.json"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -15133,8 +15184,9 @@ var _default = {
     },
     doSkip: function doSkip() {
       this.$router.push({
-        path: "/home"
+        path: "id"
       });
+      s;
     }
   }
 };
@@ -15203,7 +15255,76 @@ render._withStripped = true
         
       }
     })();
-},{"../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"router.js":[function(require,module,exports) {
+},{"../services/countService":"services/countService.js","../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Character.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _countService = _interopRequireDefault(require("../services/countService"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: "CHOISIS TON CHAR + ACCESSOIR"
+    };
+  }
+};
+exports.default = _default;
+        var $5ef6d1 = exports.default || module.exports;
+      
+      if (typeof $5ef6d1 === 'function') {
+        $5ef6d1 = $5ef6d1.options;
+      }
+    
+        /* template */
+        Object.assign($5ef6d1, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [_c("h1", [_vm._v(_vm._s(_vm.message))])])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$5ef6d1', $5ef6d1);
+          } else {
+            api.reload('$5ef6d1', $5ef6d1);
+          }
+        }
+
+        
+      }
+    })();
+},{"../services/countService":"services/countService.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"router.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15219,6 +15340,8 @@ var _Home = _interopRequireDefault(require("./components/Home.vue"));
 
 var _Game = _interopRequireDefault(require("./components/Game.vue"));
 
+var _Character = _interopRequireDefault(require("./components/Character.vue"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _vue.default.use(_vueRouter.default);
@@ -15230,6 +15353,10 @@ var router = new _vueRouter.default({
     path: '/',
     name: 'home',
     component: _Home.default
+  }, {
+    path: '/character',
+    name: 'character',
+    component: _Character.default
   }, {
     path: '/game/:id',
     name: 'game',
@@ -15243,7 +15370,7 @@ var router = new _vueRouter.default({
 });
 var _default = router;
 exports.default = _default;
-},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/Game.vue":"components/Game.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/Game.vue":"components/Game.vue","./components/Character.vue":"components/Character.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -15357,7 +15484,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55590" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49479" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

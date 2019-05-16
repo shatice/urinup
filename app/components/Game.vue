@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import countService from "../services/countService";
 import game from "../data.json";
 
 console.log(game);
@@ -36,7 +37,8 @@ export default {
       );
     },
     doSkip() {
-      this.$router.push({ path: "/home" });
+      this.$router.push({ path: "id" });
+      s;
     }
   }
 };

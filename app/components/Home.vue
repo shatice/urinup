@@ -1,6 +1,9 @@
 <template>
   <div>
     <h1>{{ message }}</h1>
+    <br>
+    <router-link class="button" to="/game">Go to Page</router-link>
+    <br>
   </div>
 </template>
 
@@ -8,7 +11,7 @@
 export default {
   data() {
     return {
-      message: "hsh"
+      message: "INTRO + RÈGLES DU JEU"
     };
   }
 };
