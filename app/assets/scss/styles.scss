@@ -1,7 +1,7 @@
 @import 'reset';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
 
-$hetic-green: #0de595;
+$hetic-green: #FFDA5E;
 
 body,
 button,
@@ -11,8 +11,14 @@ textarea {
   font-family: 'Roboto';
 }
 
-.big-header {
+body {
   background-color: $hetic-green;
+  color: white;
+  font-weight: bold; 
+  font-size: 1.5rem; 
+}
+
+.big-header {
   height: 100vh;
 
   display: flex;
@@ -20,8 +26,6 @@ textarea {
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-
-  color: white;
 }
 
 .button {
@@ -32,5 +36,9 @@ textarea {
   border-radius: 5px;
   display: inline-block;
   border: none;
+  cursor: pointer;
+}
+
+.choice {
   cursor: pointer;
 }
