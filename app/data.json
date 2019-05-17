@@ -253,21 +253,19 @@
       ]
     }
   ],
-  "characters": [
-    {
-      "content": "choisis ton personnage",
-      "actions": [
-        {
-          "class": "parisian",
-          "accessories": "phone",
-          "path": "/game/1"
-        },
-        {
-          "class": "tourist",
-          "accessories": "map",
-          "path": "/game/1"
-        }
-      ]
-    }
-  ]
+  "charactersPage": {
+    "content": "choisis ton personnage",
+    "characters": [
+      {
+        "class": "parisian",
+        "accessory": "phone",
+        "path": "/game/1"
+      },
+      {
+        "class": "tourist",
+        "accessory": "map",
+        "path": "/game/1"
+      }
+    ]
+  }
 }

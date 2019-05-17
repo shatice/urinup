@@ -15244,18 +15244,18 @@ module.exports = {
       "path": 24
     }]
   }],
-  "characters": [{
+  "charactersPage": {
     "content": "choisis ton personnage",
-    "actions": [{
+    "characters": [{
       "class": "parisian",
-      "accessories": "phone",
+      "accessory": "phone",
       "path": "/game/1"
     }, {
       "class": "tourist",
-      "accessories": "map",
+      "accessory": "map",
       "path": "/game/1"
     }]
-  }]
+  }
 };
 },{}],"components/Game.vue":[function(require,module,exports) {
 "use strict";
@@ -15402,10 +15402,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
 var _default = {
   data: function data() {
     return {
-      characters: this.getCharacters()
+      gameData: _data.default
     };
   }
 };
@@ -15423,26 +15426,21 @@ exports.default = _default;
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h1", [_vm._v(_vm._s(_vm.characters.content))]),
+    _c("h1", [_vm._v(_vm._s(_vm.gameData.charactersPage.content))]),
     _vm._v(" "),
-    _c(
-      "ul",
-      _vm._l(_vm.step.actions, function(action) {
-        return _c(
-          "li",
-          {
-            key: action.path,
-            on: {
-              click: function($event) {
-                return _vm.doEffects(action)
-              }
-            }
-          },
-          [_c("div", [_vm._v(_vm._s(action.label))])]
-        )
-      }),
-      0
-    )
+    _c("ul", [
+      _c("li", [
+        _c("div", [
+          _vm._v(_vm._s(_vm.gameData.charactersPage.characters[0].class))
+        ])
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("div", [
+          _vm._v(_vm._s(_vm.gameData.charactersPage.characters[1].class))
+        ])
+      ])
+    ])
   ])
 }
 var staticRenderFns = []
@@ -15634,7 +15632,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64201" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59988" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

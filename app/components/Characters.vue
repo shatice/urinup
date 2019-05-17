@@ -1,9 +1,12 @@
 <template>
   <div>
-    <h1>{{ characters.content }}</h1>
+    <h1>{{ gameData.charactersPage.content }}</h1>
     <ul>
-      <li v-on:click="doEffects(action)" v-for="action in step.actions" :key="action.path">
-        <div>{{ action.label }}</div>
+      <li>
+        <div>{{ gameData.charactersPage.characters[0].class }}</div>
+      </li>
+      <li>
+        <div>{{ gameData.charactersPage.characters[1].class }}</div>
       </li>
     </ul>
   </div>
@@ -15,7 +18,7 @@ import game from "../data.json";
 export default {
   data() {
     return {
-      characters: this.getCharacters()
+      gameData: game
     };
   }
 };
