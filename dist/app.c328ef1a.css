@@ -142,21 +142,26 @@ textarea {
   font-family: "Roboto";
 }
 
+body {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 .big-header {
-  background-color: #0de595;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  color: white;
 }
 
 .button {
-  color: #0de595;
+  color: white;
   text-decoration: none;
-  background: black;
+  background: white;
   padding: 5px;
   border-radius: 5px;
   display: inline-block;
@@ -164,30 +169,8 @@ textarea {
   cursor: pointer;
 }
 
-body {
-  color: black;
-  position: relative;
-}
-
-div {
-  top: 100px;
-  width: 800px;
-  margin: auto 0;
-}
-
-h1 {
-  font-weight: bold;
-  font-size: 35px;
-  color: #d50838;
-  margin-bottom: 20px;
-}
-
-ul {
-  color: #212188;
-  font-size: 30px;
-}
-ul li {
-  margin-bottom: 20px;
+.choice {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=/app.c328ef1a.css.map */

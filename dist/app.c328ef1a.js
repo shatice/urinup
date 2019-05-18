@@ -15023,9 +15023,11 @@ exports.default = _default;
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
-      _c("router-link", { staticClass: "button", attrs: { to: "/game" } }, [
-        _vm._v("Go to Page")
-      ]),
+      _c(
+        "router-link",
+        { staticClass: "button", attrs: { to: "/characters" } },
+        [_vm._v("Jouer")]
+      ),
       _vm._v(" "),
       _c("br")
     ],
@@ -15065,10 +15067,11 @@ render._withStripped = true
 module.exports = {
   "steps": [{
     "id": 1,
-    "content": "C'est parti ! Tu dois rejoindre au plus vite le métro, tu chois d'y aller...",
+    "content": "C'est parti ! Tu dois rejoindre au plus vite le métro, tu choisis d'y aller...",
     "actions": [{
       "label": "En overboard",
-      "path": 2
+      "category": "Game Over" // "path": 2
+
     }, {
       "label": "À pieds",
       "path": 3
@@ -15076,10 +15079,11 @@ module.exports = {
       "label": "En trotinette",
       "path": 4
     }]
-  }, {
-    "id": 2,
-    "content": "Oh Oh ! Game Over, en voulant te la péter sur ton overboard tu t'es perdu dans Paris, tu n'as jamais trouvé le métro et tu t'es fais pipi dessus. Dommage !"
-  }, {
+  }, // {
+  //   "id": 2,
+  //   "content": "Oh Oh ! Game Over, en voulant te la péter sur ton overboard tu t'es perdu dans Paris, tu n'as jamais trouvé le métro et tu t'es fais pipi dessus. Dommage !"
+  // },
+  {
     "id": 3,
     "content": "Ok ok, à quelle allure veut se déplacer le petit bobo-écolo ?",
     "actions": [{
@@ -15133,17 +15137,18 @@ module.exports = {
     "id": 8,
     "content": "T'es dans le wagon",
     "actions": [{
-      "label": "ecouteurs",
-      "path": 12
+      "label": "Écouteurs",
+      "category": "Game Over" // "path": 12
+
     }, {
-      "label": "Pas ecouteurs",
+      "label": "Pas écouteurs",
       "path": 13
     }]
   }, {
     "id": 9,
     "content": "T'es à chatelet",
     "actions": [{
-      "label": "gauche",
+      "label": "Gauche",
       "path": 13
     }, {
       "label": "Droite",
@@ -15157,7 +15162,8 @@ module.exports = {
       "path": 9
     }, {
       "label": "barreau 2",
-      "path": 16
+      "category": "Game Over" // "path": 16
+
     }]
   }, {
     "id": 11,
@@ -15167,16 +15173,20 @@ module.exports = {
       "path": 9
     }, {
       "label": "droite",
-      "path": 18
+      "category": "Game Over" // "path": 18
+
     }]
-  }, {
-    "id": 12,
-    "content": "game over",
-    "actions": [{
-      "label": "recommencer",
-      "path": 1
-    }]
-  }, {
+  }, // {
+  //   "id": 12,
+  //   "content": "game over",
+  //   "actions": [
+  //     {
+  //       "label": "recommencer",
+  //       "path": 1
+  //     }
+  //   ]
+  // },
+  {
     "id": 13,
     "content": "T'es dans le wagon mais t'as trop chaud",
     "actions": [{
@@ -15196,68 +15206,112 @@ module.exports = {
       "label": "piquer un skate",
       "path": 19
     }]
-  }, {
-    "id": 16,
-    "content": "Game over",
-    "actions": [{
-      "label": "win",
-      "path": 1
-    }, {
-      "label": "lose",
-      "path": 1
-    }]
-  }, {
-    "id": 18,
-    "content": "game over",
-    "actions": [{
-      "label": "win",
-      "path": 1
-    }, {
-      "label": "lose",
-      "path": 1
-    }]
-  }, {
+  }, // {
+  //   "id": 16,
+  //   "content": "Game over",
+  //   "actions": [
+  //     {
+  //       "label": "win",
+  //       "path": 1
+  //     },
+  //     {
+  //       "label": "lose",
+  //       "path": 1
+  //     }
+  //   ]
+  // },
+  // {
+  //   "id": 18,
+  //   "content": "game over",
+  //   "actions": [
+  //     {
+  //       "label": "win",
+  //       "path": 1
+  //     },
+  //     {
+  //       "label": "lose",
+  //       "path": 1
+  //     }
+  //   ]
+  // },
+  {
     "id": 19,
     "content": "t'es a république",
     "actions": [{
       "label": "contourner",
-      "path": 20
+      "category": "Game Over" // "path": 20
+
     }, {
       "label": "affronter",
       "path": 21
     }]
-  }, {
-    "id": 20,
-    "content": "game over",
-    "actions": [{
-      "label": "lose",
-      "path": 1
-    }]
-  }, {
+  }, // {
+  //   "id": 20,
+  //   "content": "Game over",
+  //   "actions": [
+  //     {
+  //       "label": "Game Over",
+  //       "path": 1
+  //     }
+  //   ]
+  // },
+  {
     "id": 21,
     "content": "Tu surf sur les gilets jaunes, il te reste 5 km",
     "actions": [{
-      "label": "taxi",
+      "label": "Taxi",
       "path": 23
     }, {
-      "label": "uber",
+      "label": "Uber",
       "path": 24
+    }]
+  }, {
+    "id": 22,
+    "content": "GPS du taxi hs pas de phone pas d’aide à l’arrache perte de temps jauge augmente",
+    "actions": [{
+      "label": "Pleurer",
+      "ifUber": "Oups, pas de tel, pas d'Uber (t'avais qu'à être un parisien comme tous les gens bien",
+      "path": 25
+    }]
+  }, {
+    "id": 23,
+    "content": "GPS TAXI HS Phone donc aide gain de temps",
+    "actions": [{
+      "label": "Dabber",
+      "path": 25
+    }]
+  }, {
+    "id": 24,
+    "content": "game over police pipi dessus amende ceinture mauvaise notre sur appli",
+    "actions": [{
+      "label": "Game Over",
+      "path": 1
+    }]
+  }, {
+    "id": 25,
+    "content": "pas assez de liquide doit prendre un vélib automobilistes te claxonnent",
+    "actions": [{
+      "label": "Défi",
+      "category": "Victoire"
+    }, {
+      "label": "Peur",
+      "category": "Game Over"
     }]
   }],
   "charactersPage": {
-    "content": "choisis ton personnage",
+    "content": "Choisis ton personnage",
     "characters": [{
-      "class": "parisian",
+      "class": "Parisien",
       "accessory": "phone",
       "path": "/game/1"
     }, {
-      "class": "tourist",
+      "class": "Backpacker",
       "accessory": "map",
       "path": "/game/1"
     }]
   }
 };
-},{}],"components/Game.vue":[function(require,module,exports) {
+},{}],"components/Characters.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15269,6 +15323,138 @@ var _data = _interopRequireDefault(require("../data.json"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      gameChar: _data.default.charactersPage
+    };
+  },
+  methods: {
+    doEffects: function doEffects(character) {
+      this.$router.push({
+        path: "/game/1"
+      }); // TEST FOR LOCALSTORAGE
+
+      if (character.accessory === "phone") {
+        // localStorage.setItem('accessory', JSON.stringify(this.accessory));
+        localStorage.setItem("accessory", "phone");
+      } else if (character.accessory === "map") {
+        localStorage.setItem("accessory", "map");
+      }
+
+      console.log(localStorage);
+    }
+  }
+};
+exports.default = _default;
+        var $292da0 = exports.default || module.exports;
+      
+      if (typeof $292da0 === 'function') {
+        $292da0 = $292da0.options;
+      }
+    
+        /* template */
+        Object.assign($292da0, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("h1", [_vm._v(_vm._s(_vm.gameChar.content))]),
+    _vm._v(" "),
+    _c(
+      "ul",
+      _vm._l(_vm.gameChar.characters, function(character) {
+        return _c(
+          "li",
+          {
+            staticClass: "choice",
+            on: {
+              click: function($event) {
+                return _vm.doEffects(character)
+              }
+            }
+          },
+          [
+            _c("div", [
+              _vm._v(
+                "\n        " +
+                  _vm._s(character.class) +
+                  " |\n        " +
+                  _vm._s(character.accessory) +
+                  "\n      "
+              )
+            ])
+          ]
+        )
+      }),
+      0
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$292da0', $292da0);
+          } else {
+            api.reload('$292da0', $292da0);
+          }
+        }
+
+        
+      }
+    })();
+},{"../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Game.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _data = _interopRequireDefault(require("../data.json"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -15303,12 +15489,40 @@ var _default = {
         return step.id === parseInt(_this.$route.params.id);
       });
     },
-    doEffects: function doEffects(action) {
+    doActions: function doActions(action) {
       if (action.path) {
         this.$router.push({
           params: {
             id: action.path
           }
+        });
+      } // TEST FOR LOCALSTORAGE
+
+
+      if ((action.label === "Pas écouteurs" || action.label === "Gauche") && localStorage.getItem("accessory") === "map") {
+        this.$router.push({
+          path: "/game/19"
+        });
+      }
+
+      if ((action.label === "Taxi" || action.label === "Uber") && localStorage.getItem("accessory") === "map") {
+        this.$router.push({
+          path: "/game/22"
+        });
+      } // if (action.label === 'Uber' && localStorage.getItem('accessory') === 'map') {
+      //   {{ action.ifUber }}
+      // }
+
+
+      if (action.category === "Victoire") {
+        this.$router.push({
+          path: "/win"
+        });
+      }
+
+      if (action.category === "Game Over") {
+        this.$router.push({
+          path: "/loose"
         });
       }
     }
@@ -15327,27 +15541,32 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", [_vm._v(_vm._s(_vm.step.content))]),
-    _vm._v(" "),
-    _c(
-      "ul",
-      _vm._l(_vm.step.actions, function(action) {
-        return _c(
-          "li",
-          {
-            key: action.path,
-            on: {
-              click: function($event) {
-                return _vm.doEffects(action)
+  return _c("div", { staticClass: "text" }, [
+    _c("use", { attrs: { "xlink:href": "#primgroup" } }, [
+      _c("h1", [_vm._v(_vm._s(_vm.step.content))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c(
+        "ul",
+        _vm._l(_vm.step.actions, function(action) {
+          return _c(
+            "li",
+            {
+              key: action.path,
+              staticClass: "choice",
+              on: {
+                click: function($event) {
+                  return _vm.doActions(action)
+                }
               }
-            }
-          },
-          [_c("div", [_vm._v(_vm._s(action.label))])]
-        )
-      }),
-      0
-    )
+            },
+            [_c("br"), _vm._v(" "), _c("div", [_vm._v(_vm._s(action.label))])]
+          )
+        }),
+        0
+      )
+    ])
   ])
 }
 var staticRenderFns = []
@@ -15379,23 +15598,13 @@ render._withStripped = true
         
       }
     })();
-},{"../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Characters.vue":[function(require,module,exports) {
+},{"../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Win.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
-var _data = _interopRequireDefault(require("../data.json"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//
-//
-//
-//
-//
 //
 //
 //
@@ -15408,40 +15617,39 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = {
   data: function data() {
     return {
-      gameData: _data.default
+      message: 'VICTOIRE'
     };
   }
 };
 exports.default = _default;
-        var $292da0 = exports.default || module.exports;
+        var $50aaa2 = exports.default || module.exports;
       
-      if (typeof $292da0 === 'function') {
-        $292da0 = $292da0.options;
+      if (typeof $50aaa2 === 'function') {
+        $50aaa2 = $50aaa2.options;
       }
     
         /* template */
-        Object.assign($292da0, (function () {
+        Object.assign($50aaa2, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", [_vm._v(_vm._s(_vm.gameData.charactersPage.content))]),
-    _vm._v(" "),
-    _c("ul", [
-      _c("li", [
-        _c("div", [
-          _vm._v(_vm._s(_vm.gameData.charactersPage.characters[0].class))
-        ])
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/" } }, [
+        _vm._v("Recommencer")
       ]),
       _vm._v(" "),
-      _c("li", [
-        _c("div", [
-          _vm._v(_vm._s(_vm.gameData.charactersPage.characters[1].class))
-        ])
-      ])
-    ])
-  ])
+      _c("br")
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -15463,16 +15671,98 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$292da0', $292da0);
+            api.createRecord('$50aaa2', $50aaa2);
           } else {
-            api.reload('$292da0', $292da0);
+            api.reload('$50aaa2', $50aaa2);
           }
         }
 
         
       }
     })();
-},{"../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"router.js":[function(require,module,exports) {
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Loose.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: 'GAME OVER'
+    };
+  }
+};
+exports.default = _default;
+        var $a21d2d = exports.default || module.exports;
+      
+      if (typeof $a21d2d === 'function') {
+        $a21d2d = $a21d2d.options;
+      }
+    
+        /* template */
+        Object.assign($a21d2d, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/" } }, [
+        _vm._v("Recommencer")
+      ]),
+      _vm._v(" "),
+      _c("br")
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$a21d2d', $a21d2d);
+          } else {
+            api.reload('$a21d2d', $a21d2d);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"router.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15486,9 +15776,13 @@ var _vueRouter = _interopRequireDefault(require("vue-router"));
 
 var _Home = _interopRequireDefault(require("./components/Home.vue"));
 
+var _Characters = _interopRequireDefault(require("./components/Characters.vue"));
+
 var _Game = _interopRequireDefault(require("./components/Game.vue"));
 
-var _Characters = _interopRequireDefault(require("./components/Characters.vue"));
+var _Win = _interopRequireDefault(require("./components/Win.vue"));
+
+var _Loose = _interopRequireDefault(require("./components/Loose.vue"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -15510,6 +15804,14 @@ var router = new _vueRouter.default({
     name: 'game',
     component: _Game.default
   }, {
+    path: '/win',
+    name: 'win',
+    component: _Win.default
+  }, {
+    path: '/loose',
+    name: 'loose',
+    component: _Loose.default
+  }, {
     path: '*',
     redirect: {
       name: 'home'
@@ -15518,7 +15820,7 @@ var router = new _vueRouter.default({
 });
 var _default = router;
 exports.default = _default;
-},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/Game.vue":"components/Game.vue","./components/Characters.vue":"components/Characters.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/Characters.vue":"components/Characters.vue","./components/Game.vue":"components/Game.vue","./components/Win.vue":"components/Win.vue","./components/Loose.vue":"components/Loose.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -15632,7 +15934,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59988" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56353" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

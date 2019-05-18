@@ -2,11 +2,12 @@
   "steps": [
     {
       "id": 1,
-      "content": "C'est parti ! Tu dois rejoindre au plus vite le métro, tu chois d'y aller...",
+      "content": "C'est parti ! Tu dois rejoindre au plus vite le métro, tu choisis d'y aller...",
       "actions": [
         {
           "label": "En overboard",
-          "path": 2
+          "category": "Game Over"
+          // "path": 2
         },
         {
           "label": "À pieds",
@@ -18,10 +19,10 @@
         }
       ]
     },
-    {
-      "id": 2,
-      "content": "Oh Oh ! Game Over, en voulant te la péter sur ton overboard tu t'es perdu dans Paris, tu n'as jamais trouvé le métro et tu t'es fais pipi dessus. Dommage !"
-    },
+    // {
+    //   "id": 2,
+    //   "content": "Oh Oh ! Game Over, en voulant te la péter sur ton overboard tu t'es perdu dans Paris, tu n'as jamais trouvé le métro et tu t'es fais pipi dessus. Dommage !"
+    // },
     {
       "id": 3,
       "content": "Ok ok, à quelle allure veut se déplacer le petit bobo-écolo ?",
@@ -97,11 +98,12 @@
       "content": "T'es dans le wagon",
       "actions": [
         {
-          "label": "ecouteurs",
-          "path": 12
+          "label": "Écouteurs",
+          "category": "Game Over"
+          // "path": 12
         },
         {
-          "label": "Pas ecouteurs",
+          "label": "Pas écouteurs",
           "path": 13
         }
       ]
@@ -111,7 +113,7 @@
       "content": "T'es à chatelet",
       "actions": [
         {
-          "label": "gauche",
+          "label": "Gauche",
           "path": 13
         },
         {
@@ -130,7 +132,8 @@
         },
         {
           "label": "barreau 2",
-          "path": 16
+          "category": "Game Over"
+          // "path": 16
         }
       ]
     },
@@ -144,20 +147,21 @@
         },
         {
           "label": "droite",
-          "path": 18
+          "category": "Game Over"
+          // "path": 18
         }
       ]
     },
-    {
-      "id": 12,
-      "content": "game over",
-      "actions": [
-        {
-          "label": "recommencer",
-          "path": 1
-        }
-      ]
-    },
+    // {
+    //   "id": 12,
+    //   "content": "game over",
+    //   "actions": [
+    //     {
+    //       "label": "recommencer",
+    //       "path": 1
+    //     }
+    //   ]
+    // },
     {
       "id": 13,
       "content": "T'es dans le wagon mais t'as trop chaud",
@@ -186,41 +190,42 @@
         }
       ]
     },
-    {
-      "id": 16,
-      "content": "Game over",
-      "actions": [
-        {
-          "label": "win",
-          "path": 1
-        },
-        {
-          "label": "lose",
-          "path": 1
-        }
-      ]
-    },
-    {
-      "id": 18,
-      "content": "game over",
-      "actions": [
-        {
-          "label": "win",
-          "path": 1
-        },
-        {
-          "label": "lose",
-          "path": 1
-        }
-      ]
-    },
+    // {
+    //   "id": 16,
+    //   "content": "Game over",
+    //   "actions": [
+    //     {
+    //       "label": "win",
+    //       "path": 1
+    //     },
+    //     {
+    //       "label": "lose",
+    //       "path": 1
+    //     }
+    //   ]
+    // },
+    // {
+    //   "id": 18,
+    //   "content": "game over",
+    //   "actions": [
+    //     {
+    //       "label": "win",
+    //       "path": 1
+    //     },
+    //     {
+    //       "label": "lose",
+    //       "path": 1
+    //     }
+    //   ]
+    // },
     {
       "id": 19,
       "content": "t'es a république",
       "actions": [
         {
           "label": "contourner",
-          "path": 20
+          "category": "Game Over"
+          // "path": 20
         },
         {
           "label": "affronter",
@@ -228,41 +233,86 @@
         }
       ]
     },
-    {
-      "id": 20,
-      "content": "game over",
-      "actions": [
-        {
-          "label": "lose",
-          "path": 1
-        }
-      ]
-    },
+    // {
+    //   "id": 20,
+    //   "content": "Game over",
+    //   "actions": [
+    //     {
+    //       "label": "Game Over",
+    //       "path": 1
+    //     }
+    //   ]
+    // },
     {
       "id": 21,
       "content": "Tu surf sur les gilets jaunes, il te reste 5 km",
       "actions": [
         {
-          "label": "taxi",
+          "label": "Taxi",
           "path": 23
         },
         {
-          "label": "uber",
+          "label": "Uber",
           "path": 24
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "content": "GPS du taxi hs pas de phone pas d’aide à l’arrache perte de temps jauge augmente",
+      "actions": [
+        {
+          "label": "Pleurer",
+          "ifUber": "Oups, pas de tel, pas d'Uber (t'avais qu'à être un parisien comme tous les gens bien",
+          "path": 25
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "content": "GPS TAXI HS Phone donc aide gain de temps",
+      "actions": [
+        {
+          "label": "Dabber",
+          "path": 25
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "content": "game over police pipi dessus amende ceinture mauvaise notre sur appli",
+      "actions": [
+        {
+          "label": "Game Over",
+          "path": 1
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "content": "pas assez de liquide doit prendre un vélib automobilistes te claxonnent",
+      "actions": [
+        {
+          "label": "Défi",
+          "category": "Victoire"
+        },
+        {
+          "label": "Peur",
+          "category": "Game Over"
         }
       ]
     }
   ],
   "charactersPage": {
-    "content": "choisis ton personnage",
+    "content": "Choisis ton personnage",
     "characters": [
       {
-        "class": "parisian",
+        "class": "Parisien",
         "accessory": "phone",
         "path": "/game/1"
       },
       {
-        "class": "tourist",
+        "class": "Backpacker",
         "accessory": "map",
         "path": "/game/1"
       }
