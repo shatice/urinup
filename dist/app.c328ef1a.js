@@ -15068,10 +15068,11 @@ module.exports = {
   "steps": [{
     "id": 1,
     "content": "C'est parti ! Tu dois rejoindre au plus vite le métro, tu choisis d'y aller...",
+    "perso": "#DotBlue",
+    "background": "../assets/img/paris.jpg",
     "actions": [{
       "label": "En overboard",
-      "category": "Game Over" // "path": 2
-
+      "category": "Game Over"
     }, {
       "label": "À pieds",
       "path": 3
@@ -15079,17 +15080,17 @@ module.exports = {
       "label": "En trotinette",
       "path": 4
     }]
-  }, // {
-  //   "id": 2,
-  //   "content": "Oh Oh ! Game Over, en voulant te la péter sur ton overboard tu t'es perdu dans Paris, tu n'as jamais trouvé le métro et tu t'es fais pipi dessus. Dommage !"
-  // },
-  {
+  }, {
     "id": 3,
-    "content": "Ok ok, à quelle allure veut se déplacer le petit bobo-écolo ?",
+    "content": "Ok ok, à quelle allure veut tu te déplacer ?",
+    "img": "#DotGreen",
+    "background": "../assets/img/paris.jpg",
     "actions": [{
+      "logo": "url(../assets/img/walk.png)",
       "label": "Je marche, ça tombe bien j'ai mis mes chassures de ville",
       "path": 5
     }, {
+      "logo": "url(../assets/img/run.jpg)",
       "label": "Je cours ! (comme Forest)",
       "path": 7
     }]
@@ -15138,8 +15139,7 @@ module.exports = {
     "content": "T'es dans le wagon",
     "actions": [{
       "label": "Écouteurs",
-      "category": "Game Over" // "path": 12
-
+      "category": "Game Over"
     }, {
       "label": "Pas écouteurs",
       "path": 13
@@ -15435,7 +15435,76 @@ render._withStripped = true
         
       }
     })();
-},{"../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Game.vue":[function(require,module,exports) {
+},{"../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"assets/img/paris.jpg":[function(require,module,exports) {
+module.exports = "/paris.cd31f03b.jpg";
+},{}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"components/Game.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15466,11 +15535,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-console.log(_data.default);
+//
+//
+//
 var _default = {
   data: function data() {
     return {
-      step: this.getStep()
+      step: this.getStep(),
+      show: true
     };
   },
   mounted: function mounted() {
@@ -15481,6 +15553,7 @@ var _default = {
       this.step = this.getStep();
     }
   },
+  default: require('../assets/img/paris.jpg'),
   methods: {
     getStep: function getStep() {
       var _this = this;
@@ -15541,9 +15614,23 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "text" }, [
-    _c("use", { attrs: { "xlink:href": "#primgroup" } }, [
+  return _c(
+    "div",
+    {
+      staticClass: "background",
+      style: {
+        "background-image": "url(" + require("" + _vm.step.background) + ")"
+      }
+    },
+    [
       _c("h1", [_vm._v(_vm._s(_vm.step.content))]),
+      _vm._v(" "),
+      _c("svg", { attrs: { viewBox: "0 0 24 24" } }, [
+        _c("use", {
+          staticStyle: { opacity: "1.0" },
+          attrs: { href: "" + _vm.step.perso, x: "5", y: "5" }
+        })
+      ]),
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
@@ -15556,18 +15643,29 @@ exports.default = _default;
               key: action.path,
               staticClass: "choice",
               on: {
-                click: function($event) {
-                  return _vm.doActions(action)
-                }
+                click: [
+                  function($event) {
+                    _vm.show = !_vm.show
+                  },
+                  function($event) {
+                    return _vm.doActions(action)
+                  }
+                ]
               }
             },
-            [_c("br"), _vm._v(" "), _c("div", [_vm._v(_vm._s(action.label))])]
+            [
+              _c("div", { staticClass: "actionIcon" }),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c("div", [_vm._v(_vm._s(_vm.step.logo))])
+            ]
           )
         }),
         0
       )
-    ])
-  ])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -15598,7 +15696,7 @@ render._withStripped = true
         
       }
     })();
-},{"../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Win.vue":[function(require,module,exports) {
+},{"../data.json":"data.json","../assets/img/paris.jpg":"assets/img/paris.jpg","_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Win.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15820,74 +15918,7 @@ var router = new _vueRouter.default({
 });
 var _default = router;
 exports.default = _default;
-},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/Characters.vue":"components/Characters.vue","./components/Game.vue":"components/Game.vue","./components/Win.vue":"components/Win.vue","./components/Loose.vue":"components/Loose.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"assets/scss/styles.scss":[function(require,module,exports) {
+},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/Characters.vue":"components/Characters.vue","./components/Game.vue":"components/Game.vue","./components/Win.vue":"components/Win.vue","./components/Loose.vue":"components/Loose.vue"}],"assets/scss/styles.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -15934,7 +15965,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56353" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57254" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

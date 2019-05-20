@@ -140,6 +140,7 @@ input,
 select,
 textarea {
   font-family: "Roboto";
+  overflow: hidden;
 }
 
 body {
@@ -147,6 +148,19 @@ body {
   color: black;
   font-weight: bold;
   font-size: 1.5rem;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 40px;
+  color: white;
+  width: 60vw;
+  margin: 40px auto;
+  text-align: center;
 }
 
 .big-header {
@@ -161,7 +175,7 @@ body {
 .button {
   color: white;
   text-decoration: none;
-  background: white;
+  background: #ad8585;
   padding: 5px;
   border-radius: 5px;
   display: inline-block;
@@ -169,8 +183,59 @@ body {
   cursor: pointer;
 }
 
-.choice {
-  cursor: pointer;
+svg {
+  z-index: 20px;
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  width: 400px;
+}
+svg use {
+  width: 100%;
+}
+
+.DotBlue {
+  fill: #ccccd2;
+}
+
+.DotGreen {
+  fill: #00ff73;
+}
+
+ul {
+  height: 80vh;
+  display: flex;
+  width: 85vw;
+  justify-content: space-around;
+  margin: 130px auto;
+}
+ul li {
+  height: 180px;
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.562);
+  width: 180px;
+  border-radius: 90px;
+}
+ul li:hover {
+  background-color: #fefead;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=/app.c328ef1a.css.map */

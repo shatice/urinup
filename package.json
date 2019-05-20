@@ -6,6 +6,7 @@
   },
   "scripts": {
     "dev": "parcel app/index.html",
+    "prebuild": "npm run icons",
     "build": "parcel build app/index.html && cp _redirects dist/",
     "lint": "esw . --ext .js,.vue --watch --color"
   },
@@ -30,6 +31,7 @@
   "dependencies": {
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.3",
-    "vue-router": "^3.0.6"
+    "vue-router": "^3.0.6",
+    "vue-svgicon": "^3.2.6"
   }
 }

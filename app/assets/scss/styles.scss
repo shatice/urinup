@@ -9,6 +9,7 @@ input,
 select,
 textarea {
   font-family: 'Roboto';
+  overflow: hidden;
 }
 
 body {
@@ -16,6 +17,20 @@ body {
   color: rgb(0, 0, 0);
   font-weight: bold; 
   font-size: 1.5rem; 
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  // background-image: url(../img/paris.jpg);
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 40px;
+  color: white;
+  width: 60vw;
+  margin: 40px auto;
+  text-align: center;
 }
 
 .big-header {
@@ -30,7 +45,7 @@ body {
 .button {
   color: $hetic-green;
   text-decoration: none;
-  background: rgb(255, 255, 255);
+  background: rgb(173, 133, 133);
   padding: 5px;
   border-radius: 5px;
   display: inline-block;
@@ -38,7 +53,63 @@ body {
   cursor: pointer;
 }
 
-.choice {
-  cursor: pointer;
+svg {
+  z-index: 20px;
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  width: 400px;
+  use {
+    width: 100%;
+  }
 }
 
+.DotBlue {
+  fill: rgb(204, 204, 210);
+}
+.DotGreen {
+  fill: rgb(0, 255, 115);
+}
+ul {
+  height: 80vh;
+  display: flex;
+  width: 85vw;
+  justify-content: space-around;
+  margin: 130px auto;
+  li { 
+    height: 180px;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.562);
+    width: 180px;
+    border-radius: 90px;
+    // border-top-right-radius: 90px;
+    // border-top-left-radius: 90px;
+
+  }
+  // li:first-child {
+  //   border-bottom-right-radius: 90px;
+  // }
+  // li:last-child {
+  //   border-bottom-left-radius: 90px;
+  // }
+  li:hover {
+    background-color: rgb(254, 254, 173);
+
+  }
+}
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+}
