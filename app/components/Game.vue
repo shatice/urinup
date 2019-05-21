@@ -1,79 +1,90 @@
-
 <template>
-  <div class="all background">
+  <div class="gameMain">
     <h1>{{ step.content }}</h1>  
-    <ul>
+
+    <div class="svgContainer">    
+      <svg class="character" aria-hidden="true"><use v-bind:href="`${step.svg}`"></use></svg>
+    </div>
+
+    <ul class="choicesList">
       <li
-        class="choice"
+        class="choiceItem"
         v-on:click="doActions(action)"
         v-for="action in step.actions"
-        :key="action.path" 
-      >
+        :key="action.path">
+
         <div class="labelAction" >{{action.label}}</div>
-        <div class="actionIcon">
-          <div class="actionIcon__img"></div>
+        <div class="iconAction">
+          <div class="iconAction__img"></div>
         </div>
+
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-import game from "../data.json";
+import countService from '../services/countService';
+import game from '../data.json';
+
+console.log(game);
 
 export default {
   data() {
     return {
-      step: this.getStep(),
-      show: true,
-      prevHeight: 0,
+      step: this.getStep()
     };
   },
   mounted() {
-    console.log("Mounted");
+    console.log('Mounted')
   },
   watch: {
-    "$route.params.id"(to, from) {
-      this.step = this.getStep();
+    '$route.params.id' (to, from) {
+      this.step = this.getStep()
     }
   },
-  default: 
-  require('../assets/img/paris.jpg'), 
-
   methods: {
     getStep() {
-      return game.steps.find(
-        step => step.id === parseInt(this.$route.params.id)
-      );
+      return game.steps.find(step => step.id === parseInt(this.$route.params.id))
     },
-
     doActions(action) {
+
       if (action.path) {
-        this.$router.push({ params: { id: action.path } });
+        this.$router.push({params: {id: action.path}})
       }
-      // TEST FOR LOCALSTORAGE
-      if (
-        (action.label === "Pas écouteurs" || action.label === "Gauche") &&
-        localStorage.getItem("accessory") === "map"
-      ) {
-        this.$router.push({ path: "/game/19" });
+
+      // LOCALSTORAGE
+      if ((action.label === 'Pas écouteurs' || action.label === 'Gauche') && localStorage.getItem('asset') === 'newspaper') {
+        this.$router.push({path: '/game/14'})
       }
-      if (
-        (action.label === "Taxi" || action.label === "Uber") &&
-        localStorage.getItem("accessory") === "map"
-      ) {
-        this.$router.push({ path: "/game/22" });
+      if ((action.label === 'Taxi' || action.label === 'Uber') && localStorage.getItem('asset') === 'newspaper') {
+        this.$router.push({path: '/game/16'})
       }
-      // if (action.label === 'Uber' && localStorage.getItem('accessory') === 'map') {
-      //   {{ action.ifUber }}
-      // }
-      if (action.category === "Victoire") {
-        this.$router.push({ path: "/win" });
+      if (action.asset === "newspaper") {
+        localStorage.setItem('asset', 'newspaper')
+        console.log(localStorage)
       }
-      if (action.category === "Game Over") {
-        this.$router.push({ path: "/loose" });
+
+      // FIN déterminée par phone || newspaper 
+      if (action.category === 'win/lose' && localStorage.getItem('asset') === 'phone') {
+        this.$router.push({path: '/lose'})
       }
+
+      // Écrans de fin Win || Lose
+      if (action.category === 'win') {
+        this.$router.push({path: '/win'})
+      }
+      if (action.category === 'lose') {
+        this.$router.push({path: '/lose'})
+      }
+
+      // Qd on choisi Eau || Journal => item ds localStorage => direction la même frame
+      if (action.category === 'sameGoal') {
+        this.$router.push({path: '/game/14'})
+      }
+
     }
-  }
-};
+  },
+}
 </script>
+

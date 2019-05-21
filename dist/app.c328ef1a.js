@@ -15002,20 +15002,21 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $52d86d = exports.default || module.exports;
+        var $f7e50a = exports.default || module.exports;
       
-      if (typeof $52d86d === 'function') {
-        $52d86d = $52d86d.options;
+      if (typeof $f7e50a === 'function') {
+        $f7e50a = $f7e50a.options;
       }
     
         /* template */
-        Object.assign($52d86d, (function () {
+        Object.assign($f7e50a, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticClass: "homeMain" },
     [
       _c("h1", [_vm._v(_vm._s(_vm.message))]),
       _vm._v(" "),
@@ -15048,9 +15049,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$52d86d', $52d86d);
+            api.createRecord('$f7e50a', $f7e50a);
           } else {
-            api.reload('$52d86d', $52d86d);
+            api.reload('$f7e50a', $f7e50a);
           }
         }
 
@@ -15060,248 +15061,208 @@ render._withStripped = true
 },{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"data.json":[function(require,module,exports) {
 module.exports = {
   "steps": [{
-    "logo": "../assets/img/logo.svg",
-    "audio": "../assets/audio.pookie.mp3"
-  }, {
     "id": 1,
     "content": "C'est parti ! Tu dois rejoindre au plus vite le métro, tu choisis d'y aller...",
-    "background": "../assets/img/paris.jpg",
+    "svg": "#character",
     "actions": [{
       "label": "En overboard",
-      "category": "Game Over"
+      "category": "lose"
     }, {
       "label": "À pieds",
-      "path": 3
+      "path": 2
     }, {
       "label": "En trotinette",
+      "path": 3
+    }]
+  }, {
+    "id": 2,
+    "content": "Ok ok, à quelle allure veut se déplacer le petit bobo-écolo ?",
+    "svg": "#character",
+    "actions": [{
+      "label": "Je marche, ça tombe bien j'ai mis mes chassures de ville",
       "path": 4
+    }, {
+      "label": "Je cours ! (comme Forest)",
+      "path": 6
     }]
   }, {
     "id": 3,
-    "content": "Ok ok, à quelle allure veut tu te déplacer ?",
-    "img": "#DotGreen",
-    "actions": [{
-      "logo": "url(../assets/img/walk.png)",
-      "label": "Je marche",
-      "path": 5
-    }, {
-      "logo": "url(../assets/img/run.jpg)",
-      "label": "Je cours !",
-      "path": 7
-    }]
-  }, {
-    "id": 4,
     "content": "Quel courage ! Choisis maintenant ton chemin (à tes risques et périls)",
     "actions": [{
       "label": "Je prend la route, easy",
       "path": 5
     }, {
       "label": "Je prend le trottoir, j'suis un vrai",
-      "path": 7
+      "path": 6
     }]
   }, {
-    "id": 5,
+    "id": 4,
     "content": "T'es dans le métro",
     "actions": [{
       "label": "direct",
-      "path": 8
+      "path": 7
     }, {
       "label": "Changements",
-      "path": 9
+      "path": 8
     }]
   }, {
-    "id": 6,
+    "id": 5,
     "content": "T'es sur les quais",
     "actions": [{
       "label": "continuer",
-      "path": 10
+      "path": 9
     }, {
       "label": "Marcher",
-      "path": 9
+      "path": 8
     }]
   }, {
-    "id": 7,
+    "id": 6,
     "content": "T'es dans les égouts",
     "actions": [{
       "label": "continuer",
-      "path": 11
+      "path": 10
     }, {
       "label": "Grimper",
       "path": 1
     }]
   }, {
-    "id": 8,
+    "id": 7,
     "content": "T'es dans le wagon",
     "actions": [{
       "label": "Écouteurs",
-      "category": "Game Over"
+      "category": "lose"
     }, {
       "label": "Pas écouteurs",
-      "path": 13
+      "path": 11
     }]
   }, {
-    "id": 9,
+    "id": 8,
     "content": "T'es à chatelet",
     "actions": [{
       "label": "Gauche",
-      "path": 13
+      "path": 11
     }, {
       "label": "Droite",
-      "path": 14
+      "path": 12
     }]
   }, {
-    "id": 10,
+    "id": 9,
     "content": "T'es dans la seine",
     "actions": [{
       "label": "barreau 1",
       "path": 9
     }, {
       "label": "barreau 2",
-      "category": "Game Over" // "path": 16
-
+      "path": 13
     }]
   }, {
-    "id": 11,
+    "id": 10,
     "content": "T'es dans les catacombes",
     "actions": [{
       "label": "gauche",
-      "path": 9
+      "path": 8
     }, {
       "label": "droite",
-      "category": "Game Over" // "path": 18
-
-    }]
-  }, // {
-  //   "id": 12,
-  //   "content": "game over",
-  //   "actions": [
-  //     {
-  //       "label": "recommencer",
-  //       "path": 1
-  //     }
-  //   ]
-  // },
-  {
-    "id": 13,
-    "content": "T'es dans le wagon mais t'as trop chaud",
-    "actions": [{
-      "label": "eau",
-      "path": 19
-    }, {
-      "label": "carte",
-      "path": 19
+      "category": "lose"
     }]
   }, {
-    "id": 14,
+    "id": 11,
+    "content": "T'es dans le wagon mais t'as trop chaud",
+    "actions": [{
+      "label": "Carte de Paris",
+      "item": "map",
+      "category": "sameGoal"
+    }, {
+      "label": "Journal",
+      "item": "newspaper",
+      "category": "sameGoal"
+    }]
+  }, {
+    "id": 12,
     "content": "T'es au forum",
     "actions": [{
       "label": "ecouter la dame de l'asso",
-      "path": 19
+      "category": "sameGoal"
     }, {
       "label": "piquer un skate",
-      "path": 19
+      "category": "sameGoal"
     }]
-  }, // {
-  //   "id": 16,
-  //   "content": "Game over",
-  //   "actions": [
-  //     {
-  //       "label": "win",
-  //       "path": 1
-  //     },
-  //     {
-  //       "label": "lose",
-  //       "path": 1
-  //     }
-  //   ]
-  // },
-  // {
-  //   "id": 18,
-  //   "content": "game over",
-  //   "actions": [
-  //     {
-  //       "label": "win",
-  //       "path": 1
-  //     },
-  //     {
-  //       "label": "lose",
-  //       "path": 1
-  //     }
-  //   ]
-  // },
-  {
-    "id": 19,
+  }, {
+    "id": 14,
     "content": "t'es a république",
     "actions": [{
       "label": "contourner",
-      "category": "Game Over" // "path": 20
-
+      "category": "lose"
     }, {
       "label": "affronter",
-      "path": 21
+      "path": 15
     }]
-  }, // {
-  //   "id": 20,
-  //   "content": "Game over",
-  //   "actions": [
-  //     {
-  //       "label": "Game Over",
-  //       "path": 1
-  //     }
-  //   ]
-  // },
-  {
-    "id": 21,
+  }, {
+    "id": 15,
     "content": "Tu surf sur les gilets jaunes, il te reste 5 km",
     "actions": [{
       "label": "Taxi",
-      "path": 23
+      "path": 17
     }, {
       "label": "Uber",
-      "path": 24
+      "category": "lose"
     }]
   }, {
-    "id": 22,
+    "id": 16,
     "content": "GPS du taxi hs pas de phone pas d’aide à l’arrache perte de temps jauge augmente",
     "actions": [{
       "label": "Pleurer",
       "ifUber": "Oups, pas de tel, pas d'Uber (t'avais qu'à être un parisien comme tous les gens bien",
-      "path": 25
+      "path": 18
     }]
   }, {
-    "id": 23,
+    "id": 17,
     "content": "GPS TAXI HS Phone donc aide gain de temps",
     "actions": [{
       "label": "Dabber",
-      "path": 25
+      "path": 18
     }]
   }, {
-    "id": 24,
-    "content": "game over police pipi dessus amende ceinture mauvaise notre sur appli",
-    "actions": [{
-      "label": "Game Over",
-      "path": 1
-    }]
-  }, {
-    "id": 25,
+    "id": 18,
     "content": "pas assez de liquide doit prendre un vélib automobilistes te claxonnent",
     "actions": [{
       "label": "Défi",
-      "category": "Victoire"
+      "path": 19
     }, {
       "label": "Peur",
-      "category": "Game Over"
+      "category": "lose"
+    }]
+  }, {
+    "id": 19,
+    "content": "Bravo ! Tu es devant chez toi. À présent tu as besoin du digicode, mais oups ! Tu l'as oublié. Est ce que l'accessoir qui se trouve dans ta poche pourra t'aider ? ...",
+    "actions": [{
+      "label": "Aide",
+      "category": "win/lose",
+      "path": 20
+    }]
+  }, {
+    "id": 20,
+    "content": "Trouve le code",
+    "text": "les indies",
+    "actions": [{
+      "label": "Bon code",
+      "category": "win"
+    }, {
+      "label": "Mauvais code",
+      "category": "lose"
     }]
   }],
   "charactersPage": {
     "content": "Choisis ton personnage",
     "characters": [{
-      "class": "Parisien",
-      "accessory": "phone",
+      "label": "Le bobo parisien",
+      "class": "parisian",
+      "asset": "phone",
       "path": "/game/1"
     }, {
-      "class": "Backpacker",
-      "accessory": "map",
+      "label": "Le backpacker",
+      "class": "backpacker",
+      "asset": "newspaper",
       "path": "/game/1"
     }]
   }
@@ -15331,7 +15292,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
 var _default = {
   data: function data() {
     return {
@@ -15341,14 +15301,13 @@ var _default = {
   methods: {
     doEffects: function doEffects(character) {
       this.$router.push({
-        path: "/game/1"
-      }); // TEST FOR LOCALSTORAGE
+        path: '/game/1'
+      }); // ITEMS IN LOCALSTORAGE
 
-      if (character.accessory === "phone") {
-        // localStorage.setItem('accessory', JSON.stringify(this.accessory));
-        localStorage.setItem("accessory", "phone");
-      } else if (character.accessory === "map") {
-        localStorage.setItem("accessory", "map");
+      if (character.asset === 'phone') {
+        localStorage.setItem('asset', 'phone');
+      } else if (character.asset === 'newspaper') {
+        localStorage.setItem('asset', 'newspaper');
       }
 
       console.log(localStorage);
@@ -15356,14 +15315,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $292da0 = exports.default || module.exports;
+        var $d52fd0 = exports.default || module.exports;
       
-      if (typeof $292da0 === 'function') {
-        $292da0 = $292da0.options;
+      if (typeof $d52fd0 === 'function') {
+        $d52fd0 = $d52fd0.options;
       }
     
         /* template */
-        Object.assign($292da0, (function () {
+        Object.assign($d52fd0, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -15377,6 +15336,7 @@ exports.default = _default;
         return _c(
           "li",
           {
+            key: character.class,
             staticClass: "choice",
             on: {
               click: function($event) {
@@ -15386,13 +15346,7 @@ exports.default = _default;
           },
           [
             _c("div", [
-              _vm._v(
-                "\n        " +
-                  _vm._s(character.class) +
-                  " |\n        " +
-                  _vm._s(character.accessory) +
-                  "\n      "
-              )
+              _vm._v("\n        " + _vm._s(character.label) + "\n      ")
             ])
           ]
         )
@@ -15421,17 +15375,47 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$292da0', $292da0);
+            api.createRecord('$d52fd0', $d52fd0);
           } else {
-            api.reload('$292da0', $292da0);
+            api.reload('$d52fd0', $d52fd0);
           }
         }
 
         
       }
     })();
-},{"../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"assets/img/paris.jpg":[function(require,module,exports) {
-module.exports = "/paris.cd31f03b.jpg";
+},{"../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"services/countService.js":[function(require,module,exports) {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var CountService =
+/*#__PURE__*/
+function () {
+  function CountService() {
+    _classCallCheck(this, CountService);
+
+    this.count = 0;
+  }
+
+  _createClass(CountService, [{
+    key: "increment",
+    value: function increment() {
+      this.count++;
+    }
+  }, {
+    key: "value",
+    value: function value() {
+      return this.count;
+    }
+  }]);
+
+  return CountService;
+}();
+
+module.exports = new CountService();
 },{}],"components/Game.vue":[function(require,module,exports) {
 "use strict";
 
@@ -15439,6 +15423,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+
+var _countService = _interopRequireDefault(require("../services/countService"));
 
 var _data = _interopRequireDefault(require("../data.json"));
 
@@ -15464,23 +15450,26 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+console.log(_data.default);
 var _default = {
   data: function data() {
     return {
-      step: this.getStep(),
-      show: true,
-      prevHeight: 0
+      step: this.getStep()
     };
   },
   mounted: function mounted() {
-    console.log("Mounted");
+    console.log('Mounted');
   },
   watch: {
-    "$route.params.id": function $routeParamsId(to, from) {
+    '$route.params.id': function $routeParamsId(to, from) {
       this.step = this.getStep();
     }
   },
-  default: require('../assets/img/paris.jpg'),
   methods: {
     getStep: function getStep() {
       var _this = this;
@@ -15496,62 +15485,88 @@ var _default = {
             id: action.path
           }
         });
-      } // TEST FOR LOCALSTORAGE
+      } // LOCALSTORAGE
 
 
-      if ((action.label === "Pas écouteurs" || action.label === "Gauche") && localStorage.getItem("accessory") === "map") {
+      if ((action.label === 'Pas écouteurs' || action.label === 'Gauche') && localStorage.getItem('asset') === 'newspaper') {
         this.$router.push({
-          path: "/game/19"
+          path: '/game/14'
         });
       }
 
-      if ((action.label === "Taxi" || action.label === "Uber") && localStorage.getItem("accessory") === "map") {
+      if ((action.label === 'Taxi' || action.label === 'Uber') && localStorage.getItem('asset') === 'newspaper') {
         this.$router.push({
-          path: "/game/22"
-        });
-      } // if (action.label === 'Uber' && localStorage.getItem('accessory') === 'map') {
-      //   {{ action.ifUber }}
-      // }
-
-
-      if (action.category === "Victoire") {
-        this.$router.push({
-          path: "/win"
+          path: '/game/16'
         });
       }
 
-      if (action.category === "Game Over") {
+      if (action.asset === "newspaper") {
+        localStorage.setItem('asset', 'newspaper');
+        console.log(localStorage);
+      } // FIN déterminée par phone || newspaper 
+
+
+      if (action.category === 'win/lose' && localStorage.getItem('asset') === 'phone') {
         this.$router.push({
-          path: "/loose"
+          path: '/lose'
+        });
+      } // Écrans de fin Win || Lose
+
+
+      if (action.category === 'win') {
+        this.$router.push({
+          path: '/win'
+        });
+      }
+
+      if (action.category === 'lose') {
+        this.$router.push({
+          path: '/lose'
+        });
+      } // Qd on choisi Eau || Journal => item ds localStorage => direction la même frame
+
+
+      if (action.category === 'sameGoal') {
+        this.$router.push({
+          path: '/game/14'
         });
       }
     }
   }
 };
 exports.default = _default;
-        var $a8a85a = exports.default || module.exports;
+        var $bca9fb = exports.default || module.exports;
       
-      if (typeof $a8a85a === 'function') {
-        $a8a85a = $a8a85a.options;
+      if (typeof $bca9fb === 'function') {
+        $bca9fb = $bca9fb.options;
       }
     
         /* template */
-        Object.assign($a8a85a, (function () {
+        Object.assign($bca9fb, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "all background" }, [
+  return _c("div", { staticClass: "gameMain" }, [
     _c("h1", [_vm._v(_vm._s(_vm.step.content))]),
+    _vm._v(" "),
+    _c("div", { staticClass: "svgContainer" }, [
+      _c(
+        "svg",
+        { staticClass: "character", attrs: { "aria-hidden": "true" } },
+        [_c("use", { attrs: { href: "" + _vm.step.svg } })]
+      )
+    ]),
     _vm._v(" "),
     _c(
       "ul",
+      { staticClass: "choicesList" },
       _vm._l(_vm.step.actions, function(action) {
         return _c(
           "li",
           {
             key: action.path,
-            staticClass: "choice",
+            staticClass: "choiceItem",
             on: {
               click: function($event) {
                 return _vm.doActions(action)
@@ -15576,8 +15591,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "actionIcon" }, [
-      _c("div", { staticClass: "actionIcon__img" })
+    return _c("div", { staticClass: "iconAction" }, [
+      _c("div", { staticClass: "iconAction__img" })
     ])
   }
 ]
@@ -15600,16 +15615,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$a8a85a', $a8a85a);
+            api.createRecord('$bca9fb', $bca9fb);
           } else {
-            api.reload('$a8a85a', $a8a85a);
+            api.reload('$bca9fb', $bca9fb);
           }
         }
 
         
       }
     })();
-},{"../data.json":"data.json","../assets/img/paris.jpg":"assets/img/paris.jpg","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Win.vue":[function(require,module,exports) {
+},{"../services/countService":"services/countService.js","../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Win.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15633,14 +15648,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $50aaa2 = exports.default || module.exports;
+        var $ecbaf7 = exports.default || module.exports;
       
-      if (typeof $50aaa2 === 'function') {
-        $50aaa2 = $50aaa2.options;
+      if (typeof $ecbaf7 === 'function') {
+        $ecbaf7 = $ecbaf7.options;
       }
     
         /* template */
-        Object.assign($50aaa2, (function () {
+        Object.assign($ecbaf7, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -15682,16 +15697,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$50aaa2', $50aaa2);
+            api.createRecord('$ecbaf7', $ecbaf7);
           } else {
-            api.reload('$50aaa2', $50aaa2);
+            api.reload('$ecbaf7', $ecbaf7);
           }
         }
 
         
       }
     })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Loose.vue":[function(require,module,exports) {
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Lose.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15715,14 +15730,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $a21d2d = exports.default || module.exports;
+        var $3cb397 = exports.default || module.exports;
       
-      if (typeof $a21d2d === 'function') {
-        $a21d2d = $a21d2d.options;
+      if (typeof $3cb397 === 'function') {
+        $3cb397 = $3cb397.options;
       }
     
         /* template */
-        Object.assign($a21d2d, (function () {
+        Object.assign($3cb397, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -15764,9 +15779,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$a21d2d', $a21d2d);
+            api.createRecord('$3cb397', $3cb397);
           } else {
-            api.reload('$a21d2d', $a21d2d);
+            api.reload('$3cb397', $3cb397);
           }
         }
 
@@ -15793,7 +15808,7 @@ var _Game = _interopRequireDefault(require("./components/Game.vue"));
 
 var _Win = _interopRequireDefault(require("./components/Win.vue"));
 
-var _Loose = _interopRequireDefault(require("./components/Loose.vue"));
+var _Lose = _interopRequireDefault(require("./components/Lose.vue"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -15819,9 +15834,9 @@ var router = new _vueRouter.default({
     name: 'win',
     component: _Win.default
   }, {
-    path: '/loose',
-    name: 'loose',
-    component: _Loose.default
+    path: '/lose',
+    name: 'lose',
+    component: _Lose.default
   }, {
     path: '*',
     redirect: {
@@ -15831,7 +15846,7 @@ var router = new _vueRouter.default({
 });
 var _default = router;
 exports.default = _default;
-},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/Characters.vue":"components/Characters.vue","./components/Game.vue":"components/Game.vue","./components/Win.vue":"components/Win.vue","./components/Loose.vue":"components/Loose.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/Characters.vue":"components/Characters.vue","./components/Game.vue":"components/Game.vue","./components/Win.vue":"components/Win.vue","./components/Lose.vue":"components/Lose.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -15903,7 +15918,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../fonts/rajdhani/rajdhani-v8-latin-300.eot":[["rajdhani-v8-latin-300.5b0bc40e.eot","assets/fonts/rajdhani/rajdhani-v8-latin-300.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-300.woff2":[["rajdhani-v8-latin-300.2d2be70f.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-300.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-300.woff":[["rajdhani-v8-latin-300.643e8b21.woff","assets/fonts/rajdhani/rajdhani-v8-latin-300.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-300.ttf":[["rajdhani-v8-latin-300.9e2f8c80.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-300.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-300.svg":[["rajdhani-v8-latin-300.1b470ba9.svg","assets/fonts/rajdhani/rajdhani-v8-latin-300.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.svg"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.eot":[["rajdhani-v8-latin-regular.e7ffbd94.eot","assets/fonts/rajdhani/rajdhani-v8-latin-regular.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.woff2":[["rajdhani-v8-latin-regular.4e36293d.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-regular.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.woff":[["rajdhani-v8-latin-regular.5a25e55c.woff","assets/fonts/rajdhani/rajdhani-v8-latin-regular.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.ttf":[["rajdhani-v8-latin-regular.ddae8c95.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-regular.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.svg":[["rajdhani-v8-latin-regular.52fa31c5.svg","assets/fonts/rajdhani/rajdhani-v8-latin-regular.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.svg"],"./../fonts/rajdhani/rajdhani-v8-latin-500.eot":[["rajdhani-v8-latin-500.f426db9e.eot","assets/fonts/rajdhani/rajdhani-v8-latin-500.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-500.woff2":[["rajdhani-v8-latin-500.7f9e5ec5.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-500.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-500.woff":[["rajdhani-v8-latin-500.4604a461.woff","assets/fonts/rajdhani/rajdhani-v8-latin-500.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-500.ttf":[["rajdhani-v8-latin-500.c0ee9d4e.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-500.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-500.svg":[["rajdhani-v8-latin-500.79e8bb0c.svg","assets/fonts/rajdhani/rajdhani-v8-latin-500.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.svg"],"./../fonts/rajdhani/rajdhani-v8-latin-600.eot":[["rajdhani-v8-latin-600.592d968c.eot","assets/fonts/rajdhani/rajdhani-v8-latin-600.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-600.woff2":[["rajdhani-v8-latin-600.472afc7d.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-600.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-600.woff":[["rajdhani-v8-latin-600.9fd088cc.woff","assets/fonts/rajdhani/rajdhani-v8-latin-600.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-600.ttf":[["rajdhani-v8-latin-600.55126355.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-600.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-600.svg":[["rajdhani-v8-latin-600.0146b473.svg","assets/fonts/rajdhani/rajdhani-v8-latin-600.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.svg"],"./../fonts/rajdhani/rajdhani-v8-latin-700.eot":[["rajdhani-v8-latin-700.5c7bcffc.eot","assets/fonts/rajdhani/rajdhani-v8-latin-700.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-700.woff2":[["rajdhani-v8-latin-700.e427e9e9.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-700.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-700.woff":[["rajdhani-v8-latin-700.9b46fd89.woff","assets/fonts/rajdhani/rajdhani-v8-latin-700.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-700.ttf":[["rajdhani-v8-latin-700.a9eaf502.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-700.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-700.svg":[["rajdhani-v8-latin-700.f876bbe0.svg","assets/fonts/rajdhani/rajdhani-v8-latin-700.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.svg"],"./../img/paris.jpg":[["paris.cd31f03b.jpg","assets/img/paris.jpg"],"assets/img/paris.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/vuetify/dist/vuetify.js":[function(require,module,exports) {
+},{"./../fonts/rajdhani/rajdhani-v8-latin-300.eot":[["rajdhani-v8-latin-300.5b0bc40e.eot","assets/fonts/rajdhani/rajdhani-v8-latin-300.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-300.woff2":[["rajdhani-v8-latin-300.2d2be70f.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-300.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-300.woff":[["rajdhani-v8-latin-300.643e8b21.woff","assets/fonts/rajdhani/rajdhani-v8-latin-300.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-300.ttf":[["rajdhani-v8-latin-300.9e2f8c80.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-300.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-300.svg":[["rajdhani-v8-latin-300.1b470ba9.svg","assets/fonts/rajdhani/rajdhani-v8-latin-300.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.svg"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.eot":[["rajdhani-v8-latin-regular.e7ffbd94.eot","assets/fonts/rajdhani/rajdhani-v8-latin-regular.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.woff2":[["rajdhani-v8-latin-regular.4e36293d.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-regular.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.woff":[["rajdhani-v8-latin-regular.5a25e55c.woff","assets/fonts/rajdhani/rajdhani-v8-latin-regular.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.ttf":[["rajdhani-v8-latin-regular.ddae8c95.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-regular.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.svg":[["rajdhani-v8-latin-regular.52fa31c5.svg","assets/fonts/rajdhani/rajdhani-v8-latin-regular.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.svg"],"./../fonts/rajdhani/rajdhani-v8-latin-500.eot":[["rajdhani-v8-latin-500.f426db9e.eot","assets/fonts/rajdhani/rajdhani-v8-latin-500.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-500.woff2":[["rajdhani-v8-latin-500.7f9e5ec5.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-500.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-500.woff":[["rajdhani-v8-latin-500.4604a461.woff","assets/fonts/rajdhani/rajdhani-v8-latin-500.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-500.ttf":[["rajdhani-v8-latin-500.c0ee9d4e.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-500.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-500.svg":[["rajdhani-v8-latin-500.79e8bb0c.svg","assets/fonts/rajdhani/rajdhani-v8-latin-500.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.svg"],"./../fonts/rajdhani/rajdhani-v8-latin-600.eot":[["rajdhani-v8-latin-600.592d968c.eot","assets/fonts/rajdhani/rajdhani-v8-latin-600.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-600.woff2":[["rajdhani-v8-latin-600.472afc7d.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-600.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-600.woff":[["rajdhani-v8-latin-600.9fd088cc.woff","assets/fonts/rajdhani/rajdhani-v8-latin-600.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-600.ttf":[["rajdhani-v8-latin-600.55126355.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-600.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-600.svg":[["rajdhani-v8-latin-600.0146b473.svg","assets/fonts/rajdhani/rajdhani-v8-latin-600.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.svg"],"./../fonts/rajdhani/rajdhani-v8-latin-700.eot":[["rajdhani-v8-latin-700.5c7bcffc.eot","assets/fonts/rajdhani/rajdhani-v8-latin-700.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-700.woff2":[["rajdhani-v8-latin-700.e427e9e9.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-700.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-700.woff":[["rajdhani-v8-latin-700.9b46fd89.woff","assets/fonts/rajdhani/rajdhani-v8-latin-700.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-700.ttf":[["rajdhani-v8-latin-700.a9eaf502.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-700.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-700.svg":[["rajdhani-v8-latin-700.f876bbe0.svg","assets/fonts/rajdhani/rajdhani-v8-latin-700.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.svg"],"/Users/HETIC/Desktop/w1p2021-hero-gungor-margary/app/assets/img/bg.svg":[["bg.e910e237.svg","assets/img/bg.svg"],"assets/img/bg.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/vuetify/dist/vuetify.js":[function(require,module,exports) {
 var define;
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
@@ -41933,7 +41948,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59431" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55765" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

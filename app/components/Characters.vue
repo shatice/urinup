@@ -2,10 +2,9 @@
   <div>
     <h1>{{ gameChar.content }}</h1>
     <ul>
-      <li class="choice" v-on:click="doEffects(character)" v-for="character in gameChar.characters">
+      <li class="choice" v-on:click="doEffects(character)" :key="character.class" v-for="character in gameChar.characters">
         <div>
-          {{ character.class }} |
-          {{ character.accessory }}
+          {{ character.label }}
         </div>
       </li>
     </ul>
@@ -23,17 +22,16 @@ export default {
   },
   methods: {
     doEffects(character) {
-      this.$router.push({ path: "/game/1" });
+      this.$router.push({path: '/game/1'})
 
-      // TEST FOR LOCALSTORAGE
-      if (character.accessory === "phone") {
-        // localStorage.setItem('accessory', JSON.stringify(this.accessory));
-        localStorage.setItem("accessory", "phone");
-      } else if (character.accessory === "map") {
-        localStorage.setItem("accessory", "map");
+      // ITEMS IN LOCALSTORAGE
+      if (character.asset === 'phone') {
+        localStorage.setItem('asset', 'phone')
+      } else if (character.asset === 'newspaper') {
+        localStorage.setItem('asset', 'newspaper')
       }
-      console.log(localStorage);
+      console.log(localStorage)
     }
-  }
+  },
 };
 </script>

@@ -1,47 +1,41 @@
 {
   "steps": [
     {
-      "logo": "../assets/img/logo.svg",
-      "audio": "../assets/audio.pookie.mp3"
-    },
-    {
       "id": 1,
       "content": "C'est parti ! Tu dois rejoindre au plus vite le métro, tu choisis d'y aller...",
-      "background": "../assets/img/paris.jpg",
+      "svg": "#character",
       "actions": [
         {
           "label": "En overboard",
-          "category": "Game Over"
+          "category": "lose"
         },
         {
           "label": "À pieds",
-          "path": 3
+          "path": 2
         },
         {
           "label": "En trotinette",
+          "path": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "content": "Ok ok, à quelle allure veut se déplacer le petit bobo-écolo ?",
+      "svg": "#character",
+      "actions": [
+        {
+          "label": "Je marche, ça tombe bien j'ai mis mes chassures de ville",
           "path": 4
+        },
+        {
+          "label": "Je cours ! (comme Forest)",
+          "path": 6
         }
       ]
     },
     {
       "id": 3,
-      "content": "Ok ok, à quelle allure veut tu te déplacer ?",
-      "img": "#DotGreen",
-      "actions": [
-        {
-          "logo": "url(../assets/img/walk.png)",
-          "label": "Je marche",
-          "path": 5
-        },
-        {
-          "logo": "url(../assets/img/run.jpg)",
-          "label": "Je cours !",
-          "path": 7
-        }
-      ]
-    },
-    {
-      "id": 4,
       "content": "Quel courage ! Choisis maintenant ton chemin (à tes risques et périls)",
       "actions": [
         {
@@ -50,45 +44,45 @@
         },
         {
           "label": "Je prend le trottoir, j'suis un vrai",
+          "path": 6
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "content": "T'es dans le métro",
+      "actions": [
+        {
+          "label": "direct",
           "path": 7
+        },
+        {
+          "label": "Changements",
+          "path": 8
         }
       ]
     },
     {
       "id": 5,
-      "content": "T'es dans le métro",
+      "content": "T'es sur les quais",
       "actions": [
         {
-          "label": "direct",
-          "path": 8
+          "label": "continuer",
+          "path": 9
         },
         {
-          "label": "Changements",
-          "path": 9
+          "label": "Marcher",
+          "path": 8
         }
       ]
     },
     {
       "id": 6,
-      "content": "T'es sur les quais",
-      "actions": [
-        {
-          "label": "continuer",
-          "path": 10
-        },
-        {
-          "label": "Marcher",
-          "path": 9
-        }
-      ]
-    },
-    {
-      "id": 7,
       "content": "T'es dans les égouts",
       "actions": [
         {
           "label": "continuer",
-          "path": 11
+          "path": 10
         },
         {
           "label": "Grimper",
@@ -97,35 +91,35 @@
       ]
     },
     {
-      "id": 8,
+      "id": 7,
       "content": "T'es dans le wagon",
       "actions": [
         {
           "label": "Écouteurs",
-          "category": "Game Over"
+          "category": "lose"
         },
         {
           "label": "Pas écouteurs",
-          "path": 13
+          "path": 11
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "content": "T'es à chatelet",
+      "actions": [
+        {
+          "label": "Gauche",
+          "path": 11
+        },
+        {
+          "label": "Droite",
+          "path": 12
         }
       ]
     },
     {
       "id": 9,
-      "content": "T'es à chatelet",
-      "actions": [
-        {
-          "label": "Gauche",
-          "path": 13
-        },
-        {
-          "label": "Droite",
-          "path": 14
-        }
-      ]
-    },
-    {
-      "id": 10,
       "content": "T'es dans la seine",
       "actions": [
         {
@@ -134,173 +128,140 @@
         },
         {
           "label": "barreau 2",
-          "category": "Game Over"
-          // "path": 16
+          "path": 13
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "content": "T'es dans les catacombes",
+      "actions": [
+        {
+          "label": "gauche",
+          "path": 8
+        },
+        {
+          "label": "droite",
+          "category": "lose"
         }
       ]
     },
     {
       "id": 11,
-      "content": "T'es dans les catacombes",
-      "actions": [
-        {
-          "label": "gauche",
-          "path": 9
-        },
-        {
-          "label": "droite",
-          "category": "Game Over"
-          // "path": 18
-        }
-      ]
-    },
-    // {
-    //   "id": 12,
-    //   "content": "game over",
-    //   "actions": [
-    //     {
-    //       "label": "recommencer",
-    //       "path": 1
-    //     }
-    //   ]
-    // },
-    {
-      "id": 13,
       "content": "T'es dans le wagon mais t'as trop chaud",
       "actions": [
         {
-          "label": "eau",
-          "path": 19
+          "label": "Carte de Paris",
+          "item": "map",
+          "category": "sameGoal"
         },
         {
-          "label": "carte",
-          "path": 19
+          "label": "Journal",
+          "item": "newspaper",
+          "category": "sameGoal"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "content": "T'es au forum",
+      "actions": [
+        {
+          "label": "ecouter la dame de l'asso",
+          "category": "sameGoal"
+        },
+        {
+          "label": "piquer un skate",
+          "category": "sameGoal"
         }
       ]
     },
     {
       "id": 14,
-      "content": "T'es au forum",
-      "actions": [
-        {
-          "label": "ecouter la dame de l'asso",
-          "path": 19
-        },
-        {
-          "label": "piquer un skate",
-          "path": 19
-        }
-      ]
-    },
-    // {
-    //   "id": 16,
-    //   "content": "Game over",
-    //   "actions": [
-    //     {
-    //       "label": "win",
-    //       "path": 1
-    //     },
-    //     {
-    //       "label": "lose",
-    //       "path": 1
-    //     }
-    //   ]
-    // },
-    // {
-    //   "id": 18,
-    //   "content": "game over",
-    //   "actions": [
-    //     {
-    //       "label": "win",
-    //       "path": 1
-    //     },
-    //     {
-    //       "label": "lose",
-    //       "path": 1
-    //     }
-    //   ]
-    // },
-    {
-      "id": 19,
       "content": "t'es a république",
       "actions": [
         {
           "label": "contourner",
-          "category": "Game Over"
-          // "path": 20
+          "category": "lose"
         },
         {
           "label": "affronter",
-          "path": 21
+          "path": 15
         }
       ]
     },
-    // {
-    //   "id": 20,
-    //   "content": "Game over",
-    //   "actions": [
-    //     {
-    //       "label": "Game Over",
-    //       "path": 1
-    //     }
-    //   ]
-    // },
     {
-      "id": 21,
+      "id": 15,
       "content": "Tu surf sur les gilets jaunes, il te reste 5 km",
       "actions": [
         {
           "label": "Taxi",
-          "path": 23
+          "path": 17
         },
         {
           "label": "Uber",
-          "path": 24
+          "category": "lose"
         }
       ]
     },
     {
-      "id": 22,
+      "id": 16,
       "content": "GPS du taxi hs pas de phone pas d’aide à l’arrache perte de temps jauge augmente",
       "actions": [
         {
           "label": "Pleurer",
           "ifUber": "Oups, pas de tel, pas d'Uber (t'avais qu'à être un parisien comme tous les gens bien",
-          "path": 25
+          "path": 18
         }
       ]
     },
     {
-      "id": 23,
+      "id": 17,
       "content": "GPS TAXI HS Phone donc aide gain de temps",
       "actions": [
         {
           "label": "Dabber",
-          "path": 25
+          "path": 18
         }
       ]
     },
     {
-      "id": 24,
-      "content": "game over police pipi dessus amende ceinture mauvaise notre sur appli",
-      "actions": [
-        {
-          "label": "Game Over",
-          "path": 1
-        }
-      ]
-    },
-    {
-      "id": 25,
+      "id": 18,
       "content": "pas assez de liquide doit prendre un vélib automobilistes te claxonnent",
       "actions": [
         {
           "label": "Défi",
-          "category": "Victoire"
+          "path": 19
         },
         {
           "label": "Peur",
-          "category": "Game Over"
+          "category": "lose"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "content": "Bravo ! Tu es devant chez toi. À présent tu as besoin du digicode, mais oups ! Tu l'as oublié. Est ce que l'accessoir qui se trouve dans ta poche pourra t'aider ? ...",
+      "actions": [
+        {
+          "label": "Aide",
+          "category": "win/lose",
+          "path": 20
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "content": "Trouve le code",
+      "text": "les indies",
+      "actions": [
+        {
+          "label": "Bon code",
+          "category": "win"
+        },
+        {
+          "label": "Mauvais code",
+          "category": "lose"
         }
       ]
     }
@@ -309,15 +270,17 @@
     "content": "Choisis ton personnage",
     "characters": [
       {
-        "class": "Parisien",
-        "accessory": "phone",
+        "label": "Le bobo parisien",
+        "class": "parisian",
+        "asset": "phone",
         "path": "/game/1"
       },
       {
-        "class": "Backpacker",
-        "accessory": "map",
+        "label": "Le backpacker",
+        "class": "backpacker",
+        "asset": "newspaper",
         "path": "/game/1"
       }
     ]
-  }
+  } 
 }

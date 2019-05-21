@@ -1,0 +1,51 @@
+.svgContainer {
+  position: absolute;
+  bottom: 0;
+  width: 20vw; 
+  left: 40vw;
+  height: 75vh;
+}
+
+.character {
+  fill: white; 
+  stroke: black; 
+  height: 100%;
+}
+
+@keyframes walk {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes walkArm {
+  from {
+    transform: scale(0.99);
+  }
+  to {
+    transform: translateZ(0);
+  }
+}
+
+.leftLeg {
+  animation: walk 0.4s linear alternate infinite; 
+}
+
+.rightLeg {
+  animation: walk 0.4s 0.4s linear alternate infinite; 
+}
+
+.leftArm, .leftHand {
+  animation: walkArm 0.4s 0.4s linear alternate infinite;
+  fill: white; 
+  stroke: black; 
+}
+
+.rightArm, .rightHand {
+  animation: walkArm 0.4s linear alternate infinite;
+  fill: white; 
+  stroke: black; 
+}

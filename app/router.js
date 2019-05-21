@@ -5,7 +5,7 @@ import Home from './components/Home.vue';
 import Characters from './components/Characters.vue';
 import Game from './components/Game.vue';
 import Win from './components/Win.vue';
-import Loose from './components/Loose.vue';
+import Lose from './components/Lose.vue';
 
 
 Vue.use(Router);
@@ -35,9 +35,9 @@ const router = new Router({
       component: Win,
     },
     {
-      path: '/loose',
-      name: 'loose',
-      component: Loose,
+      path: '/lose',
+      name: 'lose',
+      component: Lose,
     },
     {
       path: '*',

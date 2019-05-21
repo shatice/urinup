@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="homeMain">
     <h1>{{ message }}</h1>
     <router-link class="button" to="/characters">Jouer</router-link>
   </div>

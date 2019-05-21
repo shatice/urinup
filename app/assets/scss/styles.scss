@@ -1,6 +1,7 @@
 @import 'reset';
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
 @import 'font';
+@import 'svg.scss';
+@import 'svgIcons.scss';
 
 $hetic-green: rgb(255, 255, 255);
 
@@ -9,21 +10,22 @@ button,
 input,
 select,
 textarea {
-  font-family: 'Rajdhani';
+  font-family: 'Rajdhani', sans-serif;
   overflow: hidden;
 }
-
 
 body {
   font-weight: bold; 
   font-size: 1.5rem; 
-  //position: relative;
-  background-repeat: no-repeat;
+  background: red;
+}
+
+.gameMain {
+  background: url('/assets/img/bg.svg');
   background-size: cover; 
-  background-image: url(../img/paris.jpg);
+  background-repeat: no-repeat;
   width: 100vw;
-  height: 100vh;
-  z-index: -10;
+  height: 100vh; 
 }
 
 .logo {
@@ -37,7 +39,8 @@ h1 {
   font-size: 40px;
   color: white;
   width: 60vw;
-  margin: 60px auto;
+  margin: 0 auto; 
+  border: solid;
   text-align: center;
 }
 
@@ -52,19 +55,15 @@ h1 {
   cursor: pointer;
 }
 
-svg {
-  z-index: -2;
-  position: absolute;
-}
-
-ul {
-  height: 50vh;
+.choicesList {
+  height: 50%;
   display: flex;
-  width: 85vw;
+  width: 1200px;
   justify-content: space-around;
   margin: 180px auto;
-  li { 
-    width: 50%;
+
+  .choiceItem { 
+    width: 400px;
     font-size: 2.5rem;
     color: white;
     margin: 40px 20px;
@@ -92,19 +91,22 @@ ul {
   justify-content: space-around;
 }
 
-.actionIcon {
+.iconAction {
   background-color: rgba(255, 255, 255, 0.473);
   width: 180px;
   height: 180px;
   border-radius: 80px;
   position: relative;
-  &__img{
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+
+  &__img {
     background-color: black;
     width: 80%;
     height: 80%;
     border-radius: 90px;
-    margin-top: 10%;
-    margin-left: 10%;
   }
 }
 
