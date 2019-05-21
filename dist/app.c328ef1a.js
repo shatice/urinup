@@ -14994,6 +14994,12 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
 var _default = {
   data: function data() {
     return {
@@ -15018,6 +15024,16 @@ exports.default = _default;
     "div",
     { staticClass: "homeMain" },
     [
+      _c("div", { staticClass: "bgIntroContainer" }, [
+        _c(
+          "svg",
+          { staticClass: "bgIntro", attrs: { "aria-hidden": "true" } },
+          [_c("use", { attrs: { "xlink:href": "#bgIntro" } })]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div"),
+      _vm._v(" "),
       _c("h1", [_vm._v(_vm._s(_vm.message))]),
       _vm._v(" "),
       _c(
@@ -41948,7 +41964,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55765" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49439" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

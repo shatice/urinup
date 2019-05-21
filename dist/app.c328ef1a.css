@@ -182,6 +182,59 @@ table {
   src: local("Rajdhani Bold"), local("Rajdhani-Bold"), url("/rajdhani-v8-latin-700.5c7bcffc.eot?#iefix") format("embedded-opentype"), url("/rajdhani-v8-latin-700.e427e9e9.woff2") format("woff2"), url("/rajdhani-v8-latin-700.9b46fd89.woff") format("woff"), url("/rajdhani-v8-latin-700.a9eaf502.ttf") format("truetype"), url("/rajdhani-v8-latin-700.f876bbe0.svg#Rajdhani") format("svg");
   /* Legacy iOS */
 }
+.bgIntroContainer {
+  background-color: #FF7777;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: -10;
+}
+
+.bgIntro {
+  width: 100%;
+  height: 100%;
+  animation: disappear 2s 5s forwards;
+}
+
+@keyframes piss {
+  to {
+    transform: translateY(200px);
+  }
+}
+@keyframes grow {
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  to {
+    opacity: 0;
+  }
+}
+section {
+  background: #FF7777;
+}
+
+.piss {
+  fill: #FCFC9C;
+}
+
+.pissWave {
+  animation: piss 5s linear forwards;
+}
+
+.pissPool {
+  transform-origin: 50% 75%;
+  transform: scale(0.1);
+  opacity: 0;
+  animation: grow 2s 2s linear forwards;
+}
+
 .svgContainer {
   position: absolute;
   bottom: 0;
@@ -244,7 +297,6 @@ textarea {
 body {
   font-weight: bold;
   font-size: 1.5rem;
-  background: red;
 }
 
 .gameMain {
