@@ -23,17 +23,17 @@ export default {
   },
   methods: {
     doEffects(character) {
-      this.$router.push({path: '/game/1'})
+      this.$router.push({ path: "/game/1" });
 
       // TEST FOR LOCALSTORAGE
-      if (character.accessory === 'phone') {
+      if (character.accessory === "phone") {
         // localStorage.setItem('accessory', JSON.stringify(this.accessory));
-        localStorage.setItem('accessory', 'phone')
-      } else if (character.accessory === 'map') {
-        localStorage.setItem('accessory', 'map')
+        localStorage.setItem("accessory", "phone");
+      } else if (character.accessory === "map") {
+        localStorage.setItem("accessory", "map");
       }
-      console.log(localStorage)
+      console.log(localStorage);
     }
-  },
+  }
 };
 </script>

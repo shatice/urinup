@@ -1,37 +1,50 @@
 @import 'reset';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+@import 'font';
 
-$hetic-green: #FFDA5E;
+$hetic-green: rgb(255, 255, 255);
 
 body,
 button,
 input,
 select,
 textarea {
-  font-family: 'Roboto';
+  font-family: 'Rajdhani';
+  overflow: hidden;
 }
+
 
 body {
-  background-color: $hetic-green;
-  color: white;
   font-weight: bold; 
   font-size: 1.5rem; 
+  //position: relative;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-image: url(../img/paris.jpg);
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
 }
 
-.big-header {
-  height: 100vh;
+.logo {
+  position: absolute;
+  width: 100px;
+  top: 20px;
+  left: 20px;
+}
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
+h1 {
+  font-size: 40px;
+  color: white;
+  width: 60vw;
+  margin: 60px auto;
+  text-align: center;
 }
 
 .button {
   color: $hetic-green;
   text-decoration: none;
-  background: white;
+  background: rgb(173, 133, 133);
   padding: 5px;
   border-radius: 5px;
   display: inline-block;
@@ -39,6 +52,68 @@ body {
   cursor: pointer;
 }
 
-.choice {
-  cursor: pointer;
+svg {
+  z-index: -2;
+  position: absolute;
+}
+
+ul {
+  height: 50vh;
+  display: flex;
+  width: 85vw;
+  justify-content: space-around;
+  margin: 180px auto;
+  li { 
+    width: 50%;
+    font-size: 2.5rem;
+    color: white;
+    margin: 40px 20px;
+    border-radius: 90px;
+    display: flex;
+    justify-content: space-around;
+    &:last-child {
+      .labelAction {
+        order: 2;
+      }
+    }
+  }
+}
+
+.audioButton{
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  width: 30px;
+  height: 30px;
+  background-color: aqua;
+}
+
+.labelAction {
+  justify-content: space-around;
+}
+
+.actionIcon {
+  background-color: rgba(255, 255, 255, 0.473);
+  width: 180px;
+  height: 180px;
+  border-radius: 80px;
+  position: relative;
+  &__img{
+    background-color: black;
+    width: 80%;
+    height: 80%;
+    border-radius: 90px;
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+}
+
+.actionIcon:hover {
+  background-color: rgb(254, 254, 173);
+
+}
+
+.labelContainer {
+  position: absolute;
+
 }

@@ -1,13 +1,17 @@
 {
   "steps": [
     {
+      "logo": "../assets/img/logo.svg",
+      "audio": "../assets/audio.pookie.mp3"
+    },
+    {
       "id": 1,
       "content": "C'est parti ! Tu dois rejoindre au plus vite le métro, tu choisis d'y aller...",
+      "background": "../assets/img/paris.jpg",
       "actions": [
         {
           "label": "En overboard",
           "category": "Game Over"
-          // "path": 2
         },
         {
           "label": "À pieds",
@@ -19,20 +23,19 @@
         }
       ]
     },
-    // {
-    //   "id": 2,
-    //   "content": "Oh Oh ! Game Over, en voulant te la péter sur ton overboard tu t'es perdu dans Paris, tu n'as jamais trouvé le métro et tu t'es fais pipi dessus. Dommage !"
-    // },
     {
       "id": 3,
-      "content": "Ok ok, à quelle allure veut se déplacer le petit bobo-écolo ?",
+      "content": "Ok ok, à quelle allure veut tu te déplacer ?",
+      "img": "#DotGreen",
       "actions": [
         {
-          "label": "Je marche, ça tombe bien j'ai mis mes chassures de ville",
+          "logo": "url(../assets/img/walk.png)",
+          "label": "Je marche",
           "path": 5
         },
         {
-          "label": "Je cours ! (comme Forest)",
+          "logo": "url(../assets/img/run.jpg)",
+          "label": "Je cours !",
           "path": 7
         }
       ]
@@ -100,7 +103,6 @@
         {
           "label": "Écouteurs",
           "category": "Game Over"
-          // "path": 12
         },
         {
           "label": "Pas écouteurs",
@@ -317,5 +319,5 @@
         "path": "/game/1"
       }
     ]
-  } 
+  }
 }
