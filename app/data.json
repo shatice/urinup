@@ -1,9 +1,12 @@
 {
   "steps": [
     {
+      "logo": "../assets/img/logo.svg",
+      "audio": "../assets/audio.pookie.mp3"
+    },
+    {
       "id": 1,
       "content": "C'est parti ! Tu dois rejoindre au plus vite le métro, tu choisis d'y aller...",
-      "perso": "#DotBlue",
       "background": "../assets/img/paris.jpg",
       "actions": [
         {
@@ -24,16 +27,15 @@
       "id": 3,
       "content": "Ok ok, à quelle allure veut tu te déplacer ?",
       "img": "#DotGreen",
-      "background": "../assets/img/paris.jpg",
       "actions": [
         {
           "logo": "url(../assets/img/walk.png)",
-          "label": "Je marche, ça tombe bien j'ai mis mes chassures de ville",
+          "label": "Je marche",
           "path": 5
         },
         {
           "logo": "url(../assets/img/run.jpg)",
-          "label": "Je cours ! (comme Forest)",
+          "label": "Je cours !",
           "path": 7
         }
       ]

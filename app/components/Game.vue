@@ -1,25 +1,23 @@
 
 <template>
-  <div class="background" v-bind:style="{ 'background-image': `url(${require(`${step.background}`)})` }">
-    <h1>{{ step.content }}</h1>
-    <svg viewBox="0 0 24 24"> 
-    <use v-bind:href="`${step.perso}`" x="5" y="5" style="opacity:1.0" />
-    </svg>     
-    <br>
+  <div class="all background">
+    <h1>{{ step.content }}</h1>  
     <ul>
-      <li @click="show = !show"
+      <li
         class="choice"
         v-on:click="doActions(action)"
         v-for="action in step.actions"
         :key="action.path" 
       >
-      <div class="actionIcon"></div>
-        <br>
-        <div>{{step.logo}}</div>
+        <div class="labelAction" >{{action.label}}</div>
+        <div class="actionIcon">
+          <div class="actionIcon__img"></div>
+        </div>
       </li>
     </ul>
   </div>
 </template>
+
 <script>
 import game from "../data.json";
 
@@ -27,7 +25,8 @@ export default {
   data() {
     return {
       step: this.getStep(),
-      show: true
+      show: true,
+      prevHeight: 0,
     };
   },
   mounted() {
@@ -38,14 +37,16 @@ export default {
       this.step = this.getStep();
     }
   },
-  default: require('../assets/img/paris.jpg'),
+  default: 
+  require('../assets/img/paris.jpg'), 
+
   methods: {
     getStep() {
       return game.steps.find(
         step => step.id === parseInt(this.$route.params.id)
       );
     },
-  
+
     doActions(action) {
       if (action.path) {
         this.$router.push({ params: { id: action.path } });

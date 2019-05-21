@@ -1,5 +1,6 @@
 @import 'reset';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+@import 'font';
 
 $hetic-green: rgb(255, 255, 255);
 
@@ -8,38 +9,36 @@ button,
 input,
 select,
 textarea {
-  font-family: 'Roboto';
+  font-family: 'Rajdhani';
   overflow: hidden;
 }
 
+
 body {
-  background-color: $hetic-green;
-  color: rgb(0, 0, 0);
   font-weight: bold; 
   font-size: 1.5rem; 
-  position: relative;
+  //position: relative;
   background-repeat: no-repeat;
   background-size: cover; 
-  // background-image: url(../img/paris.jpg);
+  background-image: url(../img/paris.jpg);
   width: 100vw;
   height: 100vh;
+  z-index: -10;
+}
+
+.logo {
+  position: absolute;
+  width: 100px;
+  top: 20px;
+  left: 20px;
 }
 
 h1 {
   font-size: 40px;
   color: white;
   width: 60vw;
-  margin: 40px auto;
+  margin: 60px auto;
   text-align: center;
-}
-
-.big-header {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
 }
 
 .button {
@@ -54,62 +53,67 @@ h1 {
 }
 
 svg {
-  z-index: 20px;
+  z-index: -2;
   position: absolute;
-  top: 100px;
-  left: 400px;
-  width: 400px;
-  use {
-    width: 100%;
-  }
 }
 
-.DotBlue {
-  fill: rgb(204, 204, 210);
-}
-.DotGreen {
-  fill: rgb(0, 255, 115);
-}
 ul {
-  height: 80vh;
+  height: 50vh;
   display: flex;
   width: 85vw;
   justify-content: space-around;
-  margin: 130px auto;
+  margin: 180px auto;
   li { 
-    height: 180px;
-    margin: 20px;
-    background-color: rgba(255, 255, 255, 0.562);
-    width: 180px;
+    width: 50%;
+    font-size: 2.5rem;
+    color: white;
+    margin: 40px 20px;
     border-radius: 90px;
-    // border-top-right-radius: 90px;
-    // border-top-left-radius: 90px;
-
-  }
-  // li:first-child {
-  //   border-bottom-right-radius: 90px;
-  // }
-  // li:last-child {
-  //   border-bottom-left-radius: 90px;
-  // }
-  li:hover {
-    background-color: rgb(254, 254, 173);
-
+    display: flex;
+    justify-content: space-around;
+    &:last-child {
+      .labelAction {
+        order: 2;
+      }
+    }
   }
 }
-.slide-fade-enter-active {
-  transition: all .3s ease;
-}
-.slide-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
-  opacity: 0;
+
+.audioButton{
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  width: 30px;
+  height: 30px;
+  background-color: aqua;
 }
 
-.background {
-  width: 100vw;
-  height: 100vh;
+.labelAction {
+  justify-content: space-around;
+}
+
+.actionIcon {
+  background-color: rgba(255, 255, 255, 0.473);
+  width: 180px;
+  height: 180px;
+  border-radius: 80px;
+  position: relative;
+  &__img{
+    background-color: black;
+    width: 80%;
+    height: 80%;
+    border-radius: 90px;
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+}
+
+.actionIcon:hover {
+  background-color: rgb(254, 254, 173);
+
+}
+
+.labelContainer {
+  position: absolute;
+
 }

@@ -5,8 +5,7 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "dev": "parcel app/index.html",
-    "prebuild": "npm run icons",
+    "dev": "parcel app/index.html && cp -R app/assets/img dist/assets",
     "build": "parcel build app/index.html && cp _redirects dist/",
     "lint": "esw . --ext .js,.vue --watch --color"
   },
