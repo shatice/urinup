@@ -15464,12 +15464,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
 var _default = {
   data: function data() {
     return {
-      step: this.getStep(),
-      show: true,
-      prevHeight: 0
+      step: this.getStep()
     };
   },
   mounted: function mounted() {
@@ -15485,17 +15486,34 @@ var _default = {
     getStep: function getStep() {
       var _this = this;
 
+      //document.querySelector('.all').style.opacity = 1
+      console.log("get step");
       return _data.default.steps.find(function (step) {
         return step.id === parseInt(_this.$route.params.id);
       });
     },
     doActions: function doActions(action) {
+      var _this2 = this;
+
+      var timeout = null;
+      var timing = 500;
+
       if (action.path) {
-        this.$router.push({
-          params: {
-            id: action.path
-          }
-        });
+        this.animateOut(document.querySelector('.choice'));
+
+        if (timeout) {
+          clearTimeout(timeout);
+        }
+
+        timeout = setTimeout(function () {
+          console.log("change route");
+
+          _this2.$router.push({
+            params: {
+              id: action.path
+            }
+          });
+        }, timing);
       } // TEST FOR LOCALSTORAGE
 
 
@@ -15525,6 +15543,9 @@ var _default = {
           path: "/loose"
         });
       }
+    },
+    animateOut: function animateOut(el) {
+      el.style.opacity = 0;
     }
   }
 };
@@ -15542,6 +15563,8 @@ exports.default = _default;
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "all background" }, [
+    _vm._m(0),
+    _vm._v(" "),
     _c("h1", [_vm._v(_vm._s(_vm.step.content))]),
     _vm._v(" "),
     _c(
@@ -15563,7 +15586,7 @@ exports.default = _default;
               _vm._v(_vm._s(action.label))
             ]),
             _vm._v(" "),
-            _vm._m(0, true)
+            _vm._m(1, true)
           ]
         )
       }),
@@ -15572,6 +15595,14 @@ exports.default = _default;
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("audio", { attrs: { rel: "preload", autoplay: "", loop: "" } }, [
+      _c("source", { attrs: { src: "/pookie.ecbe6c4a.mp3" } })
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -15609,7 +15640,7 @@ render._withStripped = true
         
       }
     })();
-},{"../data.json":"data.json","../assets/img/paris.jpg":"assets/img/paris.jpg","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Win.vue":[function(require,module,exports) {
+},{"../data.json":"data.json","../assets/img/paris.jpg":"assets/img/paris.jpg","./../assets/audio/pookie.mp3":[["pookie.ecbe6c4a.mp3","assets/audio/pookie.mp3"],"assets/audio/pookie.mp3"],"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Win.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -41933,7 +41964,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59431" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59283" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,20 +1,23 @@
 
 <template>
   <div class="all background">
+    <audio rel="preload"  autoplay loop>
+      <source src="../assets/audio/pookie.mp3">
+    </audio>
     <h1>{{ step.content }}</h1>  
-    <ul>
-      <li
-        class="choice"
-        v-on:click="doActions(action)"
-        v-for="action in step.actions"
-        :key="action.path" 
-      >
-        <div class="labelAction" >{{action.label}}</div>
-        <div class="actionIcon">
-          <div class="actionIcon__img"></div>
-        </div>
-      </li>
-    </ul>
+      <ul>
+        <li 
+          class="choice"
+          v-on:click="doActions(action)"
+          v-for="action in step.actions"
+          :key="action.path" 
+        >
+          <div class="labelAction" >{{action.label}}</div>
+          <div class="actionIcon">
+            <div class="actionIcon__img"></div>
+          </div>
+        </li>
+      </ul>
   </div>
 </template>
 
@@ -24,17 +27,16 @@ import game from "../data.json";
 export default {
   data() {
     return {
-      step: this.getStep(),
-      show: true,
-      prevHeight: 0,
+      step: this.getStep()
     };
   },
   mounted() {
     console.log("Mounted");
-  },
+  }, 
   watch: {
     "$route.params.id"(to, from) {
       this.step = this.getStep();
+      
     }
   },
   default: 
@@ -42,14 +44,29 @@ export default {
 
   methods: {
     getStep() {
+      //document.querySelector('.all').style.opacity = 1
+      console.log("get step");
+      
       return game.steps.find(
         step => step.id === parseInt(this.$route.params.id)
       );
     },
 
+
     doActions(action) {
+      let timeout = null
+      let timing = 500
+      
       if (action.path) {
-        this.$router.push({ params: { id: action.path } });
+        this.animateOut(document.querySelector('.choice'))
+        if(timeout) {
+          clearTimeout(timeout)
+        }
+        timeout = setTimeout(() => {
+          console.log("change route");
+          
+          this.$router.push({ params: { id: action.path } });
+        }, timing);
       }
       // TEST FOR LOCALSTORAGE
       if (
@@ -73,7 +90,12 @@ export default {
       if (action.category === "Game Over") {
         this.$router.push({ path: "/loose" });
       }
+    },
+
+    animateOut(el) {
+      el.style.opacity = 0
     }
+
   }
 };
 </script>

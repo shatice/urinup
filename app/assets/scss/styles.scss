@@ -60,7 +60,7 @@ svg {
 ul {
   height: 50vh;
   display: flex;
-  width: 85vw;
+  width: 95vw;
   justify-content: space-around;
   margin: 180px auto;
   li { 
@@ -116,4 +116,49 @@ ul {
 .labelContainer {
   position: absolute;
 
+}
+
+  
+.pane-leave-active,
+.pane-enter-active {
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100vw);
+    background: black;
+  }
+}
+
+.pane-leave-active {
+  animation: fake 1s;
+  &::after {
+    animation: slideLeave 1s;
+  }
+}
+
+.pane-enter-active {
+  animation: fake 2s;
+  &::after {
+    animation: slideEnter 1s ease 1s;
+  }
+}
+
+@keyframes slideLeave {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideEnter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
