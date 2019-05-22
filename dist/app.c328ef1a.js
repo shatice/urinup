@@ -15137,7 +15137,7 @@ module.exports = {
     }, {
       "label": "Marcher",
       "path": 8,
-      "logo": "walk"
+      "logo": "#walk"
     }]
   }, {
     "id": 6,
@@ -15256,7 +15256,7 @@ module.exports = {
       "label": "Pleurer",
       "ifUber": "Oups, pas de tel, pas d'Uber (t'avais qu'à être un parisien comme tous les gens bien",
       "path": 18,
-      "logo": "pleurer"
+      "logo": "#pleurer"
     }]
   }, {
     "id": 17,
@@ -15264,17 +15264,19 @@ module.exports = {
     "actions": [{
       "label": "Dabber",
       "path": 18,
-      "logo": "dabber"
+      "logo": "#dabber"
     }]
   }, {
     "id": 18,
     "content": "pas assez de liquide doit prendre un vélib automobilistes te claxonnent",
     "actions": [{
       "label": "Défi",
-      "path": 19
+      "path": 19,
+      "logo": "#camion"
     }, {
       "label": "Peur",
-      "category": "lose"
+      "category": "lose",
+      "logo": "#walk"
     }]
   }, {
     "id": 19,
@@ -41994,7 +41996,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59885" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53334" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

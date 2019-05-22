@@ -83,7 +83,7 @@
         {
           "label": "Marcher",
           "path": 8,
-          "logo": "walk"
+          "logo": "#walk"
         }
       ]
     },
@@ -241,7 +241,7 @@
           "label": "Pleurer",
           "ifUber": "Oups, pas de tel, pas d'Uber (t'avais qu'à être un parisien comme tous les gens bien",
           "path": 18,
-          "logo": "pleurer"
+          "logo": "#pleurer"
         }
       ]
     },
@@ -252,7 +252,7 @@
         {
           "label": "Dabber",
           "path": 18,
-          "logo": "dabber"
+          "logo": "#dabber"
         }
       ]
     },
@@ -262,11 +262,13 @@
       "actions": [
         {
           "label": "Défi",
-          "path": 19
+          "path": 19,
+          "logo": "#camion"
         },
         {
           "label": "Peur",
-          "category": "lose"
+          "category": "lose",
+          "logo": "#walk"
         }
       ]
     },
