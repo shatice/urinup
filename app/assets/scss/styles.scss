@@ -138,6 +138,7 @@ ul {
   animation: fake 1s;
   &::after {
     animation: slideLeave 1s;
+    opacity: 0;
   }
 }
 
@@ -145,6 +146,7 @@ ul {
   animation: fake 2s;
   &::after {
     animation: slideEnter 1s ease 1s;
+    opacity: .5;
   }
 }
 

@@ -15467,10 +15467,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 var _default = {
   data: function data() {
     return {
-      step: this.getStep()
+      step: this.getStep(),
+      transition: ""
     };
   },
   mounted: function mounted() {
@@ -15493,27 +15495,12 @@ var _default = {
       });
     },
     doActions: function doActions(action) {
-      var _this2 = this;
-
-      var timeout = null;
-      var timing = 500;
-
       if (action.path) {
-        this.animateOut(document.querySelector('.choice'));
-
-        if (timeout) {
-          clearTimeout(timeout);
-        }
-
-        timeout = setTimeout(function () {
-          console.log("change route");
-
-          _this2.$router.push({
-            params: {
-              id: action.path
-            }
-          });
-        }, timing);
+        this.$router.push({
+          params: {
+            id: action.path
+          }
+        });
       } // TEST FOR LOCALSTORAGE
 
 
@@ -15543,9 +15530,6 @@ var _default = {
           path: "/loose"
         });
       }
-    },
-    animateOut: function animateOut(el) {
-      el.style.opacity = 0;
     }
   }
 };
@@ -15575,6 +15559,7 @@ exports.default = _default;
           {
             key: action.path,
             staticClass: "choice",
+            class: _vm.transition,
             on: {
               click: function($event) {
                 return _vm.doActions(action)
@@ -41964,7 +41949,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59283" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60900" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -10,7 +10,8 @@
           class="choice"
           v-on:click="doActions(action)"
           v-for="action in step.actions"
-          :key="action.path" 
+          :key="action.path"
+          :class="transition" 
         >
           <div class="labelAction" >{{action.label}}</div>
           <div class="actionIcon">
@@ -27,7 +28,8 @@ import game from "../data.json";
 export default {
   data() {
     return {
-      step: this.getStep()
+      step: this.getStep(),
+      transition: ""
     };
   },
   mounted() {
@@ -54,19 +56,9 @@ export default {
 
 
     doActions(action) {
-      let timeout = null
-      let timing = 500
-      
+
       if (action.path) {
-        this.animateOut(document.querySelector('.choice'))
-        if(timeout) {
-          clearTimeout(timeout)
-        }
-        timeout = setTimeout(() => {
-          console.log("change route");
-          
           this.$router.push({ params: { id: action.path } });
-        }, timing);
       }
       // TEST FOR LOCALSTORAGE
       if (
@@ -91,10 +83,6 @@ export default {
         this.$router.push({ path: "/loose" });
       }
     },
-
-    animateOut(el) {
-      el.style.opacity = 0
-    }
 
   }
 };

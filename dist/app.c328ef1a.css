@@ -310,6 +310,7 @@ ul li:last-child .labelAction {
 }
 .pane-leave-active::after {
   animation: slideLeave 1s;
+  opacity: 0;
 }
 
 .pane-enter-active {
@@ -317,6 +318,7 @@ ul li:last-child .labelAction {
 }
 .pane-enter-active::after {
   animation: slideEnter 1s ease 1s;
+  opacity: 0.5;
 }
 
 @keyframes slideLeave {
