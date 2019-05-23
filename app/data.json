@@ -442,22 +442,7 @@
       "actions": [
         {
           "label": "Aide",
-          "category": "win/lose",
-          "path": 20
-        }
-      ]
-    },
-    {
-      "id": 20,
-      "content": "Trouve le code",
-      "actions": [
-        {
-          "label": "Bon code",
-          "category": "win"
-        },
-        {
-          "label": "Mauvais code",
-          "category": "lose"
+          "category": "win/lose"
         }
       ]
     }

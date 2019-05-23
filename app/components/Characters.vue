@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="charactersMain main">
     <h1>{{ gameChar.content }}</h1>
-    <ul>
+    <ul class="charactersList">
       <li class="characterItem" v-on:click="doEffects(character)" :key="character.class" v-for="character in gameChar.characters">
         <div>
           <svg class="characterChoice" aria-hidden="true"><use v-bind:href="`${character.svg}`"></use></svg>
