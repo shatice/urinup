@@ -4,7 +4,6 @@
       <svg class="urinupLogo" aria-hidden="true"><use v-bind:href="`${step.logoSite}`"></use></svg>
     </div>
     <div class="soundContainer">
-      <!-- <svg class="soundIcon" aria-hidden="true"><use xlink:href="#soundIcon"></use></svg> -->
       <audio rel="preload" controls loop>
       <source src="../assets/audio/pookie.mp3">
     </audio>

@@ -1,54 +1,16 @@
 <template>
-<form
-  id="app"
-  @submit="checkForm"
-  action="https://vuejs.org/"
-  method="post"
-  novalidate="true"
->
+<form>
 
-  <p v-if="errors.length">
+<input id="name" name="name" v-model="name"  placeholder="modifiez-moi">
+<p>{{ name }}</p>
+
+  <p v-if="errors.value">
+    <b>Please correct the following error(s):</b>
     <ul>
       <li v-for="error in errors">{{ error }}</li>
     </ul>
   </p>
 
-  <p>
-    <label for="season">Nombre saison got</label>
-    <input
-      id="season"
-      type="number"
-      name="season"
-    >
-  </p>
-
-  <p>
-    <label for="lettre">Lettre en commun Bastien et Yves</label>
-    <input
-      id="lettre"
-      type="text"
-      name="lettre"
-    >
-  </p>
-
-  <p>
-    <label for="groupe">Meilleur groupe de la promo</label>
-    <select
-      id="groupe"
-      type="number"
-      name="groupe"
->
-    </select>
-  </p>
-
-  <p>
-    <input
-      type="submit"
-      value="Submit"
-    >
-  </p>
-
-</form>
 </template>
 
 <script>
@@ -57,29 +19,24 @@ import game from "../data.json";
 export default {
   data() {
     return {
-    errors: [],
-    name: null,
-    email: null,
-    movie: null
+     errors: [],
+     name: null
     }
   },
-  methods: {
+ methods:{
     checkForm: function (e) {
+      if (this.name.value === "helene") {
+        return true;
+      }
       this.errors = [];
 
-      if (this.letter != "e" ) {
-        this.errors.push("tu as perdu");
+      if (!this.name) {
+        this.errors.push('Name required.');
       }
-      if (this.groupe != 2 ) {
-        this.errors.push("tu as perdu");
-      } 
-      if (this.season != 8 ) {
-        this.errors.push("tu as perdu");
-      } 
-      
+
       e.preventDefault();
-    },
-  }
+    }
+ }
 }
 
 

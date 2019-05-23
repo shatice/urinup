@@ -1,6 +1,4 @@
 
-$hetic-green: rgb(255, 255, 255);
-
 body,
 button,
 input,
@@ -39,7 +37,6 @@ h1 {
 }
 
 .button {
-  color: $hetic-green;
   text-decoration: none;
   background: rgb(173, 133, 133);
   padding: 5px;
@@ -69,9 +66,6 @@ li {
   animation: fadeIn 0.5s linear;
 }
 
-
-
-
 .labelAction {
   width: 100%;
   justify-content: space-around;
@@ -95,7 +89,7 @@ li {
   align-items: center; 
   text-align: center;
   &:hover {
-    background-color: rgba(255, 255, 177, 0.66);
+    background-color: rgba(255, 163, 123, 0.66);
     height: 400px;
   }
 }
@@ -124,15 +118,15 @@ li {
   width: 60px;
   height: 60px;
   top: 30px;
-  right: 30px;
-  background-color: rgba(255, 255, 255, 0.623);
-  border-radius: 90px;
+  right: 60px;
+  border-radius: 90px; 
 }
 
 audio {
   width: 100px;
   margin-right: 130px;
-  opacity: 0;
+  opacity: 1;
+  z-index: 60;
 }
 
 

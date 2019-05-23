@@ -292,11 +292,6 @@ section {
   z-index: 40;
 }
 
-.urinupContainer svg use {
-  width: 140px;
-  height: 140px;
-}
-
 .soundContainer {
   width: 100%;
   height: 100%;
@@ -305,25 +300,6 @@ section {
   width: 50px;
   height: 50px;
   z-index: 50;
-}
-
-.playButton {
-  display: block;
-  margin: auto;
-  text-decoration-line: none;
-  color: #ff7777;
-  font-size: 2.4rem;
-  background-color: white;
-  border-radius: 20px;
-  padding: 10px 22px;
-  bottom: 15vh;
-  position: absolute;
-}
-
-.rulesContainer {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
 }
 
 body,
@@ -364,7 +340,6 @@ h1 {
 }
 
 .button {
-  color: white;
   text-decoration: none;
   background: #ad8585;
   padding: 5px;
@@ -417,7 +392,7 @@ li {
   text-align: center;
 }
 .iconAction:hover {
-  background-color: rgba(255, 255, 177, 0.66);
+  background-color: rgba(255, 163, 123, 0.66);
   height: 400px;
 }
 
@@ -444,15 +419,15 @@ li {
   width: 60px;
   height: 60px;
   top: 30px;
-  right: 30px;
-  background-color: rgba(255, 255, 255, 0.623);
+  right: 60px;
   border-radius: 90px;
 }
 
 audio {
   width: 100px;
   margin-right: 130px;
-  opacity: 0;
+  opacity: 1;
+  z-index: 60;
 }
 
 @-webkit-keyframes fadeIn {

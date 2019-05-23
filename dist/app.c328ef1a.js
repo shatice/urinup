@@ -15512,7 +15512,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
 console.log(_data.default);
 var _default = {
   data: function data() {
@@ -15897,67 +15896,23 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default = {
   data: function data() {
     return {
       errors: [],
-      name: null,
-      email: null,
-      movie: null
+      name: null
     };
   },
   methods: {
     checkForm: function checkForm(e) {
+      if (this.name.value === "helene") {
+        return true;
+      }
+
       this.errors = [];
 
-      if (this.letter != "e") {
-        this.errors.push("tu as perdu");
-      }
-
-      if (this.groupe != 2) {
-        this.errors.push("tu as perdu");
-      }
-
-      if (this.season != 8) {
-        this.errors.push("tu as perdu");
+      if (!this.name) {
+        this.errors.push('Name required.');
       }
 
       e.preventDefault();
@@ -15977,84 +15932,46 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "form",
-    {
-      attrs: {
-        id: "app",
-        action: "https://vuejs.org/",
-        method: "post",
-        novalidate: "true"
-      },
-      on: { submit: _vm.checkForm }
-    },
-    [
-      _vm.errors.length
-        ? _c("p", [
-            _c(
-              "ul",
-              _vm._l(_vm.errors, function(error) {
-                return _c("li", [_vm._v(_vm._s(error))])
-              }),
-              0
-            )
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _vm._m(1),
-      _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _vm._m(3)
-    ]
-  )
+  return _c("form", [
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.name,
+          expression: "name"
+        }
+      ],
+      attrs: { id: "name", name: "name", placeholder: "modifiez-moi" },
+      domProps: { value: _vm.name },
+      on: {
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.name = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("p", [_vm._v(_vm._s(_vm.name))]),
+    _vm._v(" "),
+    _vm.errors.value
+      ? _c("p", [
+          _c("b", [_vm._v("Please correct the following error(s):")]),
+          _vm._v(" "),
+          _c(
+            "ul",
+            _vm._l(_vm.errors, function(error) {
+              return _c("li", [_vm._v(_vm._s(error))])
+            }),
+            0
+          )
+        ])
+      : _vm._e()
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c("label", { attrs: { for: "season" } }, [_vm._v("Nombre saison got")]),
-      _vm._v(" "),
-      _c("input", { attrs: { id: "season", type: "number", name: "season" } })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c("label", { attrs: { for: "lettre" } }, [
-        _vm._v("Lettre en commun Bastien et Yves")
-      ]),
-      _vm._v(" "),
-      _c("input", { attrs: { id: "lettre", type: "text", name: "lettre" } })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c("label", { attrs: { for: "groupe" } }, [
-        _vm._v("Meilleur groupe de la promo")
-      ]),
-      _vm._v(" "),
-      _c("select", { attrs: { id: "groupe", type: "number", name: "groupe" } })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c("input", { attrs: { type: "submit", value: "Submit" } })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
           return {
@@ -42249,7 +42166,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50858" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59661" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
