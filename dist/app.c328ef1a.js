@@ -15502,6 +15502,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 console.log(_data.default);
 var _default = {
   data: function data() {
@@ -15595,6 +15605,16 @@ exports.default = _default;
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "gameMain" }, [
+    _c("div", { staticClass: "urinupContainer" }, [
+      _c(
+        "svg",
+        { staticClass: "urinupLogo", attrs: { "aria-hidden": "true" } },
+        [_c("use", { attrs: { href: "" + _vm.step.logoSite } })]
+      )
+    ]),
+    _vm._v(" "),
+    _vm._m(0),
+    _vm._v(" "),
     _c("div", { staticClass: "titleContainer" }, [
       _c("h1", [_vm._v(_vm._s(_vm.step.content))])
     ]),
@@ -15623,10 +15643,6 @@ exports.default = _default;
             }
           },
           [
-            _c("div", { staticClass: "labelAction" }, [
-              _vm._v(_vm._s(action.label))
-            ]),
-            _vm._v(" "),
             _c("div", { staticClass: "iconAction" }, [
               _c("div", { staticClass: "logoContainer" }, [
                 _c(
@@ -15634,6 +15650,10 @@ exports.default = _default;
                   { staticClass: "logo", attrs: { "aria-hidden": "true" } },
                   [_c("use", { attrs: { href: "" + action.logo } })]
                 )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "labelAction" }, [
+                _vm._v(_vm._s(action.label) + "\n        ")
               ])
             ])
           ]
@@ -15643,7 +15663,20 @@ exports.default = _default;
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "soundContainer" }, [
+      _c("audio", { attrs: { rel: "preload", controls: "", loop: "" } }, [
+        _c("source", {
+          attrs: { src: "/pookie.ecbe6c4a.mp3" }
+        })
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
           return {
@@ -15672,7 +15705,7 @@ render._withStripped = true
         
       }
     })();
-},{"../services/countService":"services/countService.js","../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Win.vue":[function(require,module,exports) {
+},{"../services/countService":"services/countService.js","../data.json":"data.json","./../assets/audio/pookie.mp3":[["pookie.ecbe6c4a.mp3","assets/audio/pookie.mp3"],"assets/audio/pookie.mp3"],"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Win.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15836,7 +15869,220 @@ render._withStripped = true
         
       }
     })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"router.js":[function(require,module,exports) {
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Enigme.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _data = _interopRequireDefault(require("../data.json"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      errors: [],
+      name: null,
+      email: null,
+      movie: null
+    };
+  },
+  methods: {
+    checkForm: function checkForm(e) {
+      this.errors = [];
+
+      if (this.letter != "e") {
+        this.errors.push("tu as perdu");
+      }
+
+      if (this.groupe != 2) {
+        this.errors.push("tu as perdu");
+      }
+
+      if (this.season != 8) {
+        this.errors.push("tu as perdu");
+      }
+
+      e.preventDefault();
+    }
+  }
+};
+exports.default = _default;
+        var $3f017c = exports.default || module.exports;
+      
+      if (typeof $3f017c === 'function') {
+        $3f017c = $3f017c.options;
+      }
+    
+        /* template */
+        Object.assign($3f017c, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "form",
+    {
+      attrs: {
+        id: "app",
+        action: "https://vuejs.org/",
+        method: "post",
+        novalidate: "true"
+      },
+      on: { submit: _vm.checkForm }
+    },
+    [
+      _vm.errors.length
+        ? _c("p", [
+            _c(
+              "ul",
+              _vm._l(_vm.errors, function(error) {
+                return _c("li", [_vm._v(_vm._s(error))])
+              }),
+              0
+            )
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _vm._m(2),
+      _vm._v(" "),
+      _vm._m(3)
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("label", { attrs: { for: "season" } }, [_vm._v("Nombre saison got")]),
+      _vm._v(" "),
+      _c("input", { attrs: { id: "season", type: "number", name: "season" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("label", { attrs: { for: "lettre" } }, [
+        _vm._v("Lettre en commun Bastien et Yves")
+      ]),
+      _vm._v(" "),
+      _c("input", { attrs: { id: "lettre", type: "text", name: "lettre" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("label", { attrs: { for: "groupe" } }, [
+        _vm._v("Meilleur groupe de la promo")
+      ]),
+      _vm._v(" "),
+      _c("select", { attrs: { id: "groupe", type: "number", name: "groupe" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("input", { attrs: { type: "submit", value: "Submit" } })
+    ])
+  }
+]
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$3f017c', $3f017c);
+          } else {
+            api.reload('$3f017c', $3f017c);
+          }
+        }
+
+        
+      }
+    })();
+},{"../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"router.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15858,6 +16104,8 @@ var _Win = _interopRequireDefault(require("./components/Win.vue"));
 
 var _Lose = _interopRequireDefault(require("./components/Lose.vue"));
 
+var _Enigme = _interopRequireDefault(require("./components/Enigme.vue"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _vue.default.use(_vueRouter.default);
@@ -15869,6 +16117,10 @@ var router = new _vueRouter.default({
     path: '/',
     name: 'home',
     component: _Home.default
+  }, {
+    path: '/enigme',
+    name: 'enigme',
+    component: _Enigme.default
   }, {
     path: '/characters',
     name: 'characters',
@@ -15894,7 +16146,7 @@ var router = new _vueRouter.default({
 });
 var _default = router;
 exports.default = _default;
-},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/Characters.vue":"components/Characters.vue","./components/Game.vue":"components/Game.vue","./components/Win.vue":"components/Win.vue","./components/Lose.vue":"components/Lose.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/Characters.vue":"components/Characters.vue","./components/Game.vue":"components/Game.vue","./components/Win.vue":"components/Win.vue","./components/Lose.vue":"components/Lose.vue","./components/Enigme.vue":"components/Enigme.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -41996,7 +42248,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53334" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60738" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

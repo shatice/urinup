@@ -1,0 +1,182 @@
+
+$hetic-green: rgb(255, 255, 255);
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'Rajdhani', sans-serif;
+  overflow: hidden;
+}
+
+body {
+  font-weight: bold; 
+  font-size: 1.5rem; 
+}
+
+.gameMain {
+  background: url('/assets/img/bg.svg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh; 
+}
+
+.logo {
+  position: absolute;
+  width: 100px;
+  top: 20px;
+  left: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  color: white;
+  width: 60vw;
+  margin: 0 auto; 
+  text-align: center;
+}
+
+.button {
+  color: $hetic-green;
+  text-decoration: none;
+  background: rgb(173, 133, 133);
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.choicesList {
+  height: 50%;
+  display: flex;
+  width: 1200px;
+  justify-content: space-around;
+  margin: 100px auto;
+
+  .choiceItem { 
+    font-size: 2.0rem;
+    color: white;
+    margin: 40px 20px;
+    border-radius: 90px;
+    justify-content: space-around;
+  }
+}
+
+li {
+  animation: animate 2s linear;
+}
+
+
+
+
+.labelAction {
+  width: 100%;
+  justify-content: space-around;
+  display: none;
+  margin-top: 70px;
+}
+
+.iconAction:hover .labelAction {
+  display: block;  
+}
+
+.iconAction {
+  background-color: rgb(255, 255, 255);
+  width: 180px;
+  height: 180px;
+  border-radius: 80px;
+  position: relative;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  &:hover {
+    background-color: rgba(255, 255, 177, 0.66);
+    height: 400px;
+  }
+}
+
+.actionIcon:hover {
+  background-color: rgb(254, 254, 173);
+
+}
+
+.labelContainer {
+  position: absolute;
+}
+
+.urinupContainer {
+  position: absolute;
+}
+  
+// .pane-leave-active,
+// .pane-enter-active {
+//   &::after {
+//     content: '';
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     transform: translateX(100vw);
+//     background: black;
+//   }
+// }
+
+// .pane-leave-active {
+//   animation: fake 1s;
+//   &::after {
+//     animation: slideLeave 1s;
+//     opacity: 0;
+//   }
+// }
+
+// .pane-enter-active {
+//   animation: fake 2s;
+//   &::after {
+//     animation: slideEnter 1s ease 1s;
+//     opacity: .5;
+//   }
+// }
+
+// @keyframes slideLeave {
+//   to {
+//     opacity: 0;
+//   }
+// }
+
+// @keyframes slideEnter {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
+
+.titleContainer {
+  width: 100vw;
+  height: 100px;
+  padding-top: 25px;
+}
+
+.soundContainer {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 30px;
+  right: 30px;
+  background-color: rgba(255, 255, 255, 0.623);
+  border-radius: 90px;
+}
+
+audio {
+  width: 100px;
+  margin-right: 130px;
+  opacity: 0;
+}

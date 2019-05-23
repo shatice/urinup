@@ -1,22 +1,32 @@
 <template>
   <div class="gameMain">
+    <div class="urinupContainer">    
+      <svg class="urinupLogo" aria-hidden="true"><use v-bind:href="`${step.logoSite}`"></use></svg>
+    </div>
+    <div class="soundContainer">
+      <!-- <svg class="soundIcon" aria-hidden="true"><use xlink:href="#soundIcon"></use></svg> -->
+      <audio rel="preload" controls loop>
+      <source src="../assets/audio/pookie.mp3">
+    </audio>
+    </div>
     <div class="titleContainer">
     <h1>{{ step.content }}</h1>  
     </div>
     <div class="svgContainer">    
       <svg class="character" aria-hidden="true"><use v-bind:href="`${step.svg}`"></use></svg>
     </div>
-
     <ul class="choicesList">
       <li
         class="choiceItem"
         v-on:click="doActions(action)"
         v-for="action in step.actions"
         :key="action.path">
-        <div class="labelAction" >{{action.label}}</div>
         <div class="iconAction">
           <div class="logoContainer">
             <svg class="logo" aria-hidden="true"><use v-bind:href="`${action.logo}`"></use></svg>
+          </div>
+          <div 
+           class="labelAction" >{{action.label}}
           </div>
         </div>
       </li>
@@ -34,6 +44,7 @@ export default {
   data() {
     return {
       step: this.getStep()
+
     };
   },
   mounted() {
@@ -45,6 +56,7 @@ export default {
     }
   },
   methods: {
+  
     getStep() {
       return game.steps.find(step => step.id === parseInt(this.$route.params.id))
     },

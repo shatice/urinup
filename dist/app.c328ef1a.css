@@ -292,6 +292,25 @@ section {
   z-index: 40;
 }
 
+.cls-2 {
+  fill: #d31515;
+}
+
+.urinupContainer svg use {
+  width: 140px;
+  height: 140px;
+}
+
+.soundContainer {
+  width: 100%;
+  height: 100%;
+}
+.soundContainer svg {
+  width: 50px;
+  height: 50px;
+  z-index: 50;
+}
+
 .playButton {
   display: block;
   margin: auto;
@@ -364,37 +383,33 @@ h1 {
   display: flex;
   width: 1200px;
   justify-content: space-around;
-  margin: 180px auto;
+  margin: 100px auto;
 }
 .choicesList .choiceItem {
-  width: 400px;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: white;
   margin: 40px 20px;
   border-radius: 90px;
-  display: flex;
   justify-content: space-around;
 }
-.choicesList .choiceItem:last-child .labelAction {
-  order: 2;
-}
 
-.audioButton {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  width: 30px;
-  height: 30px;
-  background-color: aqua;
+li {
+  animation: animate 2s linear;
 }
 
 .labelAction {
-  width: 200px;
+  width: 100%;
   justify-content: space-around;
+  display: none;
+  margin-top: 70px;
+}
+
+.iconAction:hover .labelAction {
+  display: block;
 }
 
 .iconAction {
-  background-color: rgba(255, 255, 255, 0.473);
+  background-color: white;
   width: 180px;
   height: 180px;
   border-radius: 80px;
@@ -403,9 +418,11 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .iconAction:hover {
   background-color: rgba(255, 255, 177, 0.66);
+  height: 400px;
 }
 
 .actionIcon:hover {
@@ -416,52 +433,30 @@ h1 {
   position: absolute;
 }
 
-.pane-leave-active::after,
-.pane-enter-active::after {
-  content: "";
-  display: block;
+.urinupContainer {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform: translateX(100vw);
-  background: black;
 }
 
-.pane-leave-active {
-  animation: fake 1s;
-}
-.pane-leave-active::after {
-  animation: slideLeave 1s;
-  opacity: 0;
-}
-
-.pane-enter-active {
-  animation: fake 2s;
-}
-.pane-enter-active::after {
-  animation: slideEnter 1s ease 1s;
-  opacity: 0.5;
-}
-
-@keyframes slideLeave {
-  to {
-    opacity: 0;
-  }
-}
-@keyframes slideEnter {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .titleContainer {
   width: 100vw;
   height: 100px;
   padding-top: 25px;
+}
+
+.soundContainer {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 30px;
+  right: 30px;
+  background-color: rgba(255, 255, 255, 0.623);
+  border-radius: 90px;
+}
+
+audio {
+  width: 100px;
+  margin-right: 130px;
+  opacity: 0;
 }
 /*!
 * Vuetify v1.5.14
