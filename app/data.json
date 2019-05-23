@@ -1,0 +1,319 @@
+{
+  "steps": [
+    {
+      "id": 1,
+      "content": "C'est parti ! Tu dois rejoindre au plus vite le métro, tu choisis d'y aller...",
+      "svg": "#character",
+      "actions": [
+        {
+          "label": "En overboard",
+          "category": "lose",
+          "logo": "#overboard"
+        },
+        {
+          "label": "À pieds",
+          "path": 2,
+          "logo": "#walk"
+        },
+        {
+          "label": "En trotinette",
+          "path": 3,
+          "logo": "#trotinette"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "content": "Ok ok, à quelle allure veut se déplacer le petit bobo-écolo ?",
+      "svg": "#character",
+      "actions": [
+        {
+          "label": "Je marche, ça tombe bien j'ai mis mes chassures de ville",
+          "path": 4,
+          "logo": "#walk"
+        },
+        {
+          "label": "Je cours ! (comme Forest)",
+          "path": 6,
+          "logo": "#run"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "content": "Quel courage ! Choisis maintenant ton chemin (à tes risques et périls)",
+      "actions": [
+        {
+          "label": "Je prend la route, easy",
+          "path": 5,
+          "logo": "#road"
+        },
+        {
+          "label": "Je prend le trottoir, j'suis un vrai",
+          "path": 6,
+          "logo": "#pavement"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "content": "T'es dans le métro",
+      "actions": [
+        {
+          "label": "direct",
+          "path": 7,
+          "logo": "#direct"
+        },
+        {
+          "label": "Changements",
+          "path": 8,
+          "logo": "#change"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "content": "T'es sur les quais",
+      "actions": [
+        {
+          "label": "continuer",
+          "path": 9,
+          "logo": "#trotinette"
+        },
+        {
+          "label": "Marcher",
+          "path": 8,
+          "logo": "#walk"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "content": "T'es dans les égouts",
+      "actions": [
+        {
+          "label": "continuer",
+          "path": 10,
+          "logo": "#walk"
+        },
+        {
+          "label": "Grimper",
+          "path": 1,
+          "logo": "#climb"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "content": "T'es dans le wagon",
+      "actions": [
+        {
+          "label": "Écouteurs",
+          "category": "lose",
+          "logo": "#earphone"
+        },
+        {
+          "label": "Pas écouteurs",
+          "path": 11,
+          "logo": "#noearphone"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "content": "T'es à chatelet",
+      "actions": [
+        {
+          "label": "Gauche",
+          "path": 11,
+          "logo": "#left"
+        },
+        {
+          "label": "Droite",
+          "path": 12,
+          "logo": "#right"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "content": "T'es dans la seine",
+      "actions": [
+        {
+          "label": "barreau 1",
+          "path": 9,
+          "logo": "#barreau1"
+        },
+        {
+          "label": "barreau 2",
+          "path": 13,
+          "logo": "#barreau2"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "content": "T'es dans les catacombes",
+      "actions": [
+        {
+          "label": "gauche",
+          "path": 8,
+          "logo": "#left"
+        },
+        {
+          "label": "droite",
+          "category": "lose",
+          "logo": "#right"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "content": "T'es dans le wagon mais t'as trop chaud",
+      "actions": [
+        {
+          "label": "Carte de Paris",
+          "item": "map",
+          "category": "sameGoal",
+          "logo": "#map"
+        },
+        {
+          "label": "Journal",
+          "item": "newspaper",
+          "category": "sameGoal",
+          "logo": "#newspaper"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "content": "T'es au forum",
+      "actions": [
+        {
+          "label": "ecouter la dame de l'asso",
+          "category": "sameGoal",
+          "logo": "#asso"
+        },
+        {
+          "label": "piquer un skate",
+          "category": "sameGoal",
+          "logo": "#skate"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "content": "t'es a république",
+      "actions": [
+        {
+          "label": "contourner",
+          "category": "lose",
+          "logo": "#run"
+        },
+        {
+          "label": "affronter",
+          "path": 15,
+          "logo": "#giletjaune"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "content": "Tu surf sur les gilets jaunes, il te reste 5 km",
+      "actions": [
+        {
+          "label": "Taxi",
+          "path": 17,
+          "logo": "#taxi"
+        },
+        {
+          "label": "Uber",
+          "category": "lose",
+          "logo": "#uber"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "content": "GPS du taxi hs pas de phone pas d’aide à l’arrache perte de temps jauge augmente",
+      "actions": [
+        {
+          "label": "Pleurer",
+          "ifUber": "Oups, pas de tel, pas d'Uber (t'avais qu'à être un parisien comme tous les gens bien",
+          "path": 18,
+          "logo": "#pleurer"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "content": "GPS TAXI HS Phone donc aide gain de temps",
+      "actions": [
+        {
+          "label": "Dabber",
+          "path": 18,
+          "logo": "#dabber"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "content": "pas assez de liquide doit prendre un vélib automobilistes te claxonnent",
+      "actions": [
+        {
+          "label": "Défi",
+          "path": 19,
+          "logo": "#camion"
+        },
+        {
+          "label": "Peur",
+          "category": "lose",
+          "logo": "#walk"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "content": "Bravo ! Tu es devant chez toi. À présent tu as besoin du digicode, mais oups ! Tu l'as oublié. Est ce que l'accessoir qui se trouve dans ta poche pourra t'aider ? ...",
+      "actions": [
+        {
+          "label": "Aide",
+          "category": "win/lose",
+          "path": 20
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "content": "Trouve le code",
+      "text": "les indies",
+      "actions": [
+        {
+          "label": "Bon code",
+          "category": "win"
+        },
+        {
+          "label": "Mauvais code",
+          "category": "lose"
+        }
+      ]
+    }
+  ],
+  "charactersPage": {
+    "content": "Choisis ton personnage",
+    "characters": [
+      {
+        "label": "Le bobo parisien",
+        "class": "parisian",
+        "asset": "phone",
+        "path": "/game/1"
+      },
+      {
+        "label": "Le backpacker",
+        "class": "backpacker",
+        "asset": "newspaper",
+        "path": "/game/1"
+      }
+    ]
+  }
+}

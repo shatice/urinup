@@ -5,8 +5,9 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "dev": "parcel app/index.html",
-    "build": "parcel build app/index.html && cp _redirects dist/",
+    "copy": "rm -rf dist && mkdir dist && mkdir dist/assets && cp -R app/assets/img dist/assets",
+    "dev": "npm run copy && parcel app/index.html",
+    "build": "npm run copy && parcel build app/index.html && cp _redirects dist/",
     "lint": "esw . --ext .js,.vue --watch --color"
   },
   "repository": {
@@ -29,8 +30,10 @@
   },
   "dependencies": {
     "vue": "^2.6.10",
+    "vue-audio": "0.0.12",
     "vue-hot-reload-api": "^2.3.3",
     "vue-router": "^3.0.6",
-    "vue-timers": "^2.0.2"
+    "vue-svgicon": "^3.2.6",
+    "vuetify": "^1.5.14"
   }
 }

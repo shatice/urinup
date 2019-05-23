@@ -1,17 +1,19 @@
 <template>
   <div class="big-header">
     <h1>{{ message }}</h1>
-    <br>
-    <router-link class="button" to="/Home">Recommencer</router-link>
+    <br />
+    <router-link class="button" to="/">Recommencer</router-link>
+    <br />
   </div>
 </template>
 
 <script>
+
 export default {
   data() {
     return {
-      message: "Tu as perdu tu t'es fait pipi dessus"
-    };
+      message: 'GAME OVER'
+    }
   }
 };
 </script>
