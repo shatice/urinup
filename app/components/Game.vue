@@ -1,5 +1,5 @@
 <template>
-  <div class="gameMain">
+  <div class="gameMain main">
     <div class="urinupContainer">    
       <svg class="urinupLogo" aria-hidden="true"><use v-bind:href="`${step.logoSite}`"></use></svg>
     </div>
@@ -137,6 +137,13 @@ export default {
       if (action.category === 'win/lose' && localStorage.getItem('asset') === 'phone') {
         this.$router.push({path: '/lose'})
       }
+      if (action.category === 'win/lose') {
+        this.$router.push({path: '/enigme'})
+      }
+
+
+      var gameMain = document.querySelector('.gameMain');
+      var enigmaMain = document.querySelector('.enigmaMain');
 
       // Écrans de fin Win || Lose
       if (action.category === 'win') {

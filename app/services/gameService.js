@@ -1,4 +1,3 @@
-/* eslint-disable radix */
 class GameService {
   constructor() {
     this.actualTime = 0;
@@ -7,12 +6,8 @@ class GameService {
   }
 
   counter() {
-    // div = document.getElementById('div');
     this.actualTime++;
     this.time = this.actualTime / this.maxTime;
-    // div.style.transform =  "translateY("+ distance* this.time +"px)";
-    
-    // console.log(this.time);
 
     if (this.actualTime >= this.maxTime) {
       

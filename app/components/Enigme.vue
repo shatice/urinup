@@ -1,84 +1,40 @@
 <template>
-<form
-  id="app"
-  @submit="checkForm"
-  action="https://vuejs.org/"
-  method="post"
-  novalidate="true"
->
-
-  <p v-if="errors.length">
-    <ul>
-      <li v-for="error in errors">{{ error }}</li>
+  <div class="enigmaMain main">
+    <ul class="enigmaList">
+      <li class="enigmaItem">Question 1</li>
+      <li class="enigmaItem">Question 2</li>
+      <li class="enigmaItem">Question 3</li>
+      <li class="enigmaItem">Question 4</li>
+      <li class="enigmaItem">Question 5</li>
     </ul>
-  </p>
 
-  <p>
-    <label for="season">Nombre saison got</label>
-    <input
-      id="season"
-      type="number"
-      name="season"
-    >
-  </p>
-
-  <p>
-    <label for="lettre">Lettre en commun Bastien et Yves</label>
-    <input
-      id="lettre"
-      type="text"
-      name="lettre"
-    >
-  </p>
-
-  <p>
-    <label for="groupe">Meilleur groupe de la promo</label>
-    <select
-      id="groupe"
-      type="number"
-      name="groupe"
->
-    </select>
-  </p>
-
-  <p>
-    <input
-      type="submit"
-      value="Submit"
-    >
-  </p>
-
-</form>
+    <form action="" method="get" class="form-example">
+      <div class="formInput">
+        <label for="char1">DIGICODE </label>
+        <input v-on:keyup="doEnigma()" class="input" type="text" name="char1" id="char1" maxlength="5" required >
+      </div>
+    </form>
+  </div>
 </template>
 
 <script>
 import game from "../data.json";
 
 export default {
-  data() {
-    return {
-    errors: [],
-    name: null,
-    email: null,
-    movie: null
-    }
-  },
   methods: {
-    checkForm: function (e) {
-      this.errors = [];
+    doEnigma() {
+      var input = document.querySelector('.formInput input[name=char1]');
+      var value = ""; 
 
-      if (this.letter != "e" ) {
-        this.errors.push("tu as perdu");
-      }
-      if (this.groupe != 2 ) {
-        this.errors.push("tu as perdu");
-      } 
-      if (this.season != 8 ) {
-        this.errors.push("tu as perdu");
-      } 
+      value += input.value;
       
-      e.preventDefault();
-    },
+      if (value === 'sarah') {
+        this.$router.push({path: '/win'})
+      } 
+      if (value.length === 5 && input.value !== 'sarah') {
+        this.$router.push({path: '/lose'})
+      }
+    }
   }
 }
 
