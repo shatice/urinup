@@ -15512,6 +15512,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 console.log(_data.default);
 var _default = {
   data: function data() {
@@ -15644,16 +15645,16 @@ exports.default = _default;
           },
           [
             _c("div", { staticClass: "iconAction" }, [
+              _c("div", { staticClass: "labelAction" }, [
+                _vm._v(_vm._s(action.label) + "\n        ")
+              ]),
+              _vm._v(" "),
               _c("div", { staticClass: "logoContainer" }, [
                 _c(
                   "svg",
                   { staticClass: "logo", attrs: { "aria-hidden": "true" } },
                   [_c("use", { attrs: { href: "" + action.logo } })]
                 )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "labelAction" }, [
-                _vm._v(_vm._s(action.label) + "\n        ")
               ])
             ])
           ]
@@ -42248,7 +42249,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50257" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50858" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

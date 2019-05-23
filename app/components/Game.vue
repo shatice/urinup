@@ -22,12 +22,13 @@
         v-for="action in step.actions"
         :key="action.path">
         <div class="iconAction">
-          <div class="logoContainer">
-            <svg class="logo" aria-hidden="true"><use v-bind:href="`${action.logo}`"></use></svg>
-          </div>
           <div 
            class="labelAction" >{{action.label}}
           </div>
+          <div class="logoContainer">
+            <svg class="logo" aria-hidden="true"><use v-bind:href="`${action.logo}`"></use></svg>
+          </div>
+          
         </div>
       </li>
     </ul>

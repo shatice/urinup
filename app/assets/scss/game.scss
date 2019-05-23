@@ -66,7 +66,7 @@ h1 {
 }
 
 li {
-  animation: animate 2s linear;
+  animation: fadeIn 0.5s linear;
 }
 
 
@@ -84,7 +84,7 @@ li {
 }
 
 .iconAction {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.61);
   width: 180px;
   height: 180px;
   border-radius: 80px;
@@ -113,52 +113,6 @@ li {
   position: absolute;
 }
   
-// .pane-leave-active,
-// .pane-enter-active {
-//   &::after {
-//     content: '';
-//     display: block;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     transform: translateX(100vw);
-//     background: black;
-//   }
-// }
-
-// .pane-leave-active {
-//   animation: fake 1s;
-//   &::after {
-//     animation: slideLeave 1s;
-//     opacity: 0;
-//   }
-// }
-
-// .pane-enter-active {
-//   animation: fake 2s;
-//   &::after {
-//     animation: slideEnter 1s ease 1s;
-//     opacity: .5;
-//   }
-// }
-
-// @keyframes slideLeave {
-//   to {
-//     opacity: 0;
-//   }
-// }
-
-// @keyframes slideEnter {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
-
 .titleContainer {
   width: 100vw;
   height: 100px;
@@ -179,4 +133,31 @@ audio {
   width: 100px;
   margin-right: 130px;
   opacity: 0;
+}
+
+
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }

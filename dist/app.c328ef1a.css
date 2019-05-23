@@ -292,10 +292,6 @@ section {
   z-index: 40;
 }
 
-.cls-2 {
-  fill: #d31515;
-}
-
 .urinupContainer svg use {
   width: 140px;
   height: 140px;
@@ -394,7 +390,7 @@ h1 {
 }
 
 li {
-  animation: animate 2s linear;
+  animation: fadeIn 0.5s linear;
 }
 
 .labelAction {
@@ -409,7 +405,7 @@ li {
 }
 
 .iconAction {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.61);
   width: 180px;
   height: 180px;
   border-radius: 80px;
@@ -457,6 +453,27 @@ audio {
   width: 100px;
   margin-right: 130px;
   opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
 /*!
 * Vuetify v1.5.14
