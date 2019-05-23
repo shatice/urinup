@@ -15007,34 +15007,34 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $52d86d = exports.default || module.exports;
+        var $f7e50a = exports.default || module.exports;
       
-      if (typeof $52d86d === 'function') {
-        $52d86d = $52d86d.options;
+      if (typeof $f7e50a === 'function') {
+        $f7e50a = $f7e50a.options;
       }
     
         /* template */
-        Object.assign($52d86d, (function () {
+        Object.assign($f7e50a, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "homeMain" }, [
-    _c("div", { staticClass: "bgIntroContainer" }, [
-      _c("svg", { staticClass: "bgIntro", attrs: { "aria-hidden": "true" } }, [
-        _c("use", { attrs: { "xlink:href": "#bgIntro" } })
+    _c("div", { staticClass: "loaderContainer" }, [
+      _c("svg", { staticClass: "loader", attrs: { "aria-hidden": "true" } }, [
+        _c("use", { attrs: { "xlink:href": "#loader" } })
       ])
     ]),
     _vm._v(" "),
     _c(
       "div",
-      { staticClass: "rulesContainer" },
+      { staticClass: "homeContent" },
       [
         _c("h1", [_vm._v(_vm._s(_vm.message))]),
         _vm._v(" "),
         _c(
           "router-link",
-          { staticClass: "playButton", attrs: { to: "/characters" } },
+          { staticClass: "button", attrs: { to: "/characters" } },
           [_vm._v("Jouer")]
         )
       ],
@@ -15062,9 +15062,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$52d86d', $52d86d);
+            api.createRecord('$f7e50a', $f7e50a);
           } else {
-            api.reload('$52d86d', $52d86d);
+            api.reload('$f7e50a', $f7e50a);
           }
         }
 
@@ -15076,19 +15076,22 @@ module.exports = {
   "steps": [{
     "id": 1,
     "content": "C'est parti ! Tu dois rejoindre au plus vite le métro, tu choisis d'y aller...",
-    "svg": "#character",
     "actions": [{
       "label": "En overboard",
       "category": "lose",
       "logo": "#overboard"
     }, {
       "label": "À pieds",
+      "characterState": "walking",
       "path": 2,
+      "test": "test",
       "logo": "#walk"
     }, {
       "label": "En trotinette",
-      "path": 3,
-      "logo": "#trotinette"
+      "characterState": "scooting",
+      "logo": "#trotinette",
+      "test": "test",
+      "path": 3
     }]
   }, {
     "id": 2,
@@ -15097,190 +15100,308 @@ module.exports = {
     "actions": [{
       "label": "Je marche, ça tombe bien j'ai mis mes chassures de ville",
       "path": 4,
-      "logo": "#walk"
+      "characterState": "walking",
+      "logo": "#walk",
+      "category": "wasteTime"
     }, {
       "label": "Je cours ! (comme Forest)",
-      "path": 6,
-      "logo": "#run"
+      "characterState": "running",
+      "logo": "#run",
+      "path": 6
     }]
   }, {
     "id": 3,
     "content": "Quel courage ! Choisis maintenant ton chemin (à tes risques et périls)",
     "actions": [{
       "label": "Je prend la route, easy",
-      "path": 5,
-      "logo": "#road"
+      "characterState": "scooting",
+      "logo": "#road",
+      "path": 5
     }, {
       "label": "Je prend le trottoir, j'suis un vrai",
-      "path": 6,
-      "logo": "#pavement"
+      "characterState": "scooting",
+      "logo": "#pavement",
+      "path": 6
     }]
   }, {
     "id": 4,
     "content": "T'es dans le métro",
     "actions": [{
       "label": "direct",
-      "path": 7,
-      "logo": "#direct"
+      "logo": "#direct",
+      "path": 7
     }, {
       "label": "Changements",
-      "path": 8,
-      "logo": "#change"
+      "logo": "#change",
+      "path": 8
     }]
   }, {
     "id": 5,
     "content": "T'es sur les quais",
     "actions": [{
       "label": "continuer",
-      "path": 9,
-      "logo": "#trotinette"
+      "logo": "#trotinette",
+      "path": 9
     }, {
       "label": "Marcher",
-      "path": 8,
-      "logo": "#walk"
+      "characterState": "walking",
+      "logo": "#walk",
+      "path": 8
     }]
   }, {
     "id": 6,
     "content": "T'es dans les égouts",
     "actions": [{
       "label": "continuer",
-      "path": 10,
-      "logo": "#walk"
+      "characterState": "running",
+      "logo": "#walk",
+      "path": 10
     }, {
       "label": "Grimper",
-      "path": 1,
-      "logo": "#climb"
+      "logo": "#climb",
+      "path": 1
     }]
   }, {
     "id": 7,
     "content": "T'es dans le wagon",
     "actions": [{
       "label": "Écouteurs",
-      "category": "lose",
-      "logo": "#earphone"
+      "logo": "#earphone",
+      "category": "lose"
     }, {
       "label": "Pas écouteurs",
-      "path": 11,
-      "logo": "#noearphone"
+      "logo": "#noearphone",
+      "path": 11
     }]
   }, {
     "id": 8,
     "content": "T'es à chatelet",
     "actions": [{
       "label": "Gauche",
-      "path": 11,
-      "logo": "#left"
+      "logo": "#left",
+      "path": 11
     }, {
       "label": "Droite",
-      "path": 12,
-      "logo": "#right"
+      "characterState": "walking",
+      "logo": "#right",
+      "path": 12
     }]
   }, {
     "id": 9,
     "content": "T'es dans la seine",
     "actions": [{
       "label": "barreau 1",
-      "path": 9,
-      "logo": "#barreau1"
+      "logo": "#barreau1",
+      "path": 8
     }, {
       "label": "barreau 2",
-      "path": 13,
-      "logo": "#barreau2"
+      "logo": "#barreau2",
+      "path": 13
     }]
   }, {
     "id": 10,
     "content": "T'es dans les catacombes",
     "actions": [{
       "label": "gauche",
-      "path": 8,
-      "logo": "#left"
+      "characterState": "walking",
+      "logo": "#left",
+      "path": 8
     }, {
       "label": "droite",
-      "category": "lose",
-      "logo": "#right"
+      "logo": "#right",
+      "category": "lose"
     }]
   }, {
     "id": 11,
     "content": "T'es dans le wagon mais t'as trop chaud",
     "actions": [{
       "label": "Carte de Paris",
-      "item": "map",
-      "category": "sameGoal",
-      "logo": "#map"
+      "asset": "map",
+      "characterState": "walking",
+      "logo": "#map",
+      "category": "sameGoal"
     }, {
       "label": "Journal",
-      "item": "newspaper",
-      "category": "sameGoal",
-      "logo": "#newspaper"
+      "asset": "newspaper",
+      "characterState": "walking",
+      "logo": "#journal",
+      "category": "sameGoal"
     }]
   }, {
     "id": 12,
     "content": "T'es au forum",
     "actions": [{
       "label": "ecouter la dame de l'asso",
-      "category": "sameGoal",
-      "logo": "#asso"
+      "logo": "#asso",
+      "category": "sameGoal"
     }, {
       "label": "piquer un skate",
-      "category": "sameGoal",
-      "logo": "#skate"
+      "characterState": "skating",
+      "logo": "#skate",
+      "category": "sameGoal"
+    }]
+  }, {
+    "id": 13,
+    "content": "GAME OVER, Trouve la couche pr te sauver",
+    "actions": [{
+      "label": "Couche",
+      "category": "win"
+    }, {
+      "label": "Pas couche",
+      "category": "lose"
     }]
   }, {
     "id": 14,
     "content": "t'es a république",
     "actions": [{
       "label": "contourner",
-      "category": "lose",
-      "logo": "#run"
+      "logo": "#run",
+      "category": "lose"
     }, {
       "label": "affronter",
-      "path": 15,
-      "logo": "#giletjaune"
+      "characterState": "walking",
+      "logo": "#giletjaune",
+      "path": 15
     }]
   }, {
     "id": 15,
     "content": "Tu surf sur les gilets jaunes, il te reste 5 km",
     "actions": [{
       "label": "Taxi",
-      "path": 17,
-      "logo": "#taxi"
+      "logo": "#taxi",
+      "path": 17
     }, {
       "label": "Uber",
-      "category": "lose",
-      "logo": "#uber"
+      "logo": "#uber",
+      "category": "lose"
     }]
   }, {
     "id": 16,
-    "content": "GPS du taxi hs pas de phone pas d’aide à l’arrache perte de temps jauge augmente",
+    "content": "GPS du taxi hs pas de phone pas d’aide à l’arrache perte de temps jauge augmente. En plus le chauffeur est bavard, surtout que tu viens de lui apprendre que tu bosses dans le Web !",
     "actions": [{
-      "label": "Pleurer",
-      "ifUber": "Oups, pas de tel, pas d'Uber (t'avais qu'à être un parisien comme tous les gens bien",
-      "path": 18,
-      "logo": "#pleurer"
+      "label": "Ha ?",
+      "path": 22
     }]
   }, {
     "id": 17,
-    "content": "GPS TAXI HS Phone donc aide gain de temps",
+    "content": "Cool grâce à ton super smartphone t'as pu aider le chauffeur à retrouver son chemin ! ",
     "actions": [{
-      "label": "Dabber",
-      "path": 18,
-      "logo": "#dabber"
+      "label": "OkD'acc, cool",
+      "path": 21
+    }]
+  }, {
+    "id": 21,
+    "content": "Mais le chauffeur a l'air bavard, surtout que tu viens de lui apprendre que tu bosses dans le Web !",
+    "actions": [{
+      "label": "Ha...",
+      "path": 22
+    }]
+  }, {
+    "id": 22,
+    "content": "Sauras-tu répondre à ses questions assez rapidement ? Fais gaffe, si tu te trompes, tu augmentes la jauge... ;)",
+    "actions": [{
+      "label": "Vas-y balance !",
+      "path": 23
+    }]
+  }, {
+    "id": 23,
+    "content": "Comment se prononce vraiment JSON : ",
+    "actions": [{
+      "label": "Djéssonne",
+      "answer": true,
+      "path": 24
+    }, {
+      "label": "Djison",
+      "answer": false,
+      "path": 25
+    }]
+  }, {
+    "id": 24,
+    "content": "Tu es une div de 10vw de large, 20vh de hauteur et tu souhaites te placer en bas à droite du viewport, tu fais quoi ?",
+    "actions": [{
+      "label": "{position: absolute; bottom: 0vh; right: 90vw;}",
+      "path": 26
+    }, {
+      "label": "{position: absolute; top: 80vh; left: 90vw;}",
+      "path": 25
+    }]
+  }, {
+    "id": 25,
+    "content": "Les SVG c'est :",
+    "actions": [{
+      "label": "Trop cool, je veux m'épouser avec eux",
+      "path": 26
+    }, {
+      "label": "Mouais, nan, j'préfère les png, la base",
+      "path": 27
+    }]
+  }, {
+    "id": 26,
+    "content": "Et sinon, le JS t'en penses quoi ?",
+    "actions": [{
+      "label": "J'adore le JS, dans 20/30 ans y en aura plus",
+      "path": 28
+    }, {
+      "label": "console.log('C'est trop cool')",
+      "path": 27
+    }]
+  }, {
+    "id": 27,
+    "content": "Bon bah voilà, c'était pas si long que ça finalement...",
+    "actions": [{
+      "label": "Si tu veux",
+      "path": 28
+    }]
+  }, {
+    "id": 28,
+    "content": "On s'en fait une dernière ?",
+    "actions": [{
+      "label": "Carrément !",
+      "path": 29
+    }, {
+      "label": "NAN ! Aller, enchaîne",
+      "path": 30
+    }]
+  }, {
+    "id": 29,
+    "content": "Bah nan en fait, j'ai pas envie...",
+    "actions": [{
+      "label": "Ok sympa...",
+      "path": 31
+    }]
+  }, {
+    "id": 30,
+    "content": "Bon bah pour la peine, dis moi donc ce que ''Kaybedeceksin'' veut dire en turc",
+    "actions": [{
+      "label": "Kanoé-kayak",
+      "category": "lose"
+    }, {
+      "label": "Médecine",
+      "category": "lose"
+    }]
+  }, {
+    "id": 31,
+    "content": "Bon, où en étions-nous ? Ha oui ! T'as plus de fric. Du coup t'es obligé de sortir et de continuer en vélib",
+    "actions": [{
+      "label": "Bah super",
+      "characterState": "skating",
+      "path": 18
     }]
   }, {
     "id": 18,
-    "content": "pas assez de liquide doit prendre un vélib automobilistes te claxonnent",
+    "content": "Te voilà donc à bord de ce super engin. Problème : les automobilistes te haient et te klaxonnent à tout va.",
     "actions": [{
-      "label": "Défi",
-      "path": 19,
-      "logo": "#camion"
+      "label": "Tu t'en moques, tu fonces, tu tiens presque plus",
+      "logo": "#camion",
+      "path": 19
     }, {
-      "label": "Peur",
-      "category": "lose",
-      "logo": "#walk"
+      "label": "Ils ont raison, t'es super génant. Tu te décales pour ne pas les déranger",
+      "logo": "#walk",
+      "category": "lose"
     }]
   }, {
     "id": 19,
-    "content": "Bravo ! Tu es devant chez toi. À présent tu as besoin du digicode, mais oups ! Tu l'as oublié. Est ce que l'accessoir qui se trouve dans ta poche pourra t'aider ? ...",
+    "content": "Bravo ! Tu as su défier tous les obstacles et tu es à présent en face du portail de l'immeuble. MAIS CATASTROPHE : tu as oublié le digicode... Trouveras-tu l'aides dont tu as besoin dans l'objet qui se trouve dans ta poche ?",
     "actions": [{
       "label": "Aide",
       "category": "win/lose",
@@ -15289,7 +15410,6 @@ module.exports = {
   }, {
     "id": 20,
     "content": "Trouve le code",
-    "text": "les indies",
     "actions": [{
       "label": "Bon code",
       "category": "win"
@@ -15304,15 +15424,67 @@ module.exports = {
       "label": "Le bobo parisien",
       "class": "parisian",
       "asset": "phone",
+      "svg": "#parisian",
       "path": "/game/1"
     }, {
       "label": "Le backpacker",
       "class": "backpacker",
       "asset": "newspaper",
+      "svg": "#backpacker",
       "path": "/game/1"
     }]
   }
 };
+},{}],"services/gameService.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/* eslint-disable radix */
+var GameService =
+/*#__PURE__*/
+function () {
+  function GameService() {
+    _classCallCheck(this, GameService);
+
+    this.actualTime = 0;
+    this.maxTime = 180;
+    this.time = 0;
+  }
+
+  _createClass(GameService, [{
+    key: "counter",
+    value: function counter() {
+      var _this = this;
+
+      // div = document.getElementById('div');
+      this.actualTime++;
+      this.time = this.actualTime / this.maxTime; // div.style.transform =  "translateY("+ distance* this.time +"px)";
+      // console.log(this.time);
+
+      if (this.actualTime >= this.maxTime) {} else {
+        setTimeout(function () {
+          return _this.counter();
+        }, 1000);
+      }
+    }
+  }]);
+
+  return GameService;
+}();
+
+var _default = new GameService();
+
+exports.default = _default;
 },{}],"components/Characters.vue":[function(require,module,exports) {
 "use strict";
 
@@ -15322,6 +15494,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _data = _interopRequireDefault(require("../data.json"));
+
+var _gameService = _interopRequireDefault(require("../services/gameService"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -15338,9 +15512,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 var _default = {
   data: function data() {
     return {
+      gameService: _gameService.default,
       gameChar: _data.default.charactersPage
     };
   },
@@ -15348,11 +15524,13 @@ var _default = {
     doEffects: function doEffects(character) {
       this.$router.push({
         path: '/game/1'
-      }); // ITEMS IN LOCALSTORAGE
+      }); // CHARACTERS IN LOCALSTORAGE
 
-      if (character.asset === 'phone') {
+      if (character.svg === '#parisian') {
+        localStorage.setItem('character', 'parisian');
         localStorage.setItem('asset', 'phone');
-      } else if (character.asset === 'newspaper') {
+      } else if (character.svg === '#backpacker') {
+        localStorage.setItem('character', 'backpacker');
         localStorage.setItem('asset', 'newspaper');
       }
 
@@ -15361,14 +15539,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $292da0 = exports.default || module.exports;
+        var $d52fd0 = exports.default || module.exports;
       
-      if (typeof $292da0 === 'function') {
-        $292da0 = $292da0.options;
+      if (typeof $d52fd0 === 'function') {
+        $d52fd0 = $d52fd0.options;
       }
     
         /* template */
-        Object.assign($292da0, (function () {
+        Object.assign($d52fd0, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -15383,7 +15561,7 @@ exports.default = _default;
           "li",
           {
             key: character.class,
-            staticClass: "choice",
+            staticClass: "characterItem",
             on: {
               click: function($event) {
                 return _vm.doEffects(character)
@@ -15392,6 +15570,14 @@ exports.default = _default;
           },
           [
             _c("div", [
+              _c(
+                "svg",
+                {
+                  staticClass: "characterChoice",
+                  attrs: { "aria-hidden": "true" }
+                },
+                [_c("use", { attrs: { href: "" + character.svg } })]
+              ),
               _vm._v("\n        " + _vm._s(character.label) + "\n      ")
             ])
           ]
@@ -15421,48 +15607,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$292da0', $292da0);
+            api.createRecord('$d52fd0', $d52fd0);
           } else {
-            api.reload('$292da0', $292da0);
+            api.reload('$d52fd0', $d52fd0);
           }
         }
 
         
       }
     })();
-},{"../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"services/countService.js":[function(require,module,exports) {
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-var CountService =
-/*#__PURE__*/
-function () {
-  function CountService() {
-    _classCallCheck(this, CountService);
-
-    this.count = 0;
-  }
-
-  _createClass(CountService, [{
-    key: "increment",
-    value: function increment() {
-      this.count++;
-    }
-  }, {
-    key: "value",
-    value: function value() {
-      return this.count;
-    }
-  }]);
-
-  return CountService;
-}();
-
-module.exports = new CountService();
-},{}],"components/Game.vue":[function(require,module,exports) {
+},{"../data.json":"data.json","../services/gameService":"services/gameService.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Game.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15470,7 +15624,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _countService = _interopRequireDefault(require("../services/countService"));
+var _gameService = _interopRequireDefault(require("../services/gameService"));
 
 var _data = _interopRequireDefault(require("../data.json"));
 
@@ -15513,11 +15667,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-console.log(_data.default);
 var _default = {
   data: function data() {
     return {
-      step: this.getStep()
+      gameService: _gameService.default,
+      step: this.getStep(),
+      character: '#parisian'
     };
   },
   mounted: function mounted() {
@@ -15543,6 +15698,55 @@ var _default = {
             id: action.path
           }
         });
+      }
+
+      var char = document.querySelector('.character');
+
+      if (action.test === 'test') {
+        char.style.opacity = '1';
+      } // CHARACTERS STATES
+
+
+      var charParisian = document.querySelector('.parisian'),
+          charBackpacker = document.querySelector('.backpacker');
+
+      if (action.characterState === 'walking') {
+        charParisian.classList.add('is-walking');
+        charBackpacker.classList.add('is-walking');
+      } else if (action.characterState !== 'walking') {
+        charParisian.classList.remove('is-walking');
+      }
+
+      if (action.characterState === 'running') {
+        charParisian.classList.add('is-running');
+        charBackpacker.classList.add('is-running');
+      } else if (action.characterState !== 'running') {
+        charParisian.classList.remove('is-running');
+        charBackpacker.classList.remove('is-running');
+      }
+
+      if (action.characterState === 'scooting') {
+        charParisian.classList.add('is-scooting');
+        charBackpacker.classList.add('is-scooting');
+      } else if (action.characterState !== 'scooting') {
+        charParisian.classList.remove('is-scooting');
+        charBackpacker.classList.remove('is-scooting');
+      }
+
+      if (action.characterState === 'skating') {
+        charParisian.classList.add('is-skating');
+        charBackpacker.classList.add('is-skating');
+      } else if (action.characterState !== 'skating') {
+        charParisian.classList.remove('is-skating');
+        charBackpacker.classList.remove('is-skating');
+      }
+
+      if (action.characterState === 'dabbing') {
+        charParisian.classList.add('is-dabbing');
+        charBackpacker.classList.add('is-dabbing');
+      } else if (action.characterState !== 'dabbing') {
+        charParisian.classList.remove('is-dabbing');
+        charBackpacker.classList.remove('is-dabbing');
       } // LOCALSTORAGE
 
 
@@ -15561,8 +15765,13 @@ var _default = {
       if (action.asset === "newspaper") {
         localStorage.setItem('asset', 'newspaper');
         console.log(localStorage);
-      } // FIN déterminée par phone || newspaper 
+      }
 
+      if (localStorage.getItem('character') === 'backpacker') {
+        this.character = '#backpacker';
+      }
+
+      console.log(this.character); // FIN déterminée par phone || newspaper 
 
       if (action.category === 'win/lose' && localStorage.getItem('asset') === 'phone') {
         this.$router.push({
@@ -15588,19 +15797,30 @@ var _default = {
         this.$router.push({
           path: '/game/14'
         });
+      } // COUNTER
+
+
+      if (action.category === 'wasteTime') {
+        _gameService.default.actualTime -= 5;
+      }
+
+      if (_gameService.default.actualTime >= _gameService.default.maxTime) {
+        this.$router.push({
+          path: '/lose'
+        });
       }
     }
   }
 };
 exports.default = _default;
-        var $a8a85a = exports.default || module.exports;
+        var $bca9fb = exports.default || module.exports;
       
-      if (typeof $a8a85a === 'function') {
-        $a8a85a = $a8a85a.options;
+      if (typeof $bca9fb === 'function') {
+        $bca9fb = $bca9fb.options;
       }
     
         /* template */
-        Object.assign($a8a85a, (function () {
+        Object.assign($bca9fb, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -15624,7 +15844,7 @@ exports.default = _default;
       _c(
         "svg",
         { staticClass: "character", attrs: { "aria-hidden": "true" } },
-        [_c("use", { attrs: { href: "" + _vm.step.svg } })]
+        [_c("use", { attrs: { href: "" + _vm.character } })]
       )
     ]),
     _vm._v(" "),
@@ -15646,7 +15866,7 @@ exports.default = _default;
           [
             _c("div", { staticClass: "iconAction" }, [
               _c("div", { staticClass: "labelAction" }, [
-                _vm._v(_vm._s(action.label) + "\n        ")
+                _vm._v(_vm._s(action.label))
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "logoContainer" }, [
@@ -15697,180 +15917,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$a8a85a', $a8a85a);
+            api.createRecord('$bca9fb', $bca9fb);
           } else {
-            api.reload('$a8a85a', $a8a85a);
+            api.reload('$bca9fb', $bca9fb);
           }
         }
 
         
       }
     })();
-},{"../services/countService":"services/countService.js","../data.json":"data.json","./../assets/audio/pookie.mp3":[["pookie.ecbe6c4a.mp3","assets/audio/pookie.mp3"],"assets/audio/pookie.mp3"],"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Win.vue":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = {
-  data: function data() {
-    return {
-      message: 'VICTOIRE'
-    };
-  }
-};
-exports.default = _default;
-        var $50aaa2 = exports.default || module.exports;
-      
-      if (typeof $50aaa2 === 'function') {
-        $50aaa2 = $50aaa2.options;
-      }
-    
-        /* template */
-        Object.assign($50aaa2, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "big-header" },
-    [
-      _c("h1", [_vm._v(_vm._s(_vm.message))]),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("router-link", { staticClass: "button", attrs: { to: "/" } }, [
-        _vm._v("Recommencer")
-      ]),
-      _vm._v(" "),
-      _c("br")
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$50aaa2', $50aaa2);
-          } else {
-            api.reload('$50aaa2', $50aaa2);
-          }
-        }
-
-        
-      }
-    })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Lose.vue":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = {
-  data: function data() {
-    return {
-      message: 'GAME OVER'
-    };
-  }
-};
-exports.default = _default;
-        var $8d3a56 = exports.default || module.exports;
-      
-      if (typeof $8d3a56 === 'function') {
-        $8d3a56 = $8d3a56.options;
-      }
-    
-        /* template */
-        Object.assign($8d3a56, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "big-header" },
-    [
-      _c("h1", [_vm._v(_vm._s(_vm.message))]),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("router-link", { staticClass: "button", attrs: { to: "/" } }, [
-        _vm._v("Recommencer")
-      ]),
-      _vm._v(" "),
-      _c("br")
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$8d3a56', $8d3a56);
-          } else {
-            api.reload('$8d3a56', $8d3a56);
-          }
-        }
-
-        
-      }
-    })();
-},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Enigme.vue":[function(require,module,exports) {
+},{"../services/gameService":"services/gameService.js","../data.json":"data.json","./../assets/audio/pookie.mp3":[["pookie.ecbe6c4a.mp3","assets/audio/pookie.mp3"],"assets/audio/pookie.mp3"],"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Enigme.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15965,14 +16021,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $3f017c = exports.default || module.exports;
+        var $7698a5 = exports.default || module.exports;
       
-      if (typeof $3f017c === 'function') {
-        $3f017c = $3f017c.options;
+      if (typeof $7698a5 === 'function') {
+        $7698a5 = $7698a5.options;
       }
     
         /* template */
-        Object.assign($3f017c, (function () {
+        Object.assign($7698a5, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -16074,16 +16130,180 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$3f017c', $3f017c);
+            api.createRecord('$7698a5', $7698a5);
           } else {
-            api.reload('$3f017c', $3f017c);
+            api.reload('$7698a5', $7698a5);
           }
         }
 
         
       }
     })();
-},{"../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"router.js":[function(require,module,exports) {
+},{"../data.json":"data.json","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Win.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: 'VICTOIRE'
+    };
+  }
+};
+exports.default = _default;
+        var $ecbaf7 = exports.default || module.exports;
+      
+      if (typeof $ecbaf7 === 'function') {
+        $ecbaf7 = $ecbaf7.options;
+      }
+    
+        /* template */
+        Object.assign($ecbaf7, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/" } }, [
+        _vm._v("Recommencer")
+      ]),
+      _vm._v(" "),
+      _c("br")
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$ecbaf7', $ecbaf7);
+          } else {
+            api.reload('$ecbaf7', $ecbaf7);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Lose.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      message: 'GAME OVER'
+    };
+  }
+};
+exports.default = _default;
+        var $3cb397 = exports.default || module.exports;
+      
+      if (typeof $3cb397 === 'function') {
+        $3cb397 = $3cb397.options;
+      }
+    
+        /* template */
+        Object.assign($3cb397, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "big-header" },
+    [
+      _c("h1", [_vm._v(_vm._s(_vm.message))]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("router-link", { staticClass: "button", attrs: { to: "/" } }, [
+        _vm._v("Recommencer")
+      ]),
+      _vm._v(" "),
+      _c("br")
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$3cb397', $3cb397);
+          } else {
+            api.reload('$3cb397', $3cb397);
+          }
+        }
+
+        
+      }
+    })();
+},{"vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"router.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16101,11 +16321,11 @@ var _Characters = _interopRequireDefault(require("./components/Characters.vue"))
 
 var _Game = _interopRequireDefault(require("./components/Game.vue"));
 
+var _Enigme = _interopRequireDefault(require("./components/Enigme.vue"));
+
 var _Win = _interopRequireDefault(require("./components/Win.vue"));
 
 var _Lose = _interopRequireDefault(require("./components/Lose.vue"));
-
-var _Enigme = _interopRequireDefault(require("./components/Enigme.vue"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -16119,10 +16339,6 @@ var router = new _vueRouter.default({
     name: 'home',
     component: _Home.default
   }, {
-    path: '/enigme',
-    name: 'enigme',
-    component: _Enigme.default
-  }, {
     path: '/characters',
     name: 'characters',
     component: _Characters.default
@@ -16130,6 +16346,10 @@ var router = new _vueRouter.default({
     path: '/game/:id',
     name: 'game',
     component: _Game.default
+  }, {
+    path: '/enigme',
+    name: 'enigme',
+    component: _Enigme.default
   }, {
     path: '/win',
     name: 'win',
@@ -16147,7 +16367,7 @@ var router = new _vueRouter.default({
 });
 var _default = router;
 exports.default = _default;
-},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/Characters.vue":"components/Characters.vue","./components/Game.vue":"components/Game.vue","./components/Win.vue":"components/Win.vue","./components/Lose.vue":"components/Lose.vue","./components/Enigme.vue":"components/Enigme.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"vue":"../node_modules/vue/dist/vue.common.js","vue-router":"../node_modules/vue-router/dist/vue-router.esm.js","./components/Home.vue":"components/Home.vue","./components/Characters.vue":"components/Characters.vue","./components/Game.vue":"components/Game.vue","./components/Enigme.vue":"components/Enigme.vue","./components/Win.vue":"components/Win.vue","./components/Lose.vue":"components/Lose.vue"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -16219,7 +16439,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../fonts/rajdhani/rajdhani-v8-latin-300.eot":[["rajdhani-v8-latin-300.5b0bc40e.eot","assets/fonts/rajdhani/rajdhani-v8-latin-300.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-300.woff2":[["rajdhani-v8-latin-300.2d2be70f.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-300.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-300.woff":[["rajdhani-v8-latin-300.643e8b21.woff","assets/fonts/rajdhani/rajdhani-v8-latin-300.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-300.ttf":[["rajdhani-v8-latin-300.9e2f8c80.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-300.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-300.svg":[["rajdhani-v8-latin-300.1b470ba9.svg","assets/fonts/rajdhani/rajdhani-v8-latin-300.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.svg"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.eot":[["rajdhani-v8-latin-regular.e7ffbd94.eot","assets/fonts/rajdhani/rajdhani-v8-latin-regular.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.woff2":[["rajdhani-v8-latin-regular.4e36293d.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-regular.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.woff":[["rajdhani-v8-latin-regular.5a25e55c.woff","assets/fonts/rajdhani/rajdhani-v8-latin-regular.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.ttf":[["rajdhani-v8-latin-regular.ddae8c95.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-regular.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.svg":[["rajdhani-v8-latin-regular.52fa31c5.svg","assets/fonts/rajdhani/rajdhani-v8-latin-regular.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.svg"],"./../fonts/rajdhani/rajdhani-v8-latin-500.eot":[["rajdhani-v8-latin-500.f426db9e.eot","assets/fonts/rajdhani/rajdhani-v8-latin-500.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-500.woff2":[["rajdhani-v8-latin-500.7f9e5ec5.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-500.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-500.woff":[["rajdhani-v8-latin-500.4604a461.woff","assets/fonts/rajdhani/rajdhani-v8-latin-500.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-500.ttf":[["rajdhani-v8-latin-500.c0ee9d4e.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-500.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-500.svg":[["rajdhani-v8-latin-500.79e8bb0c.svg","assets/fonts/rajdhani/rajdhani-v8-latin-500.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.svg"],"./../fonts/rajdhani/rajdhani-v8-latin-600.eot":[["rajdhani-v8-latin-600.592d968c.eot","assets/fonts/rajdhani/rajdhani-v8-latin-600.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-600.woff2":[["rajdhani-v8-latin-600.472afc7d.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-600.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-600.woff":[["rajdhani-v8-latin-600.9fd088cc.woff","assets/fonts/rajdhani/rajdhani-v8-latin-600.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-600.ttf":[["rajdhani-v8-latin-600.55126355.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-600.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-600.svg":[["rajdhani-v8-latin-600.0146b473.svg","assets/fonts/rajdhani/rajdhani-v8-latin-600.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.svg"],"./../fonts/rajdhani/rajdhani-v8-latin-700.eot":[["rajdhani-v8-latin-700.5c7bcffc.eot","assets/fonts/rajdhani/rajdhani-v8-latin-700.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-700.woff2":[["rajdhani-v8-latin-700.e427e9e9.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-700.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-700.woff":[["rajdhani-v8-latin-700.9b46fd89.woff","assets/fonts/rajdhani/rajdhani-v8-latin-700.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-700.ttf":[["rajdhani-v8-latin-700.a9eaf502.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-700.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-700.svg":[["rajdhani-v8-latin-700.f876bbe0.svg","assets/fonts/rajdhani/rajdhani-v8-latin-700.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.svg"],"/Users/helene/Desktop/HETIC/hero/w1p2021-hero-gungor-margary/app/assets/img/bg.svg":[["bg.e910e237.svg","assets/img/bg.svg"],"assets/img/bg.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/vuetify/dist/vuetify.js":[function(require,module,exports) {
+},{"./../fonts/rajdhani/rajdhani-v8-latin-300.eot":[["rajdhani-v8-latin-300.5b0bc40e.eot","assets/fonts/rajdhani/rajdhani-v8-latin-300.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-300.woff2":[["rajdhani-v8-latin-300.2d2be70f.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-300.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-300.woff":[["rajdhani-v8-latin-300.643e8b21.woff","assets/fonts/rajdhani/rajdhani-v8-latin-300.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-300.ttf":[["rajdhani-v8-latin-300.9e2f8c80.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-300.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-300.svg":[["rajdhani-v8-latin-300.1b470ba9.svg","assets/fonts/rajdhani/rajdhani-v8-latin-300.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-300.svg"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.eot":[["rajdhani-v8-latin-regular.e7ffbd94.eot","assets/fonts/rajdhani/rajdhani-v8-latin-regular.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.woff2":[["rajdhani-v8-latin-regular.4e36293d.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-regular.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.woff":[["rajdhani-v8-latin-regular.5a25e55c.woff","assets/fonts/rajdhani/rajdhani-v8-latin-regular.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.ttf":[["rajdhani-v8-latin-regular.ddae8c95.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-regular.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-regular.svg":[["rajdhani-v8-latin-regular.52fa31c5.svg","assets/fonts/rajdhani/rajdhani-v8-latin-regular.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-regular.svg"],"./../fonts/rajdhani/rajdhani-v8-latin-500.eot":[["rajdhani-v8-latin-500.f426db9e.eot","assets/fonts/rajdhani/rajdhani-v8-latin-500.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-500.woff2":[["rajdhani-v8-latin-500.7f9e5ec5.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-500.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-500.woff":[["rajdhani-v8-latin-500.4604a461.woff","assets/fonts/rajdhani/rajdhani-v8-latin-500.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-500.ttf":[["rajdhani-v8-latin-500.c0ee9d4e.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-500.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-500.svg":[["rajdhani-v8-latin-500.79e8bb0c.svg","assets/fonts/rajdhani/rajdhani-v8-latin-500.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-500.svg"],"./../fonts/rajdhani/rajdhani-v8-latin-600.eot":[["rajdhani-v8-latin-600.592d968c.eot","assets/fonts/rajdhani/rajdhani-v8-latin-600.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-600.woff2":[["rajdhani-v8-latin-600.472afc7d.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-600.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-600.woff":[["rajdhani-v8-latin-600.9fd088cc.woff","assets/fonts/rajdhani/rajdhani-v8-latin-600.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-600.ttf":[["rajdhani-v8-latin-600.55126355.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-600.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-600.svg":[["rajdhani-v8-latin-600.0146b473.svg","assets/fonts/rajdhani/rajdhani-v8-latin-600.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-600.svg"],"./../fonts/rajdhani/rajdhani-v8-latin-700.eot":[["rajdhani-v8-latin-700.5c7bcffc.eot","assets/fonts/rajdhani/rajdhani-v8-latin-700.eot"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.eot"],"./../fonts/rajdhani/rajdhani-v8-latin-700.woff2":[["rajdhani-v8-latin-700.e427e9e9.woff2","assets/fonts/rajdhani/rajdhani-v8-latin-700.woff2"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.woff2"],"./../fonts/rajdhani/rajdhani-v8-latin-700.woff":[["rajdhani-v8-latin-700.9b46fd89.woff","assets/fonts/rajdhani/rajdhani-v8-latin-700.woff"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.woff"],"./../fonts/rajdhani/rajdhani-v8-latin-700.ttf":[["rajdhani-v8-latin-700.a9eaf502.ttf","assets/fonts/rajdhani/rajdhani-v8-latin-700.ttf"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.ttf"],"./../fonts/rajdhani/rajdhani-v8-latin-700.svg":[["rajdhani-v8-latin-700.f876bbe0.svg","assets/fonts/rajdhani/rajdhani-v8-latin-700.svg"],"assets/fonts/rajdhani/rajdhani-v8-latin-700.svg"],"/Users/HETIC/Desktop/w1p2021-hero-gungor-margary/app/assets/img/bg.svg":[["bg.e910e237.svg","assets/img/bg.svg"],"assets/img/bg.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/vuetify/dist/vuetify.js":[function(require,module,exports) {
 var define;
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
@@ -42249,7 +42469,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51997" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60014" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

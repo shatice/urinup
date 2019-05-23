@@ -113,7 +113,6 @@ body {
 ol,
 ul {
   list-style: none;
-  padding-left: none;
 }
 
 blockquote,
@@ -183,21 +182,6 @@ table {
   src: local("Rajdhani Bold"), local("Rajdhani-Bold"), url("/rajdhani-v8-latin-700.5c7bcffc.eot?#iefix") format("embedded-opentype"), url("/rajdhani-v8-latin-700.e427e9e9.woff2") format("woff2"), url("/rajdhani-v8-latin-700.9b46fd89.woff") format("woff"), url("/rajdhani-v8-latin-700.a9eaf502.ttf") format("truetype"), url("/rajdhani-v8-latin-700.f876bbe0.svg#Rajdhani") format("svg");
   /* Legacy iOS */
 }
-.bgIntroContainer {
-  background-color: #FF7777;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  z-index: -10;
-}
-
-.bgIntro {
-  width: 100%;
-  height: 100%;
-  animation: disappear 2s 5s forwards;
-}
-
 @keyframes piss {
   to {
     transform: translateY(200px);
@@ -217,8 +201,18 @@ table {
     opacity: 0;
   }
 }
-section {
-  background: #FF7777;
+.loaderContainer {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: -10;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  animation: disappear 1s 5s forwards;
 }
 
 .piss {
@@ -234,56 +228,6 @@ section {
   transform: scale(0.1);
   opacity: 0;
   animation: grow 2s 2s linear forwards;
-}
-
-.svgContainer {
-  position: absolute;
-  bottom: 0;
-  width: 20vw;
-  left: 40vw;
-  height: 75vh;
-}
-
-.character {
-  fill: white;
-  stroke: black;
-  height: 100%;
-}
-
-@keyframes walk {
-  from {
-    transform: translateY(-50px);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-@keyframes walkArm {
-  from {
-    transform: scale(0.99);
-  }
-  to {
-    transform: translateZ(0);
-  }
-}
-.leftLeg {
-  animation: walk 0.4s linear alternate infinite;
-}
-
-.rightLeg {
-  animation: walk 0.4s 0.4s linear alternate infinite;
-}
-
-.leftArm, .leftHand {
-  animation: walkArm 0.4s 0.4s linear alternate infinite;
-  fill: white;
-  stroke: black;
-}
-
-.rightArm, .rightHand {
-  animation: walkArm 0.4s linear alternate infinite;
-  fill: white;
-  stroke: black;
 }
 
 .logoContainer svg {
@@ -307,23 +251,191 @@ section {
   z-index: 50;
 }
 
-.playButton {
-  display: block;
-  margin: auto;
-  text-decoration-line: none;
-  color: #ff7777;
-  font-size: 2.4rem;
-  background-color: white;
-  border-radius: 20px;
-  padding: 10px 22px;
-  bottom: 15vh;
-  position: absolute;
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
 }
-
-.rulesContainer {
+.homeMain {
   width: 100vw;
   height: 100vh;
-  position: relative;
+  overflow: hidden;
+}
+
+.homeContent {
+  opacity: 0;
+  animation: appear 1s 5s forwards;
+}
+
+.svgContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 75vh;
+}
+
+.character {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.group {
+  transform: translateX(125px);
+}
+
+.runningItem {
+  display: none;
+}
+
+.scooterItem {
+  display: none;
+}
+
+.dabArms {
+  display: none;
+}
+
+.skate {
+  display: none;
+}
+
+.cryingFace {
+  display: none;
+}
+
+.winningFace {
+  display: none;
+}
+
+.scaringFace {
+  display: none;
+}
+
+.losingFace {
+  display: none;
+}
+
+@keyframes walk {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes walkArm {
+  from {
+    transform: scale(0.99);
+  }
+  to {
+    transform: translateZ(0);
+  }
+}
+.is-walking .leftLeg {
+  animation: walk 0.4s linear alternate infinite;
+}
+.is-walking .rightLeg {
+  animation: walk 0.4s 0.4s linear alternate infinite;
+}
+.is-walking .leftArmWalk {
+  animation: walkArm 0.4s 0.4s linear alternate infinite;
+  fill: white;
+  stroke: black;
+}
+.is-walking .rightArmWalk {
+  animation: walkArm 0.4s linear alternate infinite;
+  fill: white;
+  stroke: black;
+}
+.is-walking .bag {
+  animation: walkArm 0.4s linear alternate infinite;
+}
+
+.is-running .leftArmWalk, .is-running .rightArmWalk {
+  display: none;
+}
+.is-running .runningItem {
+  display: block;
+}
+.is-running .leftLeg {
+  animation: walk 0.1s linear alternate infinite;
+}
+.is-running .rightLeg {
+  animation: walk 0.1s 0.1s linear alternate infinite;
+}
+.is-running .leftArmRun {
+  animation: walkArm 0.1s 0.1s linear alternate infinite;
+}
+.is-running .rightArmRun {
+  animation: walkArm 0.1s linear alternate infinite;
+}
+.is-running .bag {
+  animation: walkArm 0.1s linear alternate infinite;
+}
+
+@keyframes turningWheel {
+  from {
+    stroke-dasharray: 20;
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 20;
+  }
+}
+@keyframes driving {
+  from {
+    transform: translateX(20px);
+  }
+  to {
+    transform: translateX(-20px);
+  }
+}
+.is-scooting .leftArmWalk, .is-scooting .rightArmWalk {
+  display: none;
+}
+.is-scooting .scooterItem {
+  display: block;
+}
+.is-scooting .group {
+  animation: driving 1s linear alternate infinite;
+}
+.is-scooting .scooterLine {
+  animation: turningWheel 1s linear infinite;
+}
+
+.is-skating .group {
+  animation: driving 1s linear alternate infinite;
+}
+.is-skating .skate {
+  display: block;
+}
+.is-skating .skateLine {
+  animation: turningWheel 1s linear infinite;
+}
+
+.is-dabbing .leftArmWalk, .is-dabbing .rightArmWalk {
+  display: none;
+}
+.is-dabbing .dabArms {
+  display: block;
+}
+
+.is-crying .cryingFace {
+  display: block;
+}
+
+.is-winning .winningFace {
+  display: block;
+}
+
+.is-scaring .scaringFace {
+  display: block;
+}
+
+.is-losing .losingFace {
+  display: block;
 }
 
 body,

@@ -1,11 +1,11 @@
 <template>
   <div class="homeMain">
-    <div class="bgIntroContainer">    
-      <svg class="bgIntro" aria-hidden="true"><use xlink:href="#bgIntro"></use></svg>
+    <div class="loaderContainer">    
+      <svg class="loader" aria-hidden="true"><use xlink:href="#loader"></use></svg>
     </div>
-    <div class="rulesContainer">      
+    <div class="homeContent">
       <h1>{{ message }}</h1>
-      <router-link class="playButton" to="/characters">Jouer</router-link>
+      <router-link class="button" to="/characters">Jouer</router-link>
     </div>
   </div>
 </template>

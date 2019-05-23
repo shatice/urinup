@@ -4,9 +4,9 @@ import Router from 'vue-router';
 import Home from './components/Home.vue';
 import Characters from './components/Characters.vue';
 import Game from './components/Game.vue';
+import Enigme from './components/Enigme.vue'
 import Win from './components/Win.vue';
 import Lose from './components/Lose.vue';
-import Enigme from './components/Enigme.vue';
 
 
 Vue.use(Router);
@@ -21,11 +21,6 @@ const router = new Router({
       component: Home,
     },
     {
-      path: '/enigme',
-      name: 'enigme',
-      component: Enigme,
-    },
-    {
       path: '/characters',
       name: 'characters',
       component: Characters,
@@ -34,6 +29,11 @@ const router = new Router({
       path: '/game/:id',
       name: 'game',
       component: Game,
+    },
+    {
+      path: '/enigme',
+      name: 'enigme',
+      component: Enigme,
     },
     {
       path: '/win',

@@ -3,7 +3,6 @@
     {
       "id": 1,
       "content": "C'est parti ! Tu dois rejoindre au plus vite le métro, tu choisis d'y aller...",
-      "svg": "#character",
       "actions": [
         {
           "label": "En overboard",
@@ -12,13 +11,17 @@
         },
         {
           "label": "À pieds",
+          "characterState": "walking",
           "path": 2,
+          "test": "test",
           "logo": "#walk"
         },
         {
           "label": "En trotinette",
-          "path": 3,
-          "logo": "#trotinette"
+          "characterState": "scooting",
+          "logo": "#trotinette",
+          "test": "test",
+          "path": 3
         }
       ]
     },
@@ -30,12 +33,15 @@
         {
           "label": "Je marche, ça tombe bien j'ai mis mes chassures de ville",
           "path": 4,
-          "logo": "#walk"
+          "characterState": "walking",
+          "logo": "#walk",
+          "category": "wasteTime"
         },
         {
           "label": "Je cours ! (comme Forest)",
-          "path": 6,
-          "logo": "#run"
+          "characterState": "running",
+          "logo": "#run",
+          "path": 6
         }
       ]
     },
@@ -45,13 +51,15 @@
       "actions": [
         {
           "label": "Je prend la route, easy",
-          "path": 5,
-          "logo": "#road"
+          "characterState": "scooting",
+          "logo": "#road",
+          "path": 5
         },
         {
           "label": "Je prend le trottoir, j'suis un vrai",
-          "path": 6,
-          "logo": "#pavement"
+          "characterState": "scooting",
+          "logo": "#pavement",
+          "path": 6
         }
       ]
     },
@@ -61,13 +69,13 @@
       "actions": [
         {
           "label": "direct",
-          "path": 7,
-          "logo": "#direct"
+          "logo": "#direct",
+          "path": 7
         },
         {
           "label": "Changements",
-          "path": 8,
-          "logo": "#change"
+          "logo": "#change",
+          "path": 8
         }
       ]
     },
@@ -77,13 +85,14 @@
       "actions": [
         {
           "label": "continuer",
-          "path": 9,
-          "logo": "#trotinette"
+          "logo": "#trotinette",
+          "path": 9
         },
         {
           "label": "Marcher",
-          "path": 8,
-          "logo": "#walk"
+          "characterState": "walking",
+          "logo": "#walk",
+          "path": 8
         }
       ]
     },
@@ -93,13 +102,14 @@
       "actions": [
         {
           "label": "continuer",
-          "path": 10,
-          "logo": "#walk"
+          "characterState": "running",
+          "logo": "#walk",
+          "path": 10
         },
         {
           "label": "Grimper",
-          "path": 1,
-          "logo": "#climb"
+          "logo": "#climb",
+          "path": 1
         }
       ]
     },
@@ -109,13 +119,13 @@
       "actions": [
         {
           "label": "Écouteurs",
-          "category": "lose",
-          "logo": "#earphone"
+          "logo": "#earphone",
+          "category": "lose"
         },
         {
           "label": "Pas écouteurs",
-          "path": 11,
-          "logo": "#noearphone"
+          "logo": "#noearphone",
+          "path": 11
         }
       ]
     },
@@ -125,13 +135,14 @@
       "actions": [
         {
           "label": "Gauche",
-          "path": 11,
-          "logo": "#left"
+          "logo": "#left",
+          "path": 11
         },
         {
           "label": "Droite",
-          "path": 12,
-          "logo": "#right"
+          "characterState": "walking",
+          "logo": "#right",
+          "path": 12
         }
       ]
     },
@@ -141,13 +152,13 @@
       "actions": [
         {
           "label": "barreau 1",
-          "path": 9,
-          "logo": "#barreau1"
+          "logo": "#barreau1",
+          "path": 8
         },
         {
           "label": "barreau 2",
-          "path": 13,
-          "logo": "#barreau2"
+          "logo": "#barreau2",
+          "path": 13
         }
       ]
     },
@@ -157,13 +168,14 @@
       "actions": [
         {
           "label": "gauche",
-          "path": 8,
-          "logo": "#left"
+          "characterState": "walking",
+          "logo": "#left",
+          "path": 8
         },
         {
           "label": "droite",
-          "category": "lose",
-          "logo": "#right"
+          "logo": "#right",
+          "category": "lose"
         }
       ]
     },
@@ -173,15 +185,17 @@
       "actions": [
         {
           "label": "Carte de Paris",
-          "item": "map",
-          "category": "sameGoal",
-          "logo": "#map"
+          "asset": "map",
+          "characterState": "walking",
+          "logo": "#map",
+          "category": "sameGoal"
         },
         {
           "label": "Journal",
-          "item": "newspaper",
-          "category": "sameGoal",
-          "logo": "#newspaper"
+          "asset": "newspaper",
+          "characterState": "walking",
+          "logo": "#journal",
+          "category": "sameGoal"
         }
       ]
     },
@@ -191,13 +205,28 @@
       "actions": [
         {
           "label": "ecouter la dame de l'asso",
-          "category": "sameGoal",
-          "logo": "#asso"
+          "logo": "#asso",
+          "category": "sameGoal"
         },
         {
           "label": "piquer un skate",
-          "category": "sameGoal",
-          "logo": "#skate"
+          "characterState": "skating",
+          "logo": "#skate",
+          "category": "sameGoal"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "content": "GAME OVER, Trouve la couche pr te sauver",
+      "actions": [
+        {
+          "label": "Couche",
+          "category": "win"
+        },
+        {
+          "label": "Pas couche",
+          "category": "lose"
         }
       ]
     },
@@ -207,13 +236,14 @@
       "actions": [
         {
           "label": "contourner",
-          "category": "lose",
-          "logo": "#run"
+          "logo": "#run",
+          "category": "lose"
         },
         {
           "label": "affronter",
-          "path": 15,
-          "logo": "#giletjaune"
+          "characterState": "walking",
+          "logo": "#giletjaune",
+          "path": 15
         }
       ]
     },
@@ -223,58 +253,192 @@
       "actions": [
         {
           "label": "Taxi",
-          "path": 17,
-          "logo": "#taxi"
+          "logo": "#taxi",
+          "path": 17
         },
         {
           "label": "Uber",
-          "category": "lose",
-          "logo": "#uber"
+          "logo": "#uber",
+          "category": "lose"
         }
       ]
     },
     {
       "id": 16,
-      "content": "GPS du taxi hs pas de phone pas d’aide à l’arrache perte de temps jauge augmente",
+      "content": "GPS du taxi hs pas de phone pas d’aide à l’arrache perte de temps jauge augmente. En plus le chauffeur est bavard, surtout que tu viens de lui apprendre que tu bosses dans le Web !",
       "actions": [
         {
-          "label": "Pleurer",
-          "ifUber": "Oups, pas de tel, pas d'Uber (t'avais qu'à être un parisien comme tous les gens bien",
-          "path": 18,
-          "logo": "#pleurer"
+          "label": "Ha ?",
+          "path": 22
         }
       ]
     },
     {
       "id": 17,
-      "content": "GPS TAXI HS Phone donc aide gain de temps",
+      "content": "Cool grâce à ton super smartphone t'as pu aider le chauffeur à retrouver son chemin ! ",
       "actions": [
         {
-          "label": "Dabber",
-          "path": 18,
-          "logo": "#dabber"
+          "label": "OkD'acc, cool",
+          "path": 21
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "content": "Mais le chauffeur a l'air bavard, surtout que tu viens de lui apprendre que tu bosses dans le Web !",
+      "actions": [
+        {
+          "label": "Ha...",
+          "path": 22
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "content": "Sauras-tu répondre à ses questions assez rapidement ? Fais gaffe, si tu te trompes, tu augmentes la jauge... ;)",
+      "actions": [
+        {
+          "label": "Vas-y balance !",
+          "path": 23
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "content": "Comment se prononce vraiment JSON : ",
+      "actions": [
+        {
+          "label": "Djéssonne",
+          "answer": true, 
+          "path": 24
+        },
+        {
+          "label": "Djison",
+          "answer": false,
+          "path": 25
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "content": "Tu es une div de 10vw de large, 20vh de hauteur et tu souhaites te placer en bas à droite du viewport, tu fais quoi ?",
+      "actions": [
+        {
+          "label": "{position: absolute; bottom: 0vh; right: 90vw;}",
+          "path": 26
+        },
+        {
+          "label": "{position: absolute; top: 80vh; left: 90vw;}",
+          "path": 25
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "content": "Les SVG c'est :",
+      "actions": [
+        {
+          "label": "Trop cool, je veux m'épouser avec eux",
+          "path": 26
+        },
+        {
+          "label": "Mouais, nan, j'préfère les png, la base",
+          "path": 27
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "content": "Et sinon, le JS t'en penses quoi ?",
+      "actions": [
+        {
+          "label": "J'adore le JS, dans 20/30 ans y en aura plus",
+          "path": 28
+        },
+        {
+          "label": "console.log('C'est trop cool')",
+          "path": 27
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "content": "Bon bah voilà, c'était pas si long que ça finalement...",
+      "actions": [
+        {
+          "label": "Si tu veux",
+          "path": 28
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "content": "On s'en fait une dernière ?",
+      "actions": [
+        {
+          "label": "Carrément !",
+          "path": 29
+        }, 
+        {
+          "label": "NAN ! Aller, enchaîne",
+          "path": 30
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "content": "Bah nan en fait, j'ai pas envie...",
+      "actions": [
+        {
+          "label": "Ok sympa...",
+          "path": 31
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "content": "Bon bah pour la peine, dis moi donc ce que ''Kaybedeceksin'' veut dire en turc",
+      "actions": [
+        {
+          "label": "Kanoé-kayak",
+          "category": "lose"
+        },
+        {
+          "label": "Médecine",
+          "category": "lose"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "content": "Bon, où en étions-nous ? Ha oui ! T'as plus de fric. Du coup t'es obligé de sortir et de continuer en vélib",
+      "actions": [
+        {
+          "label": "Bah super",
+          "characterState": "skating",
+          "path": 18
         }
       ]
     },
     {
       "id": 18,
-      "content": "pas assez de liquide doit prendre un vélib automobilistes te claxonnent",
+      "content": "Te voilà donc à bord de ce super engin. Problème : les automobilistes te haient et te klaxonnent à tout va.",
       "actions": [
         {
-          "label": "Défi",
-          "path": 19,
-          "logo": "#camion"
+          "label": "Tu t'en moques, tu fonces, tu tiens presque plus",
+          "logo": "#camion",
+          "path": 19
         },
         {
-          "label": "Peur",
-          "category": "lose",
-          "logo": "#walk"
+          "label": "Ils ont raison, t'es super génant. Tu te décales pour ne pas les déranger",
+          "logo": "#walk",
+          "category": "lose"
         }
       ]
     },
     {
       "id": 19,
-      "content": "Bravo ! Tu es devant chez toi. À présent tu as besoin du digicode, mais oups ! Tu l'as oublié. Est ce que l'accessoir qui se trouve dans ta poche pourra t'aider ? ...",
+      "content": "Bravo ! Tu as su défier tous les obstacles et tu es à présent en face du portail de l'immeuble. MAIS CATASTROPHE : tu as oublié le digicode... Trouveras-tu l'aides dont tu as besoin dans l'objet qui se trouve dans ta poche ?",
       "actions": [
         {
           "label": "Aide",
@@ -286,7 +450,6 @@
     {
       "id": 20,
       "content": "Trouve le code",
-      "text": "les indies",
       "actions": [
         {
           "label": "Bon code",
@@ -306,14 +469,16 @@
         "label": "Le bobo parisien",
         "class": "parisian",
         "asset": "phone",
+        "svg": "#parisian",
         "path": "/game/1"
       },
       {
         "label": "Le backpacker",
         "class": "backpacker",
         "asset": "newspaper",
+        "svg": "#backpacker",
         "path": "/game/1"
       }
     ]
-  }
+  } 
 }

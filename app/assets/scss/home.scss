@@ -1,18 +1,16 @@
-.playButton {
-  display: block;
-  margin: auto;
-  text-decoration-line: none;
-  color: rgb(255, 119, 119);
-  font-size: 2.4rem;
-  background-color: rgb(255, 255, 255);
-  border-radius: 20px;
-  padding: 10px 22px;
-  bottom: 15vh;
-  position: absolute;
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
 }
 
-.rulesContainer {
-  width: 100vw;
+.homeMain {
+  width: 100vw; 
   height: 100vh;
-  position: relative;
+  overflow: hidden;
+}
+
+.homeContent {
+  opacity: 0;
+  animation: appear 1s 5s forwards; 
 }

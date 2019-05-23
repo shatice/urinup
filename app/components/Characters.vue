@@ -2,8 +2,9 @@
   <div>
     <h1>{{ gameChar.content }}</h1>
     <ul>
-      <li class="choice" v-on:click="doEffects(character)" :key="character.class" v-for="character in gameChar.characters">
+      <li class="characterItem" v-on:click="doEffects(character)" :key="character.class" v-for="character in gameChar.characters">
         <div>
+          <svg class="characterChoice" aria-hidden="true"><use v-bind:href="`${character.svg}`"></use></svg>
           {{ character.label }}
         </div>
       </li>
@@ -13,10 +14,11 @@
 
 <script>
 import game from "../data.json";
-
+import gameService from '../services/gameService'
 export default {
   data() {
     return {
+      gameService: gameService,
       gameChar: game.charactersPage
     };
   },
@@ -24,12 +26,16 @@ export default {
     doEffects(character) {
       this.$router.push({path: '/game/1'})
 
-      // ITEMS IN LOCALSTORAGE
-      if (character.asset === 'phone') {
+      // CHARACTERS IN LOCALSTORAGE
+      if (character.svg === '#parisian') {
+        localStorage.setItem('character', 'parisian')
         localStorage.setItem('asset', 'phone')
-      } else if (character.asset === 'newspaper') {
+      } else if (character.svg === '#backpacker') {
+        localStorage.setItem('character', 'backpacker')
         localStorage.setItem('asset', 'newspaper')
       }
+
+
       console.log(localStorage)
     }
   },
