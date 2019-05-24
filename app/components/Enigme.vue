@@ -28,7 +28,7 @@ export default {
 
       value += input.value;
       
-      if (value === '8D210') {
+      if (value === '8D213') {
         this.$router.push({path: '/win'})
       } 
       if (value.length === 5 && input.value !== '8D213') {
