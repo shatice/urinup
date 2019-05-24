@@ -167,3 +167,16 @@ li {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
+
+.soundContainer {
+  width: 100px; 
+  position: absolute; 
+  right: 40px; 
+  top: 40px; 
+}
+
+audio {
+  width: 100%; 
+  cursor: pointer;
+  align-self: center; 
+}  
