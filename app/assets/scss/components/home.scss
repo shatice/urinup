@@ -8,14 +8,31 @@
   width: 100vw; 
   height: 100vh;
   overflow: hidden;
+  z-index: 2; 
 }
 
 .homeContent {
-  opacity: 0;
-  animation: appear 1s 5s forwards; 
-}
-
-.main {
   width: 100vw; 
   height: 100vh;
+  opacity: 0;
+  animation: appear 1s 5s forwards; 
+  background: linear-gradient(#2E0244, #E56C63);
+}
+
+.playContent {
+  padding-top: 15%;
+  color: white;
+  font-size: 4rem;
+}
+
+.buttonHome {
+  position: absolute;
+  padding: 20px 55px;
+  background-color: white;
+  color: rgb(182, 35, 99);
+  text-decoration-line: none;
+  border-radius: 40px;
+  font-size: 2rem;
+  margin-top: 150px;
+  margin-left: calc( 50% - 6.5rem);
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="enigmaMain main">
+  <div class="enigmaMain">
     <ul class="enigmaList">
       <li class="enigmaItem">Question 1</li>
       <li class="enigmaItem">Question 2</li>

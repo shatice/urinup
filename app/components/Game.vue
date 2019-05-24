@@ -5,9 +5,9 @@
     </div>
 
     <div class="soundContainer">
-      <!-- <svg class="soundIcon" aria-hidden="true"><use xlink:href="#soundIcon"></use></svg> -->
-      <audio rel="preload" controls loop>
-        <source src="../assets/audio/pookie.mp3">
+      <svg class="soundIcon" aria-hidden="true"><use xlink:href="#soundIcon"></use></svg>
+      <audio rel="preload" autoplay controls loop>
+        <!-- <source src="../assets/audio/pookie.mp3"> -->
       </audio>
     </div>
     <div class="titleContainer">
@@ -49,6 +49,8 @@ export default {
   },
   mounted() {
     console.log('Mounted')
+    this.character = gameService.characterChoice;
+    console.log(this.character);
   },
   watch: {
     '$route.params.id' (to, from) {
@@ -127,30 +129,30 @@ export default {
         console.log(localStorage)
       }
 
-      if (localStorage.getItem('character') === 'backpacker') {
-        this.character = '#backpacker'
-      }
+      // if (localStorage.getItem('character') === 'backpacker') {
+      //   this.character = '#backpacker'
+      // }
 
       console.log(this.character)
 
       // FIN déterminée par phone || newspaper 
-      if (action.category === 'win/lose' && localStorage.getItem('asset') === 'phone') {
-        this.$router.push({path: '/lose'})
-      }
       if (action.category === 'win/lose') {
-        this.$router.push({path: '/enigme'})
+
+        if (localStorage.getItem('asset') === 'phone') {
+          this.$router.push({path: '/lose'})
+        }
+        if (localStorage.getItem('asset') === 'newspaper') {
+          this.$router.push({path: '/enigme'})
+        }
       }
-
-
-      var gameMain = document.querySelector('.gameMain');
-      var enigmaMain = document.querySelector('.enigmaMain');
 
       // Écrans de fin Win || Lose
       if (action.category === 'win') {
         this.$router.push({path: '/win'})
       }
       if (action.category === 'lose') {
-        this.$router.push({path: '/lose'})
+        this.$router.push({path: '/lose'});
+        gameService.endContent = action.loseSentence;
       }
 
       // Qd on choisi Eau || Journal => item ds localStorage => direction la même frame

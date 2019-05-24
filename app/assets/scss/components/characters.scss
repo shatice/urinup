@@ -1,14 +1,54 @@
+.charactersMain{
+  background: url('/assets/img/bg.svg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh; 
+  position: relative;
+  
+}
+
+.charactersContent{
+  padding-top: 40px;
+  font-size: 4rem;
+}
+
+.charactersList {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.characterLabel {
+  position: absolute;
+  font-size: 2.2rem;
+  justify-content: center;
+  padding-left: 60px;
+}
+
+.characterItem {
+  height: 100%;
+  color: white;
+}
+
+.characterChoice {
+  height: 600px;
+  width: 100%;
+}
+
 .svgContainer {
   position: absolute;
   bottom: 0;
   width: 100vw; 
-  height: 75vh; 
+  height: 45vw; 
 }
 
 .character { 
   height: 100%;
-  width: 100%;
-  opacity: 0;
+  width: 100%; 
 }
 
 .group {
@@ -148,10 +188,10 @@
 
 @keyframes driving {
   from {
-    transform: translateX(20px);
+    transform: translateX(85px);
   }  
   to {
-    transform: translateX(-20px);
+    transform: translateX(165px);
   }
 }
 
@@ -167,7 +207,7 @@
   }
 
   .group {
-    animation: driving 1s linear alternate infinite; 
+    animation: driving 0.8s linear alternate infinite; 
   }
 
   .scooterLine {
@@ -232,4 +272,47 @@
   .losingFace {
     display: block; 
   }
+}
+
+// Biking 
+
+svg {
+  width: 40%;
+}
+
+.bikeGroup {
+  animation: driving 1s linear alternate infinite; 
+}
+
+@keyframes pedaling {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes bikeTurningWheel {
+  from {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 50;
+  }
+}
+
+.bikeRightLeg, .rightBikePedal {
+  animation: pedaling 0.5s linear alternate infinite; 
+}
+
+.bikeLeftLeg, .leftBikePedal {
+    animation: pedaling 0.5s 0.5s linear alternate infinite; 
+}
+
+.bikeLine {
+  stroke: white; 
+  animation: bikeTurningWheel 0.5s linear infinite 
 }

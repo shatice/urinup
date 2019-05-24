@@ -3,6 +3,8 @@ class GameService {
     this.actualTime = 0;
     this.maxTime = 180;
     this.time = 0; 
+    this.endContent = `GAME OVER, tu t'es pissé dessus`;
+    this.characterChoice = localStorage.getItem('character') || '#parisian';
   }
 
   counter() {
@@ -16,6 +18,10 @@ class GameService {
       this.counter(), 1000)
     }
   }
+
+  // endLose() {
+  //   this.endContent === 
+  // }
 }
 
 export default new GameService();

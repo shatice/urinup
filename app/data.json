@@ -7,6 +7,7 @@
         {
           "label": "En overboard",
           "category": "lose",
+          "loseSentence": "T'es nul",
           "logo": "#overboard"
         },
         {
@@ -120,6 +121,7 @@
         {
           "label": "Écouteurs",
           "logo": "#earphone",
+          "loseSentence": "T'es nul",
           "category": "lose"
         },
         {
@@ -175,6 +177,7 @@
         {
           "label": "droite",
           "logo": "#right",
+          "loseSentence": "T'es nul",
           "category": "lose"
         }
       ]
@@ -226,6 +229,7 @@
         },
         {
           "label": "Pas couche",
+          "loseSentence": "T'es nul",
           "category": "lose"
         }
       ]
@@ -237,6 +241,7 @@
         {
           "label": "contourner",
           "logo": "#run",
+          "loseSentence": "T'es nul",
           "category": "lose"
         },
         {
@@ -259,6 +264,7 @@
         {
           "label": "Uber",
           "logo": "#uber",
+          "loseSentence": "T'es nul",
           "category": "lose"
         }
       ]
@@ -432,6 +438,7 @@
         {
           "label": "Ils ont raison, t'es super génant. Tu te décales pour ne pas les déranger",
           "logo": "#walk",
+          "loseSentence": "T'es nul",
           "category": "lose"
         }
       ]
@@ -442,7 +449,8 @@
       "actions": [
         {
           "label": "Aide",
-          "category": "win/lose"
+          "category": "win/lose",
+          "loseSentence": "GAME OVER, ton smartphone ne t'a aidé d'aucune aide, peut être que tu t'en serais mieux sorti avec un bon vieux journal"
         }
       ]
     }
