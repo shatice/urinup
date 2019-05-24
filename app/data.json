@@ -99,7 +99,7 @@
     },
     {
       "id": 6,
-      "content": "Fallait s'y attendre... T'es tombée dans une bouche d'égout, c'est pas mâlin ! Heureusement il y à une échelle à ta droite",
+      "content": "Fallait s'y attendre... T'es tombée dans une bouche d'égout, c'est mâlin ! Heureusement il y agst une échelle à ta droite",
       "actions": [
         {
           "label": "Je continue dans les égouts, sait-on jamais",
