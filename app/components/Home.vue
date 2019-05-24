@@ -31,7 +31,7 @@ export default {
       goalTitle: "Objectif",
       rulesTitle : "Règles",
       introContent: "Mince, tu as une envie très pressante, ça tombe mal : ton appartement est à l'autre bout de la ville.",
-      goalContent: "Fais les bons choix afin d'arriver sans encombre à la victoire. Attention, tous les chemins mènenent à Rome ; mais pas aux toilettes !",
+      goalContent: "Fais les bons choix afin d'arriver sans encombre à la victoire. Attention, tous les chemins mènent à Rome, mais pas aux toilettes !",
       rulesContent : "À coup de clicks, le chemin vers chez toi tu trouveras"
     }
   }, 
