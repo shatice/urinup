@@ -8,7 +8,7 @@
   width: 100vw; 
   height: 100vh;
   overflow: hidden;
-  z-index: 2; 
+  
 }
 
 .homeContent {
@@ -19,11 +19,34 @@
   background: linear-gradient(#2E0244, #E56C63);
 }
 
-.playContent {
-  padding-top: 15%;
-  color: white;
-  font-size: 4rem;
+.introTitle, 
+.goalTitle, 
+.rulesTitle {
+text-align: left;
+padding-top: 40px;
+padding-bottom: 15px;
+font-size: 2rem;
+width: 50%;
 }
+
+.introContainer,
+.goalContainer,
+.rulesContainer {
+  width: 55%;
+  padding: 25px;
+  padding-top: 35px;
+  border: solid 2px white;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+.introContent,
+.goalContent,
+.rulesContent {
+ color: white;
+
+}
+
 
 .buttonHome {
   position: absolute;
@@ -33,12 +56,23 @@
   text-decoration-line: none;
   border-radius: 40px;
   font-size: 2rem;
-  margin-top: 150px;
+  bottom: 55px;
   margin-left: calc( 50% - 6.5rem);
-  border: solid white; 
-
-  &:hover {
-    background-color: rgb(182, 35, 99);
-    color: white; 
-  }
 }
+
+li {
+  cursor: pointer;
+}
+
+.soundContainer {
+  width: 200px; 
+  position: absolute; 
+  right: 0; 
+  top: 10px; 
+}
+
+audio {
+  width: 100%; 
+  cursor: pointer;
+  align-self: center; 
+}  

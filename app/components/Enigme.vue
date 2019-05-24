@@ -1,16 +1,16 @@
 <template>
   <div class="enigmaMain">
+    <h1 class="enigmaTitle">Enigme</h1>
     <ul class="enigmaList">
-      <li class="enigmaItem">Question 1</li>
-      <li class="enigmaItem">Question 2</li>
-      <li class="enigmaItem">Question 3</li>
-      <li class="enigmaItem">Question 4</li>
-      <li class="enigmaItem">Question 5</li>
+      <li class="enigmaItem">Mon premier est le nombre de saison de Game of Thrones</li>
+      <li class="enigmaItem">Mon deuxième est la quatrième lettre du npm du bar de Hetic</li>
+      <li class="enigmaItem">Mon troisième est le meilleur groupe de la promo</li>
+      <li class="enigmaItem">Mon quatrième est le nombre de film dans lequel à joué Bastien Calou</li>
+      <li class="enigmaItem">Mon cinquième est le nombre d'heure que j'ai passé en Esprit d'équipe</li>
     </ul>
-
     <form action="" method="get" class="form-example">
       <div class="formInput">
-        <label for="char1">DIGICODE </label>
+        <label for="char1"> </label>
         <input v-on:keyup="doEnigma()" class="input" type="text" name="char1" id="char1" maxlength="5" required >
       </div>
     </form>
@@ -28,15 +28,13 @@ export default {
 
       value += input.value;
       
-      if (value === 'sarah') {
+      if (value === '8D210') {
         this.$router.push({path: '/win'})
       } 
-      if (value.length === 5 && input.value !== 'sarah') {
+      if (value.length === 5 && input.value !== '8D210') {
         this.$router.push({path: '/lose'})
       }
     }
   }
 }
-
-
 </script>
