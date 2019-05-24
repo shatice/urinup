@@ -133,15 +133,15 @@
     },
     {
       "id": 8,
-      "content": "Te voilà à Châtelet, ô mon beau châtelet. Question simple, tu prends quelle direction",
+      "content": "Bon super tu te retrouves à Châtelet les Halles, c'est tellement mal indiqué que tu ne sais pas par ou aller..Plouf plouf ?",
       "actions": [
         {
-          "label": "La gauche, j'la sens bien...",
+          "label": "La grand-mère de ma boulangère était gauchère, je prends à gauche",
           "logo": "#left",
           "path": 11
         },
         {
-          "label": "La droite, j'la sens bien aussi...",
+          "label": "À droite, quelle question !",
           "characterState": "walking",
           "logo": "#right",
           "path": 12
