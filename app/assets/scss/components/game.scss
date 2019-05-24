@@ -125,24 +125,6 @@ li {
   padding-top: 50px;
 }
 
-// .soundContainer {
-//   position: absolute;
-//   width: 60px;
-//   height: 60px;
-//   top: 30px;
-//   right: 30px;
-//   background-color: rgba(255, 255, 255, 0.623);
-//   border-radius: 90px;
-// }
-
-// audio {
-//   width: 100px;
-//   margin-right: 130px;
-//   opacity: 0;
-// }
-
-
-
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -169,7 +151,7 @@ li {
 }
 
 .soundContainer {
-  width: 100px; 
+  width: 200px; 
   position: absolute; 
   right: 40px; 
   top: 40px; 

@@ -4,7 +4,7 @@
       <h1 class="loseTitle">{{message}}</h1>
       <h2 class="loseMessage">{{endMessage}}</h2>
       <div class="btnRestartContainer">
-        <div class="btnRestart" v-on:click="switchToChar()" >Recommencer</div>
+        <div class="btnRestart" v-on:click="switchToChar()" >RECOMMENCER</div>
       </div>
     </div>
   </div>
@@ -19,7 +19,7 @@ export default {
     return {
       show: true,
       gameService: gameService,
-      message: 'GAME OVER',
+      message: "Tu t'es pissé dessus",
       endMessage: gameService.endContent
     }
   },

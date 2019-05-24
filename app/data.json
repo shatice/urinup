@@ -8,10 +8,10 @@
           "label": "En overboard du futur",
           "category": "lose",
           "logo": "#overboard",
-          "loseSentence": "Oups on t'as perdu de vue tu es parti trop loin dans le futur"
+          "loseSentence": "Oups, on t'a perdu de vue, tu es parti trop loin dans le futur"
         },
         {
-          "label": "Je suis chaud j'y vais à pied",
+          "label": "J'suis chaud j'y vais à pied",
           "characterState": "walking",
           "path": 2,
           "test": "test",
@@ -39,7 +39,7 @@
           "category": "wasteTime"
         },
         {
-          "label": "Je cours super vite !",
+          "label": "Je cours, comme Forest",
           "characterState": "running",
           "logo": "#run",
           "path": 6
@@ -66,15 +66,15 @@
     },
     {
       "id": 4,
-      "content": "Te voilà dans le métro, la ligme direct est ralentie mais tu as une alternative",
+      "content": "Te voilà dans le métro, la ligne directe est ralentie mais tu peux aussi prendre un changement",
       "actions": [
         {
-          "label": "Pas grave je prends le direct",
+          "label": "Pas grave je prends la directe",
           "logo": "#direct",
           "path": 7
         },
         {
-          "label": "Je vais prendre la 1 pui la 4 et peut etre la 9",
+          "label": "Je vais prendre la 1 puis la 4 et peut être la 9",
           "logo": "#change",
           "path": 8
         }
@@ -85,12 +85,12 @@
       "content": "La trotinette c'est cool mais tu arrives sur les quais et avec les pavés ça devient compliqué de rouler sans tomber",
       "actions": [
         {
-          "label": "J'ai pas le temps je prends le risque",
+          "label": "J'ai pas le temps, je prends le risque",
           "logo": "#trotinette",
           "path": 9
         },
         {
-          "label": "Je préfère m'arrêter et marcher",
+          "label": "Je préfère m'arrêter et marcher, safety first",
           "characterState": "walking",
           "logo": "#walk",
           "path": 8
@@ -99,10 +99,10 @@
     },
     {
       "id": 6,
-      "content": "Fallait s'y attendre.. T'es tombé dans une bouche d'égout, c'est pas mâlin ! Heureusement il y à une échelle à ta droite",
+      "content": "Fallait s'y attendre... T'es tombée dans une bouche d'égout, c'est pas mâlin ! Heureusement il y à une échelle à ta droite",
       "actions": [
         {
-          "label": "Je continue dans les égouts sait-on jamais",
+          "label": "Je continue dans les égouts, sait-on jamais",
           "characterState": "running",
           "logo": "#walk",
           "path": 10
@@ -116,13 +116,13 @@
     },
     {
       "id": 7,
-      "content": "T'es dans le métro, c'est long, très long.. Tu te souviens que tu as pris ton lecteur cd",
+      "content": "T'es dans le métro, c'est long, très long... Tu te souviens que tu as pris ton lecteur cd",
       "actions": [
         {
           "label": "Super je mets mes écouteurs ça va m'occuper un peu",
           "logo": "#earphone",
           "category": "lose",
-          "loseSentence": "Mince tu t'es endormie en écoutant Christophe Willem puis tu t'es réveillé au terminus avec le pentalon mouillé.."
+          "loseSentence": "Mince, tu t'es endormie en écoutant Christophe Willem puis tu t'es réveillé au terminus avec le pentalon mouillé..."
         },
         {
           "label": "Je préfère écouter le couple qui s'engueule derriére moi",
@@ -133,15 +133,15 @@
     },
     {
       "id": 8,
-      "content": "T'es à chatelet",
+      "content": "Te voilà à Châtelet, ô mon beau châtelet. Question simple, tu prends quelle direction",
       "actions": [
         {
-          "label": "Gauche",
+          "label": "La gauche, j'la sens bien...",
           "logo": "#left",
           "path": 11
         },
         {
-          "label": "Droite",
+          "label": "La droite, j'la sens bien aussi...",
           "characterState": "walking",
           "logo": "#right",
           "path": 12
@@ -150,7 +150,7 @@
     },
     {
       "id": 9,
-      "content": "Bravo tu maîtrisais tellement pas ta trotinette que tu as attéri dans la seine. Une échelle peut te ramener sur la terre mais celle-ci est en sale état, choisis un des deux barreaux :",
+      "content": "Bravo ! Tu maîtrisais tellement pas ta trotinette que tu as attéri dans la Seine. Une échelle peut te ramener sur la terre ferme mais celle-ci est en sale état, choisis un des deux barreaux :",
       "actions": [
         {
           "label": "Pile",
@@ -160,16 +160,17 @@
         {
           "label": "Face",
           "logo": "#barreau2",
-          "category": "lose"
+          "category": "lose", 
+          "loseSentence": "Oupsi, c'était le mauvais barreau. Résultat tu nages dans ton urine et tu vas rejoindre les beaux poissons de la Seine pour mourir dans la honte"
         }
       ]
     },
     {
       "id": 10,
-      "content": "Tu as réussi à rejoindre les catacombes de Paris. Attention plus d'un ce sont perdu dans ce labyrinthe. Ton chemin se sépare en deux, à toi de jouer..",
+      "content": "Tu as réussi à rejoindre les catacombes de Paris. Attention plus d'un se sont perdus dans ce labyrinthe. Ton chemin se sépare en deux, à toi de jouer..",
       "actions": [
         {
-          "label": "Gauche parce que je vote à gauche",
+          "label": "Gauche, parce que je vote à gauche",
           "characterState": "walking",
           "logo": "#left",
           "path": 8
@@ -178,13 +179,13 @@
           "label": "À droite, parce que je voulais prendre à gauche, mais j'ai un gros strabisme",
           "logo": "#right",
           "category": "lose",
-          "loseSentence": "On a pas eu de nouvelle de toi depuis ... désolé, tu as perdu ! "
+          "loseSentence": "On a pas eu de nouvelles de toi depuis... désolé, tu as perdu ! "
         }
       ]
     },
     {
       "id": 11,
-      "content": "Il fait vraiment trop chaud dans ce wagon, tu n'aurai pas du mettre ce gros pull ce matin. Tu as la superbe idée de te fabriquer un éventaille, par chance sur le siege d'en face se trouve une carte de Paris et un journal",
+      "content": "Il fait vraiment trop chaud dans ce wagon, tu n'aurais pas du mettre ce gros pull ce matin. Tu as la super idée de te fabriquer un éventail, par chance sur le siège d'en face se trouvent une carte de Paris et un journal",
       "actions": [
         {
           "label": "Je prends la carte",
@@ -204,7 +205,7 @@
     },
     {
       "id": 12,
-      "content": "Tu es enfin sortie du metro à Châtelet ! Une dixaine de bénévoles en orange éssaye de t'interpeller pour te soutirer des sous. Tu es piegé ou presque",
+      "content": "Tu es enfin sortie du métro ! Une dizaine de bénévoles en orange t'interpellent pour te soutirer des sous. Tu es piegé (ou presque)",
       "actions": [
         {
           "label": "J'écoute la dame de l'asso qui me demande 10 euros pour la survie des fourmies en Norvège",
@@ -219,33 +220,18 @@
         }
       ]
     },
-    // {
-    //   "id": 13,
-    //   "content": "GAME OVER",
-    //   "actions": [
-    //     {
-    //       "label": "Couche",
-    //       "category": "win"
-    //     },
-    //     {
-    //       "label": "Pas couche",
-    //       "category": "lose",
-    //       "loseSentence": "T'es nul"
-    //     }
-    //   ]
-    // },
     {
       "id": 14,
-      "content": "Tu sors du métro à république, malheureusement tu à oublié qu'on etait samedi et il y a une marée de gilet jaune",
+      "content": "Tu sors du métro à République, malheureusement tu as oublié qu'on était samedi... tu te retrouves face à une marée de gilets jaunes",
       "actions": [
         {
           "label": "Ils sont beaucoup trop, je les contourne",
           "logo": "#run",
           "category": "lose",
-          "loseSentence": "Mauvaise décision, c'etait beaucoup trop long, tu as fais sur toi.."
+          "loseSentence": "Mauvaise décision, c'était beaucoup trop long, tu t'es pissé dessus..."
         },
         {
-          "label": "J'affronte la foule",
+          "label": "J'affronte la foule, tel un viking",
           "characterState": "walking",
           "logo": "#giletjaune",
           "path": 15
@@ -254,7 +240,7 @@
     },
     {
       "id": 15,
-      "content": "Tu n'a aucun respect, tu sors ta planche et tu surf sur les gilets jaunes, il ne te reste plus que 5 km mais tu es de plus en plus pressé !",
+      "content": "Tu n'a aucun respect, tu surfes au-dessus des gilets jaunes. Il ne te reste plus que 3 km mais tu es de plus en plus pressé !",
       "actions": [
         {
           "label": "Je prends un taxi",
@@ -265,13 +251,13 @@
           "label": "Je commande un Uber",
           "logo": "#uber",
           "category": "lose",
-          "loseSentence": "T'es nul"
+          "loseSentence": "Oh non ! Après quelques mètres à hurler dans les embouteillages, ton chauffeur se fait interpeller par la police. Comme tu n'avais pas ta ceinture, tu te prends une amende. En plus, tu as perdu tellement de temps que tu te pisses dessus. Mais le pire : le chauffeur te met une mauvaise note sur l'appli"
         }
       ]
     },
     {
       "id": 16,
-      "content": "Le GPS du taxi est HS et tu n'as pas de phone, vous perdez beaucoup de temps. En plus le chauffeur est bavard et veut absolument discuter avec toi",
+      "content": "Le GPS du taxi est HS et tu n'as pas de smartphone pour l'aider (bouh), vous perdez beaucoup de temps. En plus le chauffeur est bavard et veut absolument discuter avec toi. T'as de la chance, c'est un dev/front/back/ux/ui/designer lui aussi",
       "actions": [
         {
           "label": "Mince, j'ai pas le choix",
@@ -291,7 +277,7 @@
     },
     {
       "id": 21,
-      "content": "Mais le chauffeur a l'air bavard et veut absolument discuter avec toi!",
+      "content": "Mais le chauffeur a l'air bavard et veut absolument discuter avec toi ! T'as de la chance, c'est un dev/front/back/ux/ui/designer lui aussi",
       "actions": [
         {
           "label": "Ha...",
@@ -301,7 +287,7 @@
     },
     {
       "id": 22,
-      "content": "Sauras-tu répondre à ses questions assez rapidement ? Fais gaffe, si tu te trompes, tu augmentes la jauge... 😉",
+      "content": "Sauras-tu répondre à ses questions de la mort qui tue ? Fais gaffe, si tu te trompes, c'est fini pour toi",
       "actions": [
         {
           "label": "Oui de toute façon j'ai toujours raison",
@@ -320,8 +306,8 @@
         },
         {
           "label": "Djison",
-          "answer": false,
-          "path": 25
+          "category": "lose", 
+          "loseSentence": "Oups, tu t'es pissé dessus. Va donc réviser ton JSON !"
         }
       ]
     },
@@ -330,9 +316,10 @@
       "content": "Tu es une div de 10vw de large, 20vh de hauteur et tu souhaites te placer en bas à droite du viewport, tu fais quoi ?",
       "actions": [
         {
-          "label": "{position: absolute; bottom: 0vh; right: 90vw;}",
-          "path": 26,
-          "logo": "#questionLogo"
+          "label": "{position: absolute; bottom: 0; right: 90vw;}",
+          "logo": "#questionLogo",
+          "category": "lose", 
+          "loseSentence": "Hé nan! Et bah alors, on connait pas son CSS ?"
         },
         {
           "label": "{position: absolute; top: 80vh; left: 90vw;}",
@@ -352,8 +339,9 @@
         },
         {
           "label": "Mouais, nan, j'préfère les png, la base",
-          "path": 27,
-          "logo": "#questionLogo"
+          "logo": "#questionLogo",
+          "category": "lose", 
+          "loseSentence": "Les svg c'est la vie "
         }
       ]
     },
@@ -363,8 +351,9 @@
       "actions": [
         {
           "label": "J'adore le JS, dans 20/30 ans y en aura plus",
-          "path": 28,
-          "logo": "#questionLogo"
+          "logo": "#questionLogo",
+          "category": "lose", 
+          "loseSentence": "Oh oh, t'as voulu faire ton malin mais t'as perdu "
         },
         {
           "label": "console.log('C'est trop cool')",
@@ -375,7 +364,7 @@
     },
     {
       "id": 27,
-      "content": "Bon bah voilà, c'était pas si long que ça finalement...",
+      "content": "Bon bah voilà, c'était pas si long finalement...",
       "actions": [
         {
           "label": "Si tu veux",
@@ -392,7 +381,7 @@
           "path": 29
         },
         {
-          "label": "NAN ! Aller, enchaîne",
+          "label": "NAN ! Allez, enchaîne",
           "path": 30
         }
       ]
@@ -414,21 +403,25 @@
         {
           "label": "Kanoé-kayak",
           "category": "lose",
-          "logo": "#questionLogo"
+          "logo": "#questionLogo",
+          "category": "lose", 
+          "loseSentence": "Ouin, ouin, ouin, ouin, ouinnnn. Faux ! Indice : aucune des deux n'était bonne."
         },
         {
           "label": "Médecine",
           "category": "lose",
-          "logo": "#questionLogo"
+          "logo": "#questionLogo",
+          "category": "lose", 
+          "loseSentence": "Ouin, ouin, ouin, ouin, ouinnnn. Faux ! Indice : aucune des deux n'était bonne."
         }
       ]
     },
     {
       "id": 31,
-      "content": "Bon, où en étions-nous ? Ha oui ! T'as plus de fric. Du coup t'es obligé de sortir et de continuer en vélib",
+      "content": "Bon, où en étions-nous ? Ha oui ! T'as plus de fric. Du coup, t'es obligé de sortir et de continuer en skate",
       "actions": [
         {
-          "label": "J'ai pas le choix je sors du Taxi",
+          "label": "J'ai pas le choix, je sors du Taxi",
           "characterState": "skating",
           "path": 18
         }
@@ -436,7 +429,7 @@
     },
     {
       "id": 18,
-      "content": "Te voilà donc à bord de ce super engin. Problème : les automobilistes te haient et te klaxonnent à tout va.",
+      "content": "Te voilà donc on the road again. Problème : tu roules avec classe sur la route, les automobilistes te haient et te klaxonnent à tout va.",
       "actions": [
         {
           "label": "Tu t'en moques, tu fonces, tu tiens presque plus",
@@ -447,7 +440,7 @@
           "label": "Ils ont raison, t'es super génant. Tu te décales pour ne pas les déranger",
           "logo": "#walk",
           "category": "lose",
-          "loseSentence": "T'es nul"
+          "loseSentence": "Un peu de courage mon vieux ! T'as pris tellement de temps que tu t'es pissé dessus, c'est malin"
         }
       ]
     },
@@ -456,10 +449,10 @@
       "content": "Bravo ! Tu as su défier tous les obstacles et tu es à présent en face du portail de l'immeuble. MAIS CATASTROPHE : tu as oublié le digicode... Trouveras-tu l'aides dont tu as besoin dans l'objet qui se trouve dans ta poche ?",
       "actions": [
         {
-          "label": "Aide",
+          "label": "Regarder dans ma poche",
           "category": "win/lose",
           "path": 20,
-          "loseSentence": "GAME OVER, ton smartphone ne t'a aidé d'aucune aide, peut être que tu t'en serais mieux sorti avec un bon vieux journal"
+          "loseSentence": "GAME OVER, ton smartphone ne t'a été d'aucune aide, peut être que tu t'en serais mieux sorti avec un bon vieux journal"
         }
       ]
     }

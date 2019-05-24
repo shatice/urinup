@@ -48,16 +48,32 @@ width: 50%;
 }
 
 
-.buttonHome {
-  position: absolute;
-  padding: 20px 55px;
+.btnHomeContainer {
+  width: 100%;
+}
+
+.btnHome {
+  cursor: pointer; 
+  transform: translateY(40px);
   background-color: white;
-  color: rgb(182, 35, 99);
+  color: #E56C63;
   text-decoration-line: none;
   border-radius: 40px;
   font-size: 2rem;
-  bottom: 55px;
-  margin-left: calc( 50% - 6.5rem);
+  width: 250px; 
+  margin: 0 auto;
+  text-align: center; 
+  margin-bottom: 100px; 
+  margin-left: calc( 50% - 7.4rem);
+  padding: 20px 30px 20px 27.5px;
+  border: solid white; 
+  transition: all 0.5s;
+
+  
+  &:hover {
+  color: white;
+  background: linear-gradient(#2E0244, #E56C63);
+  }
 }
 
 li {

@@ -7,7 +7,7 @@
       <svg class="toilets" aria-hidden="true"><use xlink:href="#toilets"></use></svg>
     </div>
     <div class="btnWinRestartContainer">
-      <div class="btnWinRestart" v-on:click="switchToChar()" >Rejouer</div>
+      <div class="btnWinRestart" v-on:click="switchToChar()" >REJOUER</div>
     </div>
   </div>
 </template>
@@ -18,7 +18,12 @@ export default {
   data() {
     return {
       message: 'VICTOIRE', 
-      winMessage: 'hehedfffffsdnkbekvbervbrkvbk"rbvkerbvkerjbvkrjvbr"jvn'
+      winMessage: 'Mes félicitations cher compatriote, tu peux à présent te soulager la vessie à ton aise.'
+    }
+  },
+  methods: {
+    switchToChar() {
+      this.$router.push({path: '/characters'})
     }
   }
 };
