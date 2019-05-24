@@ -3,10 +3,10 @@
     <h1 class="enigmaTitle">Enigme</h1>
     <ul class="enigmaList">
       <li class="enigmaItem">Mon premier est le nombre de saison de Game of Thrones</li>
-      <li class="enigmaItem">Mon deuxième est la quatrième lettre du npm du bar de Hetic</li>
+      <li class="enigmaItem">Mon deuxième est la quatrième lettre du nom du bar préféré des Héticiens</li>
       <li class="enigmaItem">Mon troisième est le meilleur groupe de la promo</li>
       <li class="enigmaItem">Mon quatrième est le nombre de film dans lequel à joué Bastien Calou</li>
-      <li class="enigmaItem">Mon cinquième est le nombre d'heure que j'ai passé en Esprit d'équipe</li>
+      <li class="enigmaItem">Mon cinquième est le nombre de lettres dans Amsellem, moins le nombre de lettres dans Yves</li>
     </ul>
     <form action="" method="get" class="form-example">
       <div class="formInput">
@@ -31,7 +31,7 @@ export default {
       if (value === '8D210') {
         this.$router.push({path: '/win'})
       } 
-      if (value.length === 5 && input.value !== '8D210') {
+      if (value.length === 5 && input.value !== '8D213') {
         this.$router.push({path: '/lose'})
       }
     }
