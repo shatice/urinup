@@ -25,8 +25,8 @@ URL du site : https://urinup.netlify.com/
 | Routing | Lorsqu'on recharge la page (`Ctrl + R`), on se trouve toujours à la même étape | OUI |
 | Transitions | Chaque page apparaît grâce à une transition fluide (la complexité de la transition n'est pas prise en compte ici) | EN PARTIE |
 | Transitions | Les transitions internes au jeu (d'une étape à une autre) et externes (intro, fin...) sont différentes | EN PARTIE |
-| État | Le choix du personnage et/ou de ses caractéristiques impacte l'aventure au moins une fois. **Indiquez ici comment succintement.** | OUI, chacun des personnage à un item associé (portable || journal) qui peuvent mener vers des chemins spécifiques. L'un des deux entrave d'avantage le chemin du joueur vers la victoire |
-| État | Une décision ou un événement aléatoire survenu pendant l'aventure a un impact sur la suite, au moins une fois. **Indiquez ici comment succintement.** | OUI, le joueur à la possibilité de récupérer un objet dans le métro, s'il ne le fait pas et qu'il a également choisi le personnage qui ne facilite pas la victoire, alors il perdra à coup sûr |
+| État | Le choix du personnage et/ou de ses caractéristiques impacte l'aventure au moins une fois. **Indiquez ici comment succintement.** | OUI, chacun des personnages a un item associé (portable ou journal) qui peut mener vers des chemins spécifiques. L'un des deux entrave d'avantage le chemin du joueur vers la victoire |
+| État | Une décision ou un événement aléatoire survenu pendant l'aventure a un impact sur la suite, au moins une fois. **Indiquez ici comment succintement.** | OUI, le joueur a la possibilité de récupérer un objet dans le métro, s'il ne le fait pas et qu'il a également choisi le personnage qui ne facilite pas la victoire, alors il perdra à coup sûr |
 | État | Le choix du personnage et/ou ce qu'il s'est passé pendant l'aventure impactent l'écran de fin. **Indiquez ici comment succintement.** | OUI, le contenu de l'écran de fin n'affiche pas le même message à chaque fois |
 | État | Au moins un service (classe de type `GameService`) est utilisé | OUI |
 | Sauvegarde | Lorsqu'on recharge la page (`Ctrl + R`), le personnage, ses caractéristiques, les choix du joueur et tout le reste sont rétablis | EN PARTIE... le choix du personnage est rétabli, mais pas ses animations |
@@ -34,3 +34,5 @@ URL du site : https://urinup.netlify.com/
 | Multimédia | L'expérience présente une vidéo ou plus | NON, nous avons préféré faire des animations svg/css |
 | Multimédia | L'expérience présente un audio ou plus | OUI |
 | Multimédia | L'utilisateur a la possibilité de couper le son à tout moment | OUI |
+
+![alt text](https://github.com/hlnmargary/w1p2021-hero-gungor-margary/blob/master/app/assets/img/arborescence.pdf)
