@@ -19,7 +19,7 @@ export default {
     return {
       show: true,
       gameService: gameService,
-      message: "Tu t'es pissé dessus",
+      message: "GAME OVER",
       endMessage: gameService.endContent
     }
   },
