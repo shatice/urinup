@@ -35,4 +35,8 @@ URL du site : https://urinup.netlify.com/
 | Multimédia | L'expérience présente un audio ou plus | OUI |
 | Multimédia | L'utilisateur a la possibilité de couper le son à tout moment | OUI |
 
-![alt text](https://github.com/hlnmargary/w1p2021-hero-gungor-margary/blob/master/app/assets/img/arborescence.pdf)
+L'arborescence : 
+
+Le schéma de départ est un peu obsolète. Une dizaine d'étapes qui n'y apparaissent pas ont été ajoutées à l'histoire. 
+
+![schéma](https://github.com/hlnmargary/w1p2021-hero-gungor-margary/blob/master/app/assets/img/arborescence.pdf)
