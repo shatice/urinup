@@ -116,6 +116,7 @@ export default {
 
         if (localStorage.getItem('asset') === 'phone') {
           this.$router.push({path: '/lose'})
+          gameService.endContent = action.loseSentence;
         }
         if (localStorage.getItem('asset') === 'newspaper') {
           this.$router.push({path: '/enigme'})

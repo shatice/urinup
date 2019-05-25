@@ -299,7 +299,7 @@
         {
           "label": "Regarder dans ma poche",
           "category": "win/lose",
-          "loseSentence": "GAME OVER, ton smartphone ne t'a été d'aucune aide, peut être que tu t'en serais mieux sorti avec un bon vieux journal"
+          "loseSentence": "Ton smartphone ne t'a été d'aucune aide, peut être que tu t'en serais mieux sorti avec un bon vieux journal"
         }
       ]
     },
