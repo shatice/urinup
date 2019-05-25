@@ -5,7 +5,7 @@
       <li class="enigmaItem">Mon premier est le nombre de saison de Game of Thrones</li>
       <li class="enigmaItem">Mon deuxième est la quatrième lettre du nom du bar préféré des Héticiens</li>
       <li class="enigmaItem">Mon troisième est le meilleur groupe de la promo</li>
-      <li class="enigmaItem">Mon quatrième est le nombre de film dans lequel à joué Bastien Calou</li>
+      <li class="enigmaItem">Mon quatrième est le nombre de films dans lequel a joué Bastien Calou</li>
       <li class="enigmaItem">Mon cinquième est le nombre de lettres dans Amsellem, moins le nombre de lettres dans Yves</li>
     </ul>
     <form action="" method="get" class="form-example">

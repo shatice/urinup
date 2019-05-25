@@ -100,19 +100,11 @@ export default {
         charBackpacker.classList.remove('is-skating');
       }
 
-      if (action.characterState === 'dabbing') {
-        charParisian.classList.add('is-dabbing');
-        charBackpacker.classList.add('is-dabbing');
-      } else if (action.characterState !== 'dabbing') {
-        charParisian.classList.remove('is-dabbing');
-        charBackpacker.classList.remove('is-dabbing');
-      }
-
       // LOCALSTORAGE
       if ((action.logo === "#noearphone" || action.label === 'Gauche') && localStorage.getItem('asset') === 'newspaper') {
         this.$router.push({path: '/game/14'})
       }
-      if ((action.logo === '#taxi' || action.logo === '#logo') && localStorage.getItem('asset') === 'newspaper') {
+      if (action.logo === '#taxi' && localStorage.getItem('asset') === 'newspaper') {
         this.$router.push({path: '/game/16'})
       }
       if (action.asset === "newspaper") {
