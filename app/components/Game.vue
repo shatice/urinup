@@ -47,9 +47,7 @@ export default {
     };
   },
   mounted() {
-    console.log('Mounted')
     this.character = gameService.characterChoice;
-    console.log(this.character);
   },
   watch: {
     '$route.params.id' (to, from) {
@@ -64,12 +62,6 @@ export default {
 
       if (action.path) {
         this.$router.push({params: {id: action.path}})
-      }
-
-      var char = document.querySelector('.character');
-      
-      if (action.test === 'test') {
-        char.style.opacity = '1';
       }
 
       // CHARACTERS STATES
@@ -117,22 +109,15 @@ export default {
       }
 
       // LOCALSTORAGE
-      if ((action.label === 'Pas écouteurs' || action.label === 'Gauche') && localStorage.getItem('asset') === 'newspaper') {
+      if ((action.logo === "#noearphone" || action.label === 'Gauche') && localStorage.getItem('asset') === 'newspaper') {
         this.$router.push({path: '/game/14'})
       }
-      if ((action.label === 'Taxi' || action.label === 'Uber') && localStorage.getItem('asset') === 'newspaper') {
+      if ((action.logo === '#taxi' || action.logo === '#logo') && localStorage.getItem('asset') === 'newspaper') {
         this.$router.push({path: '/game/16'})
       }
       if (action.asset === "newspaper") {
         localStorage.setItem('asset', 'newspaper')
-        console.log(localStorage)
       }
-
-      // if (localStorage.getItem('character') === 'backpacker') {
-      //   this.character = '#backpacker'
-      // }
-
-      console.log(this.character)
 
       // FIN déterminée par phone || newspaper 
       if (action.category === 'win/lose') {
@@ -154,19 +139,19 @@ export default {
         gameService.endContent = action.loseSentence;
       }
 
-      // Qd on choisi Eau || Journal => item ds localStorage => direction la même frame
+      // Qd on choisi Carte || Journal => item ds localStorage => direction la même frame
       if (action.category === 'sameGoal') {
         this.$router.push({path: '/game/14'})
       }
 
       // COUNTER
 
-      if(action.category === 'wasteTime') {
-        gameService.actualTime -= 5; 
-      }
-      if (gameService.actualTime >= gameService.maxTime) {
-        this.$router.push({path: '/lose'})
-      }
+      // if(action.category === 'wasteTime') {
+      //   gameService.actualTime -= 5; 
+      // }
+      // if (gameService.actualTime >= gameService.maxTime) {
+      //   this.$router.push({path: '/lose'})
+      // }
     }
   },
 }

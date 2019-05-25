@@ -99,7 +99,7 @@
     },
     {
       "id": 6,
-      "content": "Fallait s'y attendre... T'es tombée dans une bouche d'égout, c'est mâlin ! Heureusement il y agst une échelle à ta droite",
+      "content": "Fallait s'y attendre... T'es tombée dans une bouche d'égout, c'est mâlin ! Heureusement il y a une échelle à ta droite",
       "actions": [
         {
           "label": "Je continue dans les égouts, sait-on jamais",
@@ -133,7 +133,7 @@
     },
     {
       "id": 8,
-      "content": "Bon super tu te retrouves à Châtelet les Halles, c'est tellement mal indiqué que tu ne sais pas par ou aller..Plouf plouf ?",
+      "content": "Bon super tu te retrouves à Châtelet les Halles, c'est si mal indiqué que tu ne sais pas par ou aller..Plouf plouf ?",
       "actions": [
         {
           "label": "La grand-mère de ma boulangère était gauchère, je prends à gauche",
@@ -150,7 +150,7 @@
     },
     {
       "id": 9,
-      "content": "Bravo ! Tu maîtrisais tellement pas ta trotinette que tu as attéri dans la Seine. Une échelle peut te ramener sur la terre ferme mais celle-ci est en sale état, choisis un des deux barreaux :",
+      "content": "Bravo ! Tu maîtrisais tellement pas ta trotinette que tu as atterri dans la Seine. Une échelle peut te ramener sur la terre ferme mais celle-ci est en sale état, choisis l'un des deux barreaux :",
       "actions": [
         {
           "label": "Pile",
