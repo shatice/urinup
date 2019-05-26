@@ -114,13 +114,20 @@ export default {
       // FIN déterminée par phone || newspaper 
       if (action.category === 'win/lose') {
 
-        if (localStorage.getItem('asset') === 'phone') {
+        if (gameService.characterChoice === '#parisian' && localStorage.getItem('asset') === 'newspaper') {
+          this.$router.push({path: '/game/32'})
+        }
+        if (gameService.characterChoice === '#parisian' && localStorage.getItem('asset') === 'phone') {
           this.$router.push({path: '/lose'})
           gameService.endContent = action.loseSentence;
         }
-        if (localStorage.getItem('asset') === 'newspaper') {
-          this.$router.push({path: '/enigme'})
+        if (gameService.characterChoice === '#backpacker') {
+          this.$router.push({path: '/game/31'})
         }
+      }
+
+      if (action.category === 'enigme') {
+        this.$router.push({path: '/enigme'})
       }
 
       // Écrans de fin Win || Lose

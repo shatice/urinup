@@ -304,6 +304,36 @@
       ]
     },
     {
+      "id": 31,
+      "content": "Grâce au journal que tu trimballes dans ta poche depuis on n'sait quand tu vas pouvoir résoudre une énigme à la page 3925 et retrouver le code ! T'es prêt ?",
+      "actions": [
+        {
+          "label": "Chaud patate, go to la page 3925",
+          "category": "enigme"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "content": "Mince ! Ton smarthphone super sophistiqué, waterproof et luminescent ne t'es d'aucune aide...",
+      "actions": [
+        {
+          "label": "Pleurer",
+          "path": 33
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "content": "Pas de panique ! Grâce à la canicule et au manque de ventilation du métro parisien, tu as récupéré un journal dans le métro dans lequel une énigme t'aidera à retrouver le code !",
+      "actions": [
+        {
+          "label": "Ha, ouf ! Je sèche mes larmes et j'me retiens encore un peu",
+          "category": "enigme"
+        }
+      ]
+    },
+    {
       "id": 20,
       "content": "Mais le chauffeur a l'air bavard et veut absolument discuter avec toi ! T'as de la chance, c'est un dev/front/back/ux/ui/designer lui aussi",
       "actions": [
