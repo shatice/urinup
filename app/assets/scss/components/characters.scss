@@ -15,27 +15,40 @@
 
 .charactersList {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   position: relative;
-  width: 1000px;
+  width: 60%;
+  height: 70%; 
+  transform: translateY(10%);
   margin: 0 auto;
   padding: 0;
 }
 
-.characterLabel {
-  position: absolute;
-  font-size: 2.2rem;
-  justify-content: center;
-  padding-left: 60px;
+.characterItem {
+  color: white;
+  border-radius: 80px; 
+  border: solid; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-around;
+
+  &:hover {
+    background-color: rgb(30, 8, 95, 0.66);
+  }
 }
 
-.characterItem {
-  height: 100%;
-  color: white;
+.characterContainer {
+  height: 80%;
 }
 
 .characterChoice {
-  height: 600px;
+  height: 100%;
+  width: 100%;
+}
+
+.characterLabel {
+  font-size: 2.2rem;
+  text-align: center; 
   width: 100%;
 }
 

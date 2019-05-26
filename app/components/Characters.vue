@@ -1,18 +1,14 @@
 <template>
   <div class="charactersMain main">
-    <div>
       <h1 class="charactersContent">{{ gameChar.content }}</h1>
       <ul class="charactersList">
-        <li class="characterItem" :key="character.class" v-for="character in gameChar.characters">
-          <div>
-            <svg v-on:click="doEffects(character)" class="characterChoice" aria-hidden="true"><use v-bind:href="`${character.svg}`"></use></svg>
+        <li class="characterItem" v-on:click="doEffects(character)" :key="character.class" v-for="character in gameChar.characters">
+          <div class="characterContainer">
+            <svg class="characterChoice" aria-hidden="true"><use v-bind:href="`${character.svg}`"></use></svg>
           </div>
-          <div class="characterLabel" v-on:click="doEffects(character)">
-            {{ character.label }}
-          </div>
+          <h2 class="characterLabel">{{ character.label }}</h2>
         </li>
       </ul>
-    </div>
   </div>
 </template>
 
