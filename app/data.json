@@ -58,7 +58,7 @@
         },
         {
           "label": "J'ai trop peur, je prend le trottoir",
-          "characterState": "scooting",
+          "characterState": "walking",
           "logo": "#pavement",
           "path": 6
         }
@@ -150,7 +150,7 @@
     },
     {
       "id": 9,
-      "content": "Bravo ! Tu maîtrisais tellement pas ta trotinette que tu as atterri dans la Seine. Une échelle peut te ramener sur la terre ferme mais celle-ci est en sale état, choisis l'un des deux barreaux :",
+      "content": "Bravo ! Tu maîtrisais tellement pas ta trotinette que tu as atterri dans la Seine. Une échelle peut te ramener sur la terre ferme mais celle-ci est en sale état, choisis le bon  barreau :",
       "actions": [
         {
           "label": "Pile",
@@ -167,7 +167,7 @@
     },
     {
       "id": 10,
-      "content": "Tu as réussi à rejoindre les catacombes de Paris. Attention plus d'un se sont perdus dans ce labyrinthe. Ton chemin se sépare en deux, à toi de jouer..",
+      "content": "Tu as réussi à rejoindre les catacombes de Paris. Attention plus d'un se sont perdus dans ce labyrinthe. Ton chemin se sépare en deux, à toi de jouer...",
       "actions": [
         {
           "label": "Gauche, parce que je vote à gauche",
@@ -267,7 +267,7 @@
     },
     {
       "id": 17,
-      "content": "Le GPS du taxi est HS, mais grâce à ton super smartphone t'as pu aider le chauffeur à retrouver son chemin ! ",
+      "content": "Le GPS du taxi est HS, mais grâce à ton super smartphone t'as pu aider le chauffeur à retrouver son chemin !",
       "actions": [
         {
           "label": "Je suis super content de moi",
@@ -277,7 +277,7 @@
     },
     {
       "id": 18,
-      "content": "Te voilà donc on the road again. Problème : tu roules avec classe sur la route, les automobilistes te haient et te klaxonnent à tout va.",
+      "content": "Te voilà donc on the road again. Problème : tu roules avec classe sur la route, les automobilistes te haient et te klaxonnent à tout va",
       "actions": [
         {
           "label": "Tu t'en moques, tu t'accroches au camion de poubelles et tu fonces",
