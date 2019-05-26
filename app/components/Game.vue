@@ -4,7 +4,6 @@
       <svg class="urinupLogo" aria-hidden="true"><use v-bind:href="`${step.logoSite}`"></use></svg>
     </div>
     <div class="soundContainer">
-      <!-- <svg class="soundIcon" aria-hidden="true"><use xlink:href="#soundIcon"></use></svg> -->
       <audio rel="preload" autoplay controls loop >
         <source src="../assets/audio/audiogame.mp3">
       </audio>
@@ -105,7 +104,7 @@ export default {
       if ((action.logo === '#noearphone' || action.logo ==='#left') && localStorage.getItem('asset') === 'newspaper') {
         this.$router.push({path: '/game/14'})
       }
-      if (action.logo === '#taxi' && localStorage.getItem('asset') === 'newspaper') {
+      if (action.logo === '#taxi' && gameService.characterChoice === '#backpacker') {
         this.$router.push({path: '/game/16'})
       }
       if (action.asset === "newspaper") {
@@ -137,15 +136,6 @@ export default {
       if (action.category === 'sameGoal') {
         this.$router.push({path: '/game/14'})
       }
-
-      // COUNTER
-
-      // if(action.category === 'wasteTime') {
-      //   gameService.actualTime -= 5; 
-      // }
-      // if (gameService.actualTime >= gameService.maxTime) {
-      //   this.$router.push({path: '/lose'})
-      // }
     }
   },
 }

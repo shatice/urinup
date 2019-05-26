@@ -29,6 +29,4 @@ export default {
     }
   }
 };
-
-console.log(gameService.endContent);
 </script>

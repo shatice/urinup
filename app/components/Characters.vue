@@ -23,9 +23,6 @@ export default {
     };
   },
     mounted() {
-    console.log('Mounted')
-    // gameService.characterChoice = 
-    // this.character = gameService.characterChoice;
   },
   methods: {
     doEffects(character) {
@@ -35,18 +32,12 @@ export default {
 
       localStorage.setItem('character', character.svg);
 
-
-      console.log(gameService.characterChoice);
-
       // CHARACTERS IN LOCALSTORAGE
       if (character.svg === '#parisian') {
         localStorage.setItem('asset', 'phone')
       } else if (character.svg === '#backpacker') {
         localStorage.setItem('asset', 'newspaper')
       }
-
-
-      console.log(localStorage)
     }
   },
 };
