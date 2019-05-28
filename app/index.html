@@ -1556,7 +1556,9 @@
 
 <body>
   <div id="root">
-    <router-view />
+    <transition name="page" mode="out-in">
+      <router-view />
+    </transition>
   </div>
   <script src="./app.js"></script>
 </body>
